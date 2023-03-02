@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Scene1Dialogue : MonoBehaviour {
+public class Scene5Dialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
@@ -14,7 +14,7 @@ public class Scene1Dialogue : MonoBehaviour {
        //public Text Char3name;
        //public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1a;
+        public GameObject ArtChar1;
        //public GameObject ArtChar1b;
        //public GameObject ArtChar2;
         public GameObject ArtBG1;
@@ -30,7 +30,7 @@ public class Scene1Dialogue : MonoBehaviour {
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
-        ArtChar1a.SetActive(false);
+        ArtChar1.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -57,50 +57,55 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-               //ArtChar1a.SetActive(true);
+               ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "GEN. ROOM";
-                Char2speech.text = "You awaken in a darkened room as your eyes struggle to adjust to the dim light filtering in through the damaged walls.";
+                Char2name.text = "Jeda";
+                Char2speech.text = "Wakey wakey, human.";
         }
        else if (primeInt ==3){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "GEN. ROOM";
-                Char2speech.text = "You have no memory of how you got here, but the sight before you leaves little doubt that something terrible has happened.";
+                Char1name.text = "YOU";
+                Char1speech.text = "Wuh..? What happened?";
+                Char2name.text = "";
+                Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "GEN. ROOM";
-                Char2speech.text = "The room is in shambles, with gaping holes in the walls and scorch marks on the floor";
+                Char2name.text = "Jeda";
+                Char2speech.text = "I know I did not hit you that hard.";
         }
        else if (primeInt == 5){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "GEN. ROOM";
-                Char2speech.text = "You look to the source of the ship's power - the generator.";
+                Char1name.text = "YOU";
+                Char1speech.text = "Hit me? Why?";
+                Char2name.text = "";
+                Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "GEN. ROOM";
-                Char2speech.text = "It's clear that it has been sabotaged, with wires and circuitry hanging haphazardly from the exposed machinery.";
+                Char2name.text = "Jeda";
+                Char2speech.text = "I am searching for a fugitive. Ragu Fahn.";
         }
        else if (primeInt ==7){
+                Char1name.text = "YOU";
+                Char1speech.text = "Why do you think I know anything?";
+                Char2name.text = "";
+                Char2speech.text = "";
+        }
+       else if (primeInt == 8){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "GEN. ROOM";
-                Char2speech.text = "But nothing looks damaged, just pulled out of place. Perhaps you could repair it?";
-				// Turn off "Next" button, turn on "Choice" buttons
+                Char2name.text = "Jeda";
+                Char2speech.text = "Do not play the stupid. You will take me to him.";
+                // Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
                 Choice1a.SetActive(true); // function Choice1aFunct()
                 Choice1b.SetActive(true); // function Choice1bFunct()
-       
         }
 
 // ENCOUNTER AFTER CHOICE #1
@@ -135,8 +140,6 @@ public void next(){
                 allowSpace = false;
                 NextScene2Button.SetActive(true);
         }
-
-      //Please do NOT delete this MOST HOLY bracket that ends the next() function:
      }
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
