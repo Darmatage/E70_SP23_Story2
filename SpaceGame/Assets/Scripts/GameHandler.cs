@@ -7,7 +7,10 @@ using UnityEngine.Audio;
 
 public class GameHandler : MonoBehaviour {
 
-        public static int playerStat1;
+        public static int batteries = 0;
+		public static bool sawCorridorA = false;
+		public static bool sawCorridorB = false;
+		public static bool sawCorridorC = false;
 
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
@@ -35,9 +38,9 @@ public class GameHandler : MonoBehaviour {
                         else{ Pause(); }
                 }
                 // Stat tester:
-                if (Input.GetKey("p")){
-                       Debug.Log("Player Stat = " + playerStat1);
-                }
+                // if (Input.GetKey("p")){
+                       // Debug.Log("Player Stat = " + playerStat1);
+                // }
         }
 
         void Pause(){
