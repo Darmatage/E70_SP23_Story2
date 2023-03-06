@@ -22,6 +22,7 @@ public class Scene4Dialogue : MonoBehaviour {
         public GameObject Choice1b;
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
+		public GameObject NextScene3Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
        //public AudioSource audioSource;

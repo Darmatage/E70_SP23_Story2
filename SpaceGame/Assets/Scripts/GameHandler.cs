@@ -14,7 +14,7 @@ public class GameHandler : MonoBehaviour {
 
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
-        public AudioMixer mixer;
+        public AudioMixer MyMusicMixer;
         public static float volumeLevel = 1.0f;
         private Slider sliderVolumeCtrl;
 
@@ -56,7 +56,7 @@ public class GameHandler : MonoBehaviour {
         }
 
         public void SetLevel (float sliderValue){
-                mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
+                MyMusicMixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
                 volumeLevel = sliderValue;
         }
 
