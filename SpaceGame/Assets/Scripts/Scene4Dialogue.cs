@@ -61,12 +61,12 @@ public void next(){
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "Jeda";
-                Char2speech.text = "Wakey wakey, human.";
+                Char2name.text = "HORIZON";
+                Char2speech.text = "Warning. Fire detected. Hazardous conditions likely.";
         }
        else if (primeInt ==3){
                 Char1name.text = "YOU";
-                Char1speech.text = "Wuh..? What happened?";
+                Char1speech.text = "What's causing the fire?";
                 Char2name.text = "";
                 Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
@@ -74,32 +74,52 @@ public void next(){
        else if (primeInt == 4){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "Jeda";
-                Char2speech.text = "I know I did not hit you that hard.";
+                Char2name.text = "HORIZON";
+                Char2speech.text = "Preliminary analysis suggests weapons damage.";
         }
        else if (primeInt == 5){
-                Char1name.text = "YOU";
-                Char1speech.text = "Hit me? Why?";
-                Char2name.text = "";
-                Char2speech.text = "";
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "HORIZON";
+                Char2speech.text = "This would be consistent with visible damage";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "Jeda";
-                Char2speech.text = "I am searching for a fugitive. Ragu Fahn.";
+                Char2name.text = "HORIZON";
+                Char2speech.text = "to walls and floor, as well as two bodies on the floor.";
         }
        else if (primeInt ==7){
                 Char1name.text = "YOU";
-                Char1speech.text = "Why do you think I know anything?";
+                Char1speech.text = "Oh no, two more dead crew.";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
-       else if (primeInt == 8){
+		       else if (primeInt ==8){
+                Char1name.text = "YOU";
+                Char1speech.text = "I don't recognize these either. Who are they?";
+                Char2name.text = "";
+                Char2speech.text = "";
+        }
+		       else if (primeInt ==9){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "Jeda";
+                Char2name.text = "Data library offline.
+				Restart generator to restore access.";
+                Char2speech.text = "";
+        }
+		       else if (primeInt ==10){
+                Char1name.text = "YOU";
+                Char1speech.text = "Yeah, I'm working on it.
+				What do these doors lead to?";
+                Char2name.text = "";
+                Char2speech.text = "";
+        }
+       else if (primeInt == 11){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Available paths are to the air lock, the med bay, and the captain's quarters";
                 Char2speech.text = "Do not play the stupid. You will take me to him.";
                 // Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
