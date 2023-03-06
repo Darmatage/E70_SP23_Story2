@@ -106,13 +106,11 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "HORIZON";
-                Char2speech.text = "Data library offline.
-				Restart generator to restore access.";
+                Char2speech.text = "Data library offline. Restart generator to restore access.";
         }
 		       else if (primeInt ==10){
                 Char1name.text = "YOU";
-                Char1speech.text = "Yeah, I'm working on it.
-				What do these doors lead to?";
+                Char1speech.text = "Yeah, I'm working on it. What do these doors lead to?";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
@@ -129,6 +127,5 @@ public void next(){
 				NextScene3Button.SetActive(true); // function Load Scene5c() 
 				
         }
-
-
+	}
 }
