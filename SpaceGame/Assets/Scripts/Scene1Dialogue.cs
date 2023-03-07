@@ -191,7 +191,7 @@ public void next(){
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-				Char3name.text = "Heuristic Optimization and...";
+				Char3name.text = "Heuristic Optimization and Routing Intelligence Zone Operating Network.";
                 Char3speech.text = "Designation: Heuristic Optimization and Routing Intelligence Zone Operating Network.";
         }
 		else if (primeInt == 19){
@@ -199,7 +199,7 @@ public void next(){
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-				Char3name.text = "Heuristic Optimization and...";
+				Char3name.text = "Heuristic Optimization and Routing Intelligence Zone Operating Network.";
                 Char3speech.text = "Source of generator disruption: Unknown. Restore main power immediately.";
         }
 		else if (primeInt == 20){
@@ -301,7 +301,7 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "The huge, boxy machine is silent, with no signs of life other than a small display panel above the controls.";
+                Char2speech.text = "Aside from the steady beeping sound and the error message flashing on the control panel, the machine shows no signs of life.";
 				Char3name.text = "";
                 Char3speech.text = "";
         }
@@ -475,7 +475,7 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "The huge, boxy machine is silent, with no signs of life other than a small display panel above the controls.";
+                Char2speech.text = "Aside from the steady beeping sound and the error message flashing on the control panel, the machine shows no signs of life.";
 				Char3name.text = "";
                 Char3speech.text = "";
         }
@@ -567,6 +567,14 @@ public void next(){
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "Leaving the now-useless weapon, you proceed to the door.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 256){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "Though it can’t open on its own under emergency power, the latch to open it manually proves perfectly functional.";
 				Char3name.text = "";
                 Char3speech.text = "";
 				nextButton.SetActive(false);
