@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Scene3Dialogue : MonoBehaviour {
+public class Scene0Dialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
@@ -167,9 +167,9 @@ public void next(){
         }
 
         public void SceneChange1(){
-               SceneManager.LoadScene("Scene4a");
+               SceneManager.LoadScene("Scene2a");
         }
         public void SceneChange2(){
-                SceneManager.LoadScene("Scene4b");
+                SceneManager.LoadScene("Scene2b");
         }
 }
