@@ -11,8 +11,8 @@ public class Scene2Dialogue : MonoBehaviour {
         public Text Char1speech;
         public Text Char2name;
         public Text Char2speech;
-       //public Text Char3name;
-       //public Text Char3speech;
+        public Text Char3name;
+        public Text Char3speech;
         public GameObject DialogueDisplay;
         
 		public GameObject ArtChar1a;
@@ -22,9 +22,9 @@ public class Scene2Dialogue : MonoBehaviour {
 		public GameObject ArtBG1;
         public GameObject Choice1a;
         public GameObject Choice1b;
+		public GameObject Choice1c;
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
-		public GameObject NextScene3Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
        //public AudioSource audioSource;
@@ -39,9 +39,9 @@ void Start(){
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
+		Choice1c.SetActive(false);
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
-		NextScene3Button.SetActive(false);
         nextButton.SetActive(true);
 
      // Find the gameHandler:
@@ -67,240 +67,254 @@ public void next(){
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "GEN. ROOM";
-                Char2speech.text = "You awaken in a darkened room as your eyes struggle to adjust to the dim light filtering in through the damaged walls.";
+                Char2name.text = "...";
+                Char2speech.text = "You emerge into a sizeable corridor.";
+				Char3name.text = "";
+                Char3speech.text = "";
         }
        else if (primeInt ==3){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "GEN. ROOM";
-                Char2speech.text = "You have no memory of how you got here, but the sight before you leaves little doubt that something terrible has happened.";
+                Char1name.text = "You";
+                Char1speech.text = "So many scorch marks on the walls… and two more of the crew cut down...";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "GEN. ROOM";
-                Char2speech.text = "The room is in shambles, with gaping holes in the walls and scorch marks on the floor";
+                Char1name.text = "You";
+                Char1speech.text = "It looks like a battlefield out here. Was there a mutiny or something?";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
         }
        else if (primeInt == 5){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "GEN. ROOM";
-                Char2speech.text = "You look to the source of the ship's power - the generator.";
-                //gameHandler.AddPlayerStat(1);
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "Assessing… Result: Probable.";
         }
-       else if (primeInt == 6){
+      else if (primeInt == 6){
+                Char1name.text = "You";
+                Char1speech.text = "You don’t know? Shouldn’t you be connected to the rest of the ship? What do the logs show?";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+       else if (primeInt == 7){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "GEN. ROOM";
-                Char2speech.text = "It's clear that it has been sabotaged, with wires and circuitry hanging haphazardly from the exposed machinery.";
-        }
-       else if (primeInt ==7){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "GEN. ROOM";
-                Char2speech.text = "But nothing looks damaged, just pulled out of place. Perhaps you could repair it?";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "Data library offline. Re-start generator to restore access.";
         }
        else if (primeInt == 8){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "GEN. ROOM";
-                Char2speech.text = "You walk to the back, to find the battery.";
+                Char1name.text = "You";
+                Char1speech.text = "Right. But as far as I can tell, whoever did this is probably still around somewhere. You really don’t have any useful information about what happened?";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
         }
 		
 		else if (primeInt ==9){
-			 ArtEngine.SetActive(false);
-			 ArtChar1a.SetActive(true);
-                Char1name.text = "YOU";
-                Char1speech.text = "Is that a dead body?";
+                Char1name.text = "You";
+                Char1speech.text = "If I’m going to be searching all over for replacement batteries, I’d like to have some idea of what I might be running into, or at least how much of the ship has been sabotaged.";
                 Char2name.text = "";
                 Char2speech.text = "";
+        }
+		else if (primeInt == 10){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "Data library offline. Re-start generator to restore access.";
+        }
+		else if (primeInt == 11){
+                Char1name.text = "You";
+                Char1speech.text = "Great, just great… \n Wait, that door over there! That leads to the bridge.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 12){
+                Char1name.text = "You";
+                Char1speech.text = "The ship’s computer will probably be offline, but maybe the Captain’s still in there? There’s got to be some useful information, at least.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 13){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You approach the nearby door, and try to open it manually. It doesn’t move at all.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 14){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "Bridge Bulkead Status: Lockdown. Re-start generator to restore access.";
+        }
+		else if (primeInt == 15){
+                Char1name.text = "You";
+                Char1speech.text = "It’s been sealed? A mutiny sounds more and more likely. If someone locked themselves in here, it would probably be the Captain.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
 				// Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
-                Choice1a.SetActive(true); // function Choice1aFunct()  Button: "Investigate the body"
-                Choice1b.SetActive(true); // function Choice1bFunct()  Button: "Look somewhere else"
+                Choice1a.SetActive(true); // function Choice1aFunct()  Button: "Bang On Door"
+                Choice1b.SetActive(true); // function Choice1bFunct()  Button: "Search Elsewhere"
         }
 		
 		
-		// after CHOICE #1a:
-		else if (primeInt == 20){
-			 ArtEngine.SetActive(false);
-			 ArtChar1a.SetActive(true);
-                Char1name.text = "YOU";
-                Char1speech.text = "Ugh. I hate how corpes in space just float.";
+		// after CHOICE #1a - bang on door:
+		else if (primeInt == 17){
+                Char1name.text = "You";
+                Char1speech.text = "Hello? Is anyone in there? I don’t know what’s going on, but the ship is in danger!";
                 Char2name.text = "";
                 Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
         }
-       else if (primeInt == 21){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "AI";
-                Char2speech.text = "Can you tell who it is?";
-        }
-		       else if (primeInt == 22){
-                Char1name.text = "YOU";
-                Char1speech.text = "I don't recognize him. He's got a beard?";
+       else if (primeInt == 18){
+                Char1name.text = "You";
+                Char1speech.text = "We need to get the power up and running again, before we start losing gravity and life support!”";
                 Char2name.text = "";
                 Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
         }
-		       else if (primeInt == 23){
+		       else if (primeInt == 19){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "AI";
-                Char2speech.text = "Oh, no! That's Bobby, our engineer!";
+                Char2name.text = "...";
+                Char2speech.text = "You wait for a response, but hear nothing from behind the door. It remains firmly closed.";
+				Char3name.text = "";
+                Char3speech.text = "";
         }
-		 else if (primeInt == 24){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "AI";
-                Char2speech.text = "He always took such good care of me.";
-        }		
-
-       else if (primeInt == 25){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "AI";
-                Char2speech.text = "Plase move the body to see the status of the battery";
-        }
-		 else if (primeInt == 26){
-			 ArtChar1a.SetActive(false);
-			 ArtChar1a.SetActive(true);
-                Char1name.text = "YOU";
-                Char1speech.text = "OK. I am at the battery array console. It's been wrecked by laser fire? ";
+		       else if (primeInt == 20){
+                Char1name.text = "You";
+                Char1speech.text = "Well, if anyone’s in there, they must not be able to hear me. There probably won’t be a spare power cell on the bridge anyway.";
                 Char2name.text = "";
                 Char2speech.text = "";
-        }		
-
-       else if (primeInt == 27){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "AI";
-                Char2speech.text = "We need to find replacement batteries.";
-				primeInt = 39;
-        }		
-		
-
-		// after CHOICE #1b:
-       else if (primeInt == 30){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "AI";
-                Char2speech.text = "Well, we could try to start the engine without chcking the batteries...?";
-        }
-       else if (primeInt == 31){
-                Char1name.text = "YOU";
-                Char1speech.text = "Yeah. Lert's do that.";
-                Char2name.text = "";
-                Char2speech.text = "";
-        }
-		else if (primeInt == 32){
-			ArtChar1a.SetActive(false);
-			ArtEngine.SetActive(true);
-                Char1name.text = "YOU";
-                Char1speech.text = "OK. I am back at the engine. \n Wow, it's pretty lasered, too.";
-                Char2name.text = "";
-                Char2speech.text = "";
-        }
-		else if (primeInt == 33){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "AI";
-                Char2speech.text = "Try firing it up from the battery array. the red button";
-        }
-		else if (primeInt == 34){
-                Char1name.text = "YOU";
-                Char1speech.text = "I'm pressing it. Nothign is happening.";
-                Char2name.text = "";
-                Char2speech.text = "";
-        }
-			else if (primeInt == 35){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "AI";
-                Char2speech.text = "(...)";
-        }
-		else if (primeInt == 36){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "AI";
-                Char2speech.text = "I'm going to need you to move a body.";
-				primeInt = 19;
-        }
-
-		//after cstory hoices
-       else if (primeInt == 40){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "AI";
-                Char2speech.text = "To fix the battery array we need 3 batteries";
-        }
-		
-		else if (primeInt == 41){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "AI";
-                Char2speech.text = "We have " + GameHandler.batteries + " so far.";
-        }
-		
-		else if (primeInt == 42){
-                Char1name.text = "YOU";
-                Char1speech.text = "Where can I go look?";
-                Char2name.text = "";
-                Char2speech.text = "";
-        }
-
-       else if (primeInt == 43){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-				//
-                nextButton.SetActive(false);
+				Char3name.text = "";
+                Char3speech.text = "";
+				nextButton.SetActive(false);
                 allowSpace = false;
-				// Turn off "Next" button, turn on "Scene change" buttons
-				DialogueDisplay.SetActive(false);
-				if (GameHandler.sawCorridorA == false){NextScene1Button.SetActive(true);} // function SceneChange1()  Button: "Search Corridor A"
-                if (GameHandler.sawCorridorB == false){NextScene2Button.SetActive(true);} // function SceneChange2()  Button: "Search Corridor B"
-				if (GameHandler.sawCorridorC == false){NextScene3Button.SetActive(true);} // function SceneChange3()  Button: "Search Corridor C"
+                Choice1c.SetActive(true); // function Choice1cFunct()  Button: "Continue"
         }
+		
+				// after CHOICE #1b or #1c:
+       else if (primeInt == 22){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You turn away from the door to the bridge. Aside from the entrance back into the generator room, the corridor leads off in two different directions.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		 else if (primeInt == 23){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "Signs indicate that they go towards “Resources” and “Crew Quarters,” respectively.";
+				Char3name.text = "";
+                Char3speech.text = "";
+				// Turn off "Next" button, turn on "Scene change" buttons
+				nextButton.SetActive(false);
+                allowSpace = false;
+				NextScene1Button.SetActive(true);
+				NextScene2Button.SetActive(true);
+			
+			}		
+
+		// useful examples from jason
+		//else if (primeInt == 41){
+               // Char1name.text = "";
+                //Char1speech.text = "";
+                //Char2name.text = "AI";
+                //Char2speech.text = "We have " + GameHandler.batteries + " so far.";
+       // }
+
+       //else if (primeInt == 43){
+                //Char1name.text = "";
+                //Char1speech.text = "";
+               // Char2name.text = "";
+               // Char2speech.text = "";
+			
+                //nextButton.SetActive(false);
+                //allowSpace = false;
+				// Turn off "Next" button, turn on "Scene change" buttons
+				//DialogueDisplay.SetActive(false);
+				//if (GameHandler.sawCorridorA == false){NextScene1Button.SetActive(true);} // function SceneChange1()  Button: "Search Corridor A"
+               // if (GameHandler.sawCorridorB == false){NextScene2Button.SetActive(true);} // function SceneChange2()  Button: "Search Corridor B"
+				//if (GameHandler.sawCorridorC == false){NextScene3Button.SetActive(true);} // function SceneChange3()  Button: "Search Corridor C"
+        //}
 
       //Please do NOT delete this MOST HOLY bracket that ends the next() function:
      }
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
         public void Choice1aFunct(){
-                Char1name.text = "YOU";
-                Char1speech.text = "OK. Checking the battery array. I can do this.";
-                Char2name.text = "";
-                Char2speech.text = "";
-                primeInt = 19;
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You knock on the thick metal door a few times, hard. It barely vibrates.";
+				Char3name.text = "";
+                Char3speech.text = "";
+                primeInt = 16;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
                 nextButton.SetActive(true);
                 allowSpace = true;
         }
         public void Choice1bFunct(){
-                Char1name.text = "YOU";
-                Char1speech.text = "I am not comfortable aroudnd dead bodies. How else can I help?";
+                Char1name.text = "You";
+                Char1speech.text = "No way to get through a door that thick, and there probably won’t be a spare power cell on the bridge anyway. I should search elsewhere.";
                 Char2name.text = "";
                 Char2speech.text = "";
-                primeInt = 29;
+				Char3name.text = "";
+                Char3speech.text = "";
+                primeInt = 21;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
                 nextButton.SetActive(true);
                 allowSpace = true;
         }
+		public void Choice1cFunct(){
+                Char1name.text = "You";
+                Char1speech.text = "I don’t have much time, I’d better look elsewhere.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+                primeInt = 21;
+                Choice1c.SetActive(false);
+                nextButton.SetActive(true);
+                allowSpace = true;
+        }
 
         public void SceneChange1(){
-               SceneManager.LoadScene("Scene3a");
+               SceneManager.LoadScene("Scene3");
         }
         public void SceneChange2(){
-                SceneManager.LoadScene("Scene3b");
-        }
-	    public void SceneChange3(){
-                SceneManager.LoadScene("Scene3c");
+                SceneManager.LoadScene("Scene5");
         }	
 		
 }

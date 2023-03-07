@@ -204,7 +204,7 @@ public void next(){
         }
 		else if (primeInt == 20){
                 Char1name.text = "You";
-                Char1speech.text = "Heuristic Opti… what? Wait, I get it. Your name is supposed to be Horizon, right?";
+                Char1speech.text = "Heuristic Opti… what? Oh, I get it. Your name is supposed to be Horizon, right?";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -574,7 +574,7 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "Though it can’t open on its own under emergency power, the latch to open it manually proves perfectly functional.";
+                Char2speech.text = "Though it can’t open on its own under emergency power, the latch to open it manually proves functional.";
 				Char3name.text = "";
                 Char3speech.text = "";
 				nextButton.SetActive(false);
