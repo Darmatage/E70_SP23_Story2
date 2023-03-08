@@ -75,7 +75,7 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "*BEEP*...BEEP*...BEEP*...BEEP*...BEEP*...BEEP*...";
+                Char2speech.text = "*BEEP*...BEEP*...BEEP*...BEEP*...BEEP*... \n BEEP*...";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
@@ -135,7 +135,7 @@ public void next(){
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "?";
-                Char3speech.text = "Reboot complete. Danger: Generator Offline.";
+                Char3speech.text = "Reboot complete. WARNING: Generator Offline.";
         }
 		else if (primeInt == 12){
                 Char1name.text = "";
@@ -566,11 +566,35 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "Leaving the now-useless weapon, you proceed to the door.";
+                Char2speech.text = "Leaving the now-useless weapon, you proceed to the door. Next to it, you notice some shelves.";
 				Char3name.text = "";
                 Char3speech.text = "";
         }
 		else if (primeInt == 256){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "On them are several spare battery racks, which are used to connect multiple power cells together into a fully functional unit.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 257){
+                Char1name.text = "You";
+                Char1speech.text = "I’f I don’t want to be walking around with my arms full the whole time, I should take one of these.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 258){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = " You pick up a rack and sling the carrying strap over your shoulder, turning back towards the door.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 259){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";

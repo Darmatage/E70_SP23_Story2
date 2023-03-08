@@ -95,7 +95,7 @@ public void next(){
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "H.O.R.I.Z.O.N.";
-                Char3speech.text = "Assessing… Result: Probable.";
+                Char3speech.text = "Analyzing… Result: Probable.";
         }
       else if (primeInt == 6){
                 Char1name.text = "You";
@@ -124,7 +124,7 @@ public void next(){
 		
 		else if (primeInt ==9){
                 Char1name.text = "You";
-                Char1speech.text = "If I’m going to be searching all over for replacement batteries, I’d like to have some idea of what I might be running into, or at least how much of the ship has been sabotaged.";
+                Char1speech.text = "If I’m going to be searching all over for replacement batteries, I’d like to have some idea of what I might be running into, or at least how extensive any damage is.";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
