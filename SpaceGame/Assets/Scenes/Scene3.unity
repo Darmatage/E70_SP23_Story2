@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &261298109 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1864610666027627234, guid: 7a3c3a3b41586af4caff08ab288cc93d, type: 3}
+  m_PrefabInstance: {fileID: 675474075478465304}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &434543314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -519,7 +530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7826559507733295931, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
       propertyPath: m_Text
-      value: 'Story Choice 2
+      value: 'Kitchen
 
 '
       objectReference: {fileID: 0}
@@ -611,6 +622,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046077599}
   m_CullTransparentMesh: 1
+--- !u!114 &1058628148 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4570977426265713727, guid: 7a3c3a3b41586af4caff08ab288cc93d, type: 3}
+  m_PrefabInstance: {fileID: 675474075478465304}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1069896938
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,7 +822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7826559507733295931, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
       propertyPath: m_Text
-      value: 'Scene Change 1
+      value: 'Go to Engineering
 
 '
       objectReference: {fileID: 0}
@@ -816,6 +838,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2134477119283230364, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
   m_PrefabInstance: {fileID: 1356167000}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1380674744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 790873068478989220, guid: 7a3c3a3b41586af4caff08ab288cc93d, type: 3}
+  m_PrefabInstance: {fileID: 675474075478465304}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1540825061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,10 +1116,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   primeInt: 1
-  Char1name: {fileID: 0}
-  Char1speech: {fileID: 0}
-  Char2name: {fileID: 0}
-  Char2speech: {fileID: 0}
+  Char1name: {fileID: 261298109}
+  Char1speech: {fileID: 1058628148}
+  Char2name: {fileID: 2070936079}
+  Char2speech: {fileID: 1380674744}
+  Char3name: {fileID: 1917328951}
+  Char3speech: {fileID: 1948448053}
   DialogueDisplay: {fileID: 675474075478465305}
   ArtChar1: {fileID: 1046077599}
   ArtBG1: {fileID: 1069896938}
@@ -1095,6 +1130,28 @@ MonoBehaviour:
   NextScene1Button: {fileID: 1356167002}
   NextScene2Button: {fileID: 2065086053}
   nextButton: {fileID: 434543315}
+--- !u!114 &1917328951 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7333913439227910862, guid: 7a3c3a3b41586af4caff08ab288cc93d, type: 3}
+  m_PrefabInstance: {fileID: 675474075478465304}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1948448053 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6394648684724046655, guid: 7a3c3a3b41586af4caff08ab288cc93d, type: 3}
+  m_PrefabInstance: {fileID: 675474075478465304}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2065086051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1208,7 +1265,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7826559507733295931, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
       propertyPath: m_Text
-      value: 'Scene Change 2
+      value: 'Go to Kitchen
+
 
 '
       objectReference: {fileID: 0}
@@ -1224,6 +1282,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2134477119283230364, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
   m_PrefabInstance: {fileID: 2065086051}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2070936079 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6523488956278347306, guid: 7a3c3a3b41586af4caff08ab288cc93d, type: 3}
+  m_PrefabInstance: {fileID: 675474075478465304}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &675474075478465304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1496,7 +1565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7826559507733295931, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
       propertyPath: m_Text
-      value: 'Story Choice 1
+      value: 'Engineering
 
 '
       objectReference: {fileID: 0}
