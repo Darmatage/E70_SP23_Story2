@@ -956,6 +956,7 @@ GameObject:
   - component: {fileID: 1751985683}
   - component: {fileID: 1751985682}
   - component: {fileID: 1751985681}
+  - component: {fileID: 1751985685}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1054,6 +1055,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1751985685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751985680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859429490032cf148a5fb6463cb84534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primeInt: 1
+  Char1name: {fileID: 0}
+  Char1speech: {fileID: 0}
+  Char2name: {fileID: 0}
+  Char2speech: {fileID: 0}
+  DialogueDisplay: {fileID: 0}
+  ArtChar1: {fileID: 0}
+  ArtBG1: {fileID: 0}
+  Choice1a: {fileID: 0}
+  Choice1b: {fileID: 0}
+  NextScene1Button: {fileID: 0}
+  NextScene2Button: {fileID: 0}
+  NextScene3Button: {fileID: 0}
+  nextButton: {fileID: 0}
 --- !u!1001 &2065086051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1273,11 +1300,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: DIALOGUE_DISPLAY
       objectReference: {fileID: 0}
+    - target: {fileID: 9035819578999659539, guid: 7a3c3a3b41586af4caff08ab288cc93d, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a3c3a3b41586af4caff08ab288cc93d, type: 3}
 --- !u!224 &675474075478465305 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4767333469844721490, guid: 7a3c3a3b41586af4caff08ab288cc93d, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9035819578999659539, guid: 7a3c3a3b41586af4caff08ab288cc93d, type: 3}
   m_PrefabInstance: {fileID: 675474075478465304}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6493944099614529795
