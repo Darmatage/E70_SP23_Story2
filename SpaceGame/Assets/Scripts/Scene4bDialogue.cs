@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Scene0Dialogue : MonoBehaviour {
+public class Scene4bDialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
@@ -61,8 +61,8 @@ public void next(){
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You enter a moderately sized mess hall, with simple tables and benches bolted to the floor.";
 				Char3name.text = "";
                 Char3speech.text = "";
         }
@@ -71,13 +71,13 @@ public void next(){
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "Analyzing… Power source detected. \n Directive: Proceed to kitchen.";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
-                Char1name.text = "";
-                Char1speech.text = "";
+                Char1name.text = "You";
+                Char1speech.text = "Hmm, a few plates left on the tables, meals unfinished. Whatever happened must have started suddenly.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -86,19 +86,23 @@ public void next(){
        else if (primeInt == 5){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "At the back of the room are a series of cabinets, and a boxy machine emitting a soft hum.";
 				Char3name.text = "";
                 Char3speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
-               Char1name.text = "";
-                Char1speech.text = "";
+               Char1name.text = "You";
+                Char1speech.text = "A pantry, and the hydrator. Not much of a kitchen, but you make do when you’re in space.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";
+				nextButton.SetActive(false);
+                allowSpace = false;
+                Choice1a.SetActive(true); // function Choice1aFunct() - search pantry
+                Choice1b.SetActive(true); // function Choice1bFunct() - investigate hydrator
         }
        else if (primeInt ==7){
                 Char1name.text = "";
@@ -123,7 +127,39 @@ public void next(){
         }
 
 // ENCOUNTER AFTER CHOICE #1
-       else if (primeInt == 100){
+       else if (primeInt == 21){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "The cabinets are full of dried rations, the primary source of sustenance for such voyages.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==22){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "Composed of reconstructed proteins, they’re made to taste and feel somewhat like real food after being re-moisturized in the hydrator.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==23){
+                Char1name.text = "You";
+                Char1speech.text = "Beef, chicken, even chocolate. Not a bad selection here. ";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==24){
+                Char1name.text = "You";
+                Char1speech.text = "Huh. For some reason, I can’t remember which of these was my favorite.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==7){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -131,7 +167,7 @@ public void next(){
 				Char3name.text = "";
                 Char3speech.text = "";
         }
-       else if (primeInt == 101){
+       else if (primeInt == 51){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -165,27 +201,27 @@ public void next(){
      }
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
-        public void Choice1aFunct(){
+        public void Choice1aFunct(){   // search pantry
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";
-                primeInt = 99;
+                primeInt = 20;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
                 nextButton.SetActive(true);
                 allowSpace = true;
         }
-        public void Choice1bFunct(){
+        public void Choice1bFunct(){     // investigate hydrator
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";
-                primeInt = 199;
+                primeInt = 50;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
                 nextButton.SetActive(true);

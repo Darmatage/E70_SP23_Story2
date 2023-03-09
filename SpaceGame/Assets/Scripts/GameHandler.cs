@@ -11,6 +11,7 @@ public class GameHandler : MonoBehaviour {
 		public static bool sawCorridorA = false;
 		public static bool sawCorridorB = false;
 		public static bool sawCorridorC = false;
+		public static bool foundManual = false;
 
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
