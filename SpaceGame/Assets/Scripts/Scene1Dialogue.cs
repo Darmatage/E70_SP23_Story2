@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class Scene1Dialogue : MonoBehaviour {
-        public int primeInt = 1;         // This integer drives game progress!
+        public int primeInt = 0;         // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
         public Text Char2name;
@@ -29,6 +29,7 @@ public class Scene1Dialogue : MonoBehaviour {
        //public AudioSource audioSource;
         private bool allowSpace = true;
 		public bool seenGenerator = false;
+		public GameObject theDarkness;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
@@ -59,10 +60,14 @@ void Update(){         // use spacebar as Next button
 public void next(){
         primeInt = primeInt + 1;
         if (primeInt == 1){
+			
+			theDarkness.SetActive(true);
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
                //ArtChar1a.SetActive(true);
+			    StartCoroutine(FadeOut(theDarkness));
+			    
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -72,6 +77,7 @@ public void next(){
                 Char3speech.text = "";
         }
        else if (primeInt ==3){
+				theDarkness.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -676,4 +682,28 @@ public void next(){
         public void SceneChange1(){
                SceneManager.LoadScene("Scene2");
         }
+		
+		IEnumerator FadeIn(GameObject fadeImage){
+                float alphaLevel = 0;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel += 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
+        }
+
+        IEnumerator FadeOut(GameObject fadeImage){
+                float alphaLevel = 1;
+                fadeImage.GetComponent<Image>().color = new Color(0, 0, 0, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel -= 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(0, 0, 0, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
+        } 
+		
+		
 }
