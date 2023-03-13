@@ -686,8 +686,8 @@ public void next(){
 		IEnumerator FadeIn(GameObject fadeImage){
                 float alphaLevel = 0;
                 fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
-                for(int i = 0; i < 100; i++){
-                        alphaLevel += 0.01f;
+                for(int i = 0; i < 800; i++){
+                        alphaLevel += 0.00125f;
                         yield return null;
                         fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
                         Debug.Log("Alpha is: " + alphaLevel);
@@ -697,8 +697,8 @@ public void next(){
         IEnumerator FadeOut(GameObject fadeImage){
                 float alphaLevel = 1;
                 fadeImage.GetComponent<Image>().color = new Color(0, 0, 0, alphaLevel);
-                for(int i = 0; i < 100; i++){
-                        alphaLevel -= 0.01f;
+                for(int i = 0; i < 800; i++){
+                        alphaLevel -= 0.00125f;
                         yield return null;
                         fadeImage.GetComponent<Image>().color = new Color(0, 0, 0, alphaLevel);
                         Debug.Log("Alpha is: " + alphaLevel);
