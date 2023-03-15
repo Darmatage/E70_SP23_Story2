@@ -18,14 +18,21 @@ public class Scene4bDialogue : MonoBehaviour {
        //public GameObject ArtChar1b;
        //public GameObject ArtChar2;
         public GameObject ArtBG1;
-        public GameObject Choice1a;
-        public GameObject Choice1b;
+        public GameObject Choice1a;  // search panty
+        public GameObject Choice1b;     // search hydrator
+		public GameObject Choice1c;   // leave hydrator
+		public GameObject Choice1d;     //red wire
+		public GameObject Choice1e; // green wire
+		public GameObject Choice1f;    // blue wire
+		public GameObject Choice1g;
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
+		public bool redPull = false;
+		public bool greenPull = false;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
@@ -34,6 +41,10 @@ void Start(){
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
+		Choice1c.SetActive(false);
+		Choice1d.SetActive(false);
+		Choice1e.SetActive(false);
+		Choice1f.SetActive(false);
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
@@ -104,13 +115,19 @@ public void next(){
                 Choice1a.SetActive(true); // function Choice1aFunct() - search pantry
                 Choice1b.SetActive(true); // function Choice1bFunct() - investigate hydrator
         }
-       else if (primeInt ==7){
-                Char1name.text = "";
-                Char1speech.text = "";
+  
+		else if (primeInt ==61){
+                Char1name.text = "You";
+                Char1speech.text = "Time to look around.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";
+				nextButton.SetActive(false);
+                allowSpace = false;
+                Choice1a.SetActive(true); // Choice1aFunct() - search pantry
+                Choice1b.SetActive(true); //  Choice1bFunct() - investigate hydrator
+				Choice1g.SetActive(true); //  Choice1gFunct() - back to engineering
         }
        else if (primeInt == 8){
                 Char1name.text = "";
@@ -126,7 +143,7 @@ public void next(){
                 Choice1b.SetActive(true); // function Choice1bFunct()
         }
 
-// ENCOUNTER AFTER CHOICE #1
+// ENCOUNTER AFTER pantry choice
        else if (primeInt == 21){
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -145,7 +162,7 @@ public void next(){
         }
 		else if (primeInt ==23){
                 Char1name.text = "You";
-                Char1speech.text = "Beef, chicken, even chocolate. Not a bad selection here. ";
+                Char1speech.text = "Beef, chicken, even chocolate. Not a bad selection. ";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -159,15 +176,54 @@ public void next(){
 				Char3name.text = "";
                 Char3speech.text = "";
         }
-		else if (primeInt ==7){
+		else if (primeInt ==25){
                 Char1name.text = "";
                 Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "WARNING: Emergency Power Reserves critically low. Restore Main Power immediately.";
+        }
+		else if (primeInt ==26){
+                Char1name.text = "You";
+                Char1speech.text = "Yeah yeah, I know. I can eat when the ship’s out of danger. Not hungry anyway.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";
         }
-       else if (primeInt == 51){
+		// ENCOUNTER AFTER hydrator choice
+		else if (primeInt ==51){
+                Char1name.text = "You";
+                Char1speech.text = "Ah, here we go. The power cell, hooked up to the back. There’s a few different cables, actually.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==52){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "DANGER: Hyper-concentrated energy source detected. Improper discharge may result in lethal injury.";
+        }
+		else if (primeInt ==53){
+                Char1name.text = "You";
+                Char1speech.text = "Hopefully I do this right.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+				nextButton.SetActive(false);
+                allowSpace = false;
+                Choice1c.SetActive(true); // leave hydrator
+                Choice1d.SetActive(true); // red
+				Choice1e.SetActive(true); // green
+				Choice1f.SetActive(true); // blue
+        }
+       else if (primeInt == 101){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -202,8 +258,8 @@ public void next(){
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
         public void Choice1aFunct(){   // search pantry
-                Char1name.text = "";
-                Char1speech.text = "";
+                Char1name.text = "You";
+                Char1speech.text = "Let's see what's in here.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -215,8 +271,8 @@ public void next(){
                 allowSpace = true;
         }
         public void Choice1bFunct(){     // investigate hydrator
-                Char1name.text = "";
-                Char1speech.text = "";
+                Char1name.text = "You";
+                Char1speech.text = "A simple machine, but an important one. And it’s still on. Let’s see…";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -224,6 +280,71 @@ public void next(){
                 primeInt = 50;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
+                nextButton.SetActive(true);
+                allowSpace = true;
+        }
+		public void Choice1cFunct(){     // leave hydrator
+                Char1name.text = "You";
+                Char1speech.text = "Ok, one moment. If I get fried, I can’t get the ship back online. Maybe I can figure out a better way.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+                primeInt = 60;
+                Choice1c.SetActive(false);
+                Choice1d.SetActive(false);
+				Choice1e.SetActive(false);
+                Choice1f.SetActive(false);
+                nextButton.SetActive(true);
+                allowSpace = true;
+        }
+		public void Choice1dFunct(){     // red wire
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+                primeInt = 50;
+                Choice1d.SetActive(false);
+        }
+		public void Choice1eFunct(){     //green wire
+                Char1name.text = "You";
+                Char1speech.text = "A simple machine, but an important one. And it’s still on. Let’s see…";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+                primeInt = 50;
+                Choice1a.SetActive(false);
+                Choice1b.SetActive(false);
+                nextButton.SetActive(true);
+                allowSpace = true;
+        }
+		public void Choice1fFunct(){     // blue wire
+                Char1name.text = "You";
+                Char1speech.text = "A simple machine, but an important one. And it’s still on. Let’s see…";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+                primeInt = 50;
+                Choice1a.SetActive(false);
+                Choice1b.SetActive(false);
+                nextButton.SetActive(true);
+                allowSpace = true;
+        }
+		public void Choice1gFunct(){     // back to engineering
+                Char1name.text = "You";
+                Char1speech.text = "A simple machine, but an important one. And it’s still on. Let’s see…";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+                primeInt = 50;
+                Choice1a.SetActive(false); // Choice1aFunct() - search pantry
+                Choice1b.SetActive(false); //  Choice1bFunct() - investigate hydrator
+				Choice1g.SetActive(false); //  Choice1gFunct() - back to engineering
                 nextButton.SetActive(true);
                 allowSpace = true;
         }

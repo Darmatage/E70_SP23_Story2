@@ -363,7 +363,7 @@ PrefabInstance:
     - target: {fileID: 9184540789095884080, guid: 2e058bc48dc1f8640ab43d0f24f30422, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1751985686}
     - target: {fileID: 9184540789095884080, guid: 2e058bc48dc1f8640ab43d0f24f30422, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: next
@@ -562,7 +562,7 @@ PrefabInstance:
     - target: {fileID: 3123852706441463864, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1751985686}
     - target: {fileID: 3123852706441463864, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Choice1bFunct
@@ -838,7 +838,7 @@ PrefabInstance:
     - target: {fileID: 3123852706441463864, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1751985686}
     - target: {fileID: 3123852706441463864, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneChange1
@@ -1191,6 +1191,7 @@ GameObject:
   - component: {fileID: 1751985682}
   - component: {fileID: 1751985681}
   - component: {fileID: 1751985685}
+  - component: {fileID: 1751985686}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1302,6 +1303,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2ed1669dabd3744ae1f99f432ec464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1751985686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751985680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fe15c5f7133e2a47aac96f40b88aa35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   primeInt: 1
   Char1name: {fileID: 675474075478465310}
   Char1speech: {fileID: 675474075478465309}
@@ -1314,9 +1327,10 @@ MonoBehaviour:
   ArtBG1: {fileID: 1069896938}
   Choice1a: {fileID: 468296456}
   Choice1b: {fileID: 1895435229}
+  Choice1c: {fileID: 1795396676}
   NextScene1Button: {fileID: 1534819587}
-  NextScene2Button: {fileID: 0}
   nextButton: {fileID: 1457130529}
+  foundManual: 0
 --- !u!1001 &1795396674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1331,7 +1345,7 @@ PrefabInstance:
     - target: {fileID: 3123852706441463864, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1751985686}
     - target: {fileID: 3123852706441463864, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Choice1cFunct
@@ -1440,6 +1454,11 @@ PrefabInstance:
 --- !u!224 &1795396675 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5171385881763407660, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
+  m_PrefabInstance: {fileID: 1795396674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1795396676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2134477119283230364, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
   m_PrefabInstance: {fileID: 1795396674}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1895435229 stripped
@@ -1616,7 +1635,7 @@ PrefabInstance:
     - target: {fileID: 3123852706441463864, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1751985686}
     - target: {fileID: 3123852706441463864, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Choice1aFunct
