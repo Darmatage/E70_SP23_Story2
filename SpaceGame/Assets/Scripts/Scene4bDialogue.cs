@@ -28,6 +28,7 @@ public class Scene4bDialogue : MonoBehaviour {
 		public GameObject Choice1h;    // close pantry
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
+		public GameObject NextScene3Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
        //public AudioSource audioSource;
@@ -52,6 +53,7 @@ void Start(){
 		Choice1h.SetActive(false);
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
+		NextScene3Button.SetActive(false);
         nextButton.SetActive(true);
 
      // Find the gameHandler:
@@ -238,9 +240,33 @@ public void next(){
 				Choice1e.SetActive(true); // green
 				Choice1f.SetActive(true); // blue
         }
-		else if (primeInt == 101){
+		else if (primeInt == 101){                                   // After successful power cell retrieval
+                Char1name.text = "You";
+                Char1speech.text = "That's it, the cell's disconnected!";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 102){                                   // After successful power cell retrieval
                 Char1name.text = "";
                 Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You lift the weighty object, still slightly warm, and slot it into the battery you carry.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 103){                                   // After successful power cell retrieval
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "Power Cell retrieved. Please proceed.";
+        }
+		else if (primeInt == 104){                                 
+                Char1name.text = "You";
+                Char1speech.text = "Don't have to tell me twice. Let's keep moving.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -342,27 +368,64 @@ public void next(){
                 Choice1e.SetActive(false);
 			}
 			else {
-                
+				Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "Crackling electricity erupts from the machine as the power cell sputters.";
+				Char3name.text = "";
+                Char3speech.text = "";
+                primeInt = 50;
+				greenPull = true;
+                Choice1c.SetActive(false);
+                Choice1d.SetActive(false);
+				Choice1e.SetActive(false);
+				Choice1f.SetActive(false);
+				NextScene3Button.SetActive(true); 
 			}
         }
 		public void Choice1fFunct(){     // blue wire
             if (redPull == true){
 					if (greenPull == true){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "...";
-                Char2speech.text = "As you pull out the blue cable, the machine's hum peters out.";
-				Char3name.text = "";
-                Char3speech.text = "";
-                primeInt = 50;
-                Choice1f.SetActive(false);
+					Char1name.text = "";
+					Char1speech.text = "";
+					Char2name.text = "...";
+					Char2speech.text = "As you pull out the blue cable, the machine's hum peters out.";
+					Char3name.text = "";
+					Char3speech.text = "";
+					primeInt = 100;
+					Choice1f.SetActive(false);
+					Choice1c.SetActive(false);
+					nextButton.SetActive(true);
+					allowSpace = true;
 					}
 					else {
-                
+					Char1name.text = "";
+					Char1speech.text = "";
+					Char2name.text = "...";
+					Char2speech.text = "Crackling electricity erupts from the machine as the power cell sputters.";
+					Char3name.text = "";
+					Char3speech.text = "";
+					primeInt = 50;
+					Choice1c.SetActive(false);
+					Choice1d.SetActive(false);
+					Choice1e.SetActive(false);
+					Choice1f.SetActive(false);
+					NextScene3Button.SetActive(true);
 					}
 			}
 			else {
-                
+					Char1name.text = "";
+					Char1speech.text = "";
+					Char2name.text = "...";
+					Char2speech.text = "Crackling electricity erupts from the machine as the power cell sputters.";
+					Char3name.text = "";
+					Char3speech.text = "";
+					primeInt = 50;
+					Choice1c.SetActive(false);
+					Choice1d.SetActive(false);
+					Choice1e.SetActive(false);
+					Choice1f.SetActive(false);
+					NextScene3Button.SetActive(true);    
 			}   
         }
 		public void Choice1gFunct(){     // back to engineering
@@ -392,9 +455,12 @@ public void next(){
         }
 
         public void SceneChange1(){          //onward
-               SceneManager.LoadScene("Scene2a");
+               SceneManager.LoadScene("Scene5");
         }
 		public void SceneChange2(){            // back to engineering
                SceneManager.LoadScene("Scene4a");
+        }
+		public void SceneChange3(){            // back to engineering
+               SceneManager.LoadScene("End_Zap");
         }
 }

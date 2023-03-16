@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End_Lose.unity
     guid: 8251646df595ceb4e8e7ab3da41388b5
+  - enabled: 1
+    path: Assets/Scenes/End_Zap.unity
+    guid: 3402ad0aab60b0947bd1bd20022dcde1
   m_configObjects: {}
