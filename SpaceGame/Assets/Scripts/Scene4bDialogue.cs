@@ -227,7 +227,22 @@ public void next(){
                 Char3speech.text = "DANGER: Hyper-concentrated energy source detected. Improper discharge may result in lethal injury.";
         }
 		else if (primeInt ==53){
-                Char1name.text = "You";
+				if (GameHandler.foundManual == true){
+				Char1name.text = "You";
+                Char1speech.text = "Let's see what the manual says... \n Alright, Disconnection Protocol... red, green, then blue!";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+				nextButton.SetActive(false);
+                allowSpace = false;
+                Choice1c.SetActive(true); // leave hydrator
+                Choice1d.SetActive(true); // red
+				Choice1e.SetActive(true); // green
+				Choice1f.SetActive(true); // blue	
+				}	
+				else{
+				Char1name.text = "You";
                 Char1speech.text = "Hopefully I do this right.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -238,7 +253,8 @@ public void next(){
                 Choice1c.SetActive(true); // leave hydrator
                 Choice1d.SetActive(true); // red
 				Choice1e.SetActive(true); // green
-				Choice1f.SetActive(true); // blue
+				Choice1f.SetActive(true); // blue	
+				}
         }
 		else if (primeInt == 101){                                   // After successful power cell retrieval
                 Char1name.text = "You";
@@ -252,7 +268,7 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "You lift the weighty object, still slightly warm, and slot it into the battery you carry.";
+                Char2speech.text = "You lift the weighty object, still slightly warm, and slot it into the battery array you carry.";
 				Char3name.text = "";
                 Char3speech.text = "";
         }

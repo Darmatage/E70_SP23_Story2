@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class Scene4aDialogue : MonoBehaviour {
-        public int primeInt = 1;         // This integer drives game progress!
+		public GameHandler gameHandler;
+		public int primeInt = 1;         // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
         public Text Char2name;
@@ -23,11 +24,10 @@ public class Scene4aDialogue : MonoBehaviour {
 		public GameObject Choice1c; // search drawer choice
         public GameObject NextScene1Button;
         public GameObject nextButton;
-       //public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
-		public bool foundManual = false;
-
+		public bool engiSetup = false;
+		
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
@@ -134,20 +134,40 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt ==11){
-                Char1name.text = "You";
+				if(GameHandler.engiAlready == true) {
+				Char1name.text = "You";
+                Char1speech.text = "I have a feeling that anything we could use would be at that desk we saw earlier.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";	
+				}
+				else{
+				Char1name.text = "You";
                 Char1speech.text = "Hmm... \n Oh look, behind this shelf here. I wonder if this desk belonged to the chief engineer? A lot of papers around.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
-                Char3speech.text = "";
+                Char3speech.text = "";	
+				}
         }
 		else if (primeInt ==12){
-                Char1name.text = "";
+				if(GameHandler.engiAlready == true) {
+				Char1name.text = "You";
+                Char1speech.text = "Man, that's a messy desk.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";	
+				}
+				else {
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "H.O.R.I.Z.O.N.";
-                Char3speech.text = "No power source detected. \n Directive: Continue search elsewhere.";
+                Char3speech.text = "No power source detected. \n Directive: Continue search elsewhere.";	
+				}
 				nextButton.SetActive(false);
                 allowSpace = false;
                 Choice1a.SetActive(true); // function Choice1aFunct() - search desk
@@ -156,7 +176,7 @@ public void next(){
 
 // ENCOUNTER AFTER CHOICE #1
        else if (primeInt == 51){
-				if (foundManual == true){
+				if (GameHandler.foundManual == true){
                 Char1name.text = "You";
                 Char1speech.text = "Let's go get that power cell.";
                 Char2name.text = "";
@@ -252,7 +272,7 @@ public void next(){
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";
-				foundManual = true;
+				GameHandler.foundManual = true;
                 nextButton.SetActive(false);
                 allowSpace = false;
                 Choice1b.SetActive(true); // function Choice1bFunct() - move on to kitchen
@@ -302,6 +322,7 @@ public void next(){
         }
 
         public void SceneChange1(){
-               SceneManager.LoadScene("Scene4b");
+			GameHandler.engiAlready = true;
+            SceneManager.LoadScene("Scene4b");
         }
 }
