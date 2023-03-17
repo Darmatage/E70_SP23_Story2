@@ -314,7 +314,7 @@ public void next(){
                SceneManager.LoadScene("Scene3");
         }
         public void SceneChange2(){
-                SceneManager.LoadScene("Scene5");
+                SceneManager.LoadScene("Scene7");
         }	
 		
 }
