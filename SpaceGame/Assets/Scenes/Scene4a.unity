@@ -661,7 +661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7826559507733295931, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
       propertyPath: m_Text
-      value: 'Move on
+      value: 'Move On
 
 '
       objectReference: {fileID: 0}
@@ -1302,6 +1302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe15c5f7133e2a47aac96f40b88aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameHandler: {fileID: 0}
   primeInt: 1
   Char1name: {fileID: 675474075478465310}
   Char1speech: {fileID: 675474075478465309}
@@ -1317,7 +1318,7 @@ MonoBehaviour:
   Choice1c: {fileID: 1795396676}
   NextScene1Button: {fileID: 1534819587}
   nextButton: {fileID: 1457130529}
-  foundManual: 0
+  engiSetup: 0
 --- !u!1001 &1795396674
 PrefabInstance:
   m_ObjectHideFlags: 0

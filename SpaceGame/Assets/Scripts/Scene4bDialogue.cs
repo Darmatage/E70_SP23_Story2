@@ -35,8 +35,6 @@ public class Scene4bDialogue : MonoBehaviour {
         private bool allowSpace = true;
 		public bool redPull = false;
 		public bool greenPull = false;
-		public bool seenPantry = false;
-		public bool seenHydrator = false;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
@@ -70,6 +68,7 @@ void Update(){         // use spacebar as Next button
 
 //Story Units! This is the main story function. Players hit [NEXT] to progress to the next primeInt:
 public void next(){
+	if(GameHandler.kitchenAlready == false) {
         primeInt = primeInt + 1;
         if (primeInt == 1){
                 // AudioSource.Play();
@@ -132,7 +131,7 @@ public void next(){
                 Char3speech.text = "";
 				nextButton.SetActive(false);
                 allowSpace = false;
-				if (seenPantry == true){
+				if (GameHandler.seenPantry == true){
                 Choice1b.SetActive(true); //  Choice1bFunct() - investigate hydrator
 				Choice1g.SetActive(true); //  Choice1gFunct() - back to engineering
 				}
@@ -204,7 +203,7 @@ public void next(){
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";
-				seenPantry = true;
+				GameHandler.seenPantry = true;
 				nextButton.SetActive(false);
                 allowSpace = false;
 				Choice1h.SetActive(true);
@@ -291,7 +290,195 @@ public void next(){
                 allowSpace = false;
                 NextScene1Button.SetActive(true);
         }
-     }
+	}
+	else {       																									 // if you're here, kitchenAlready must be true!
+		primeInt = primeInt + 1;
+        if (primeInt == 1){
+                // AudioSource.Play();
+        }
+        else if (primeInt == 2){
+               ArtChar1.SetActive(true);
+                DialogueDisplay.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "The room remains eerily quiet, beyond the hydrator's soft hum.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+       else if (primeInt == 3){
+               Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "DIRECTIVE: \n Retrieve hydrator power cell.";
+				nextButton.SetActive(false);
+                allowSpace = false;
+                if (GameHandler.seenPantry == false) {
+					Choice1a.SetActive(true); // function Choice1aFunct() - search pantry
+				}
+				if (GameHandler.foundManual == false) {
+					Choice1g.SetActive(true);       // 1g - back to engineering
+				}
+                Choice1b.SetActive(true); // function Choice1bFunct() - investigate hydrator
+        }
+  
+		else if (primeInt ==61){
+                Char1name.text = "You";
+                Char1speech.text = "Hmm...";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+				nextButton.SetActive(false);
+                allowSpace = false;
+				Choice1b.SetActive(true); //  Choice1bFunct() - investigate hydrator
+				if (GameHandler.seenPantry == false){
+					Choice1a.SetActive(true); // Choice1aFunct() - search pantry
+				}
+				if (GameHandler.foundManual == false) {
+				Choice1g.SetActive(true); //  Choice1gFunct() - back to engineering
+				}
+        }
+
+// ENCOUNTER AFTER pantry choice
+       else if (primeInt == 21){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "The cabinets are full of dried rations, the primary source of sustenance for such voyages.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==22){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "Composed of reconstructed proteins, they’re made to taste and feel somewhat like real food after being re-moisturized in the hydrator.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==23){
+                Char1name.text = "You";
+                Char1speech.text = "Beef, chicken, even chocolate. Not a bad selection. ";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==24){
+                Char1name.text = "You";
+                Char1speech.text = "Huh. For some reason, I can’t remember which of these was my favorite.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==25){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "WARNING: Emergency Power Reserves critically low. Restore Main Power immediately.";
+        }
+		else if (primeInt ==26){
+                Char1name.text = "You";
+                Char1speech.text = "Yeah yeah, I know. I can eat when the ship’s out of danger.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+				GameHandler.seenPantry = true;
+				nextButton.SetActive(false);
+                allowSpace = false;
+				Choice1h.SetActive(true);
+        }
+		// ENCOUNTER AFTER hydrator choice
+		else if (primeInt ==51){
+                Char1name.text = "You";
+                Char1speech.text = "Ah, here we go. The power cell, hooked up to the back. There’s a few different cables, actually.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==52){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "DANGER: Hyper-concentrated energy source detected. Improper discharge may result in lethal injury.";
+        }
+		else if (primeInt ==53){
+				if (GameHandler.foundManual == true){
+				Char1name.text = "You";
+                Char1speech.text = "Let's see what the manual says... \n Alright, Disconnection Protocol... red, green, then blue!";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+				nextButton.SetActive(false);
+                allowSpace = false;
+                Choice1c.SetActive(true); // leave hydrator
+                Choice1d.SetActive(true); // red
+				Choice1e.SetActive(true); // green
+				Choice1f.SetActive(true); // blue	
+				}	
+				else{
+				Char1name.text = "You";
+                Char1speech.text = "Hopefully I do this right.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+				nextButton.SetActive(false);
+                allowSpace = false;
+                Choice1c.SetActive(true); // leave hydrator
+                Choice1d.SetActive(true); // red
+				Choice1e.SetActive(true); // green
+				Choice1f.SetActive(true); // blue	
+				}
+        }
+		else if (primeInt == 101){                                   // After successful power cell retrieval
+                Char1name.text = "You";
+                Char1speech.text = "That's it, the cell's disconnected!";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 102){                                   // After successful power cell retrieval
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You lift the weighty object, still slightly warm, and slot it into the battery array you carry.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 103){                                   // After successful power cell retrieval
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "Power Cell retrieved. Please proceed.";
+        }
+		else if (primeInt == 104){                                 
+                Char1name.text = "You";
+                Char1speech.text = "Don't have to tell me twice. Let's keep moving.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+                nextButton.SetActive(false);
+                allowSpace = false;
+                NextScene1Button.SetActive(true);
+        }
+	}
+	}
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
         public void Choice1aFunct(){   // search pantry
@@ -309,7 +496,7 @@ public void next(){
                 allowSpace = true;
         }
         public void Choice1bFunct(){     // investigate hydrator
-                if (seenHydrator == true){
+                if (GameHandler.seenHydrator == true){
                 primeInt = 52;
 				Char1name.text = "You";
                 Char1speech.text = "Hmm...";
@@ -334,7 +521,7 @@ public void next(){
                 allowSpace = true;
         }
 		public void Choice1cFunct(){     // leave hydrator
-                if (seenHydrator == true){
+                if (GameHandler.seenHydrator == true){
                 primeInt = 60;
 				Char1name.text = "You";
                 Char1speech.text = "Hmm...";
@@ -351,7 +538,7 @@ public void next(){
 				Char3name.text = "";
                 Char3speech.text = "";
                 primeInt = 60;
-				seenHydrator = true;
+				GameHandler.seenHydrator = true;
 				}
 				Choice1c.SetActive(false);
                 Choice1d.SetActive(false);
@@ -445,8 +632,14 @@ public void next(){
 			}   
         }
 		public void Choice1gFunct(){     // back to engineering
+			if (GameHandler.engiAlready == false) {
                 Char1name.text = "You";
                 Char1speech.text = "Maybe I can find something useful in Engineering Storage.";
+			}
+			else {
+				Char1name.text = "You";
+                Char1speech.text = "Maybe there's something I missed in Engineering.";
+			}
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -474,7 +667,8 @@ public void next(){
                SceneManager.LoadScene("Scene5");
         }
 		public void SceneChange2(){            // back to engineering
-               SceneManager.LoadScene("Scene4a");
+               GameHandler.kitchenAlready = true;
+			   SceneManager.LoadScene("Scene4a");
         }
 		public void SceneChange3(){            // back to engineering
                SceneManager.LoadScene("End_Zap");

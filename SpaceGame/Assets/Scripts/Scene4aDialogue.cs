@@ -53,12 +53,13 @@ void Update(){         // use spacebar as Next button
 
 //Story Units! This is the main story function. Players hit [NEXT] to progress to the next primeInt:
 public void next(){
+	if(GameHandler.engiAlready == false) {
         primeInt = primeInt + 1;
         if (primeInt == 1){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-               ArtChar1.SetActive(true);
+                ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -94,7 +95,7 @@ public void next(){
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
-               Char1name.text = "You";
+                Char1name.text = "You";
                 Char1speech.text = "So the ship’s inventory wasn’t important enough to store in your internal database, but the fact that the ship’s AI hates the engineers’ mess was?";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -134,40 +135,20 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt ==11){
-				if(GameHandler.engiAlready == true) {
 				Char1name.text = "You";
-                Char1speech.text = "I have a feeling that anything we could use would be at that desk we saw earlier.";
+                Char1speech.text = "Hmm... \n Oh look, behind this shelf here. I wonder if this desk belonged to the chief engineer? A lot of papers on it.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";	
-				}
-				else{
-				Char1name.text = "You";
-                Char1speech.text = "Hmm... \n Oh look, behind this shelf here. I wonder if this desk belonged to the chief engineer? A lot of papers around.";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";	
-				}
         }
 		else if (primeInt ==12){
-				if(GameHandler.engiAlready == true) {
-				Char1name.text = "You";
-                Char1speech.text = "Man, that's a messy desk.";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";	
-				}
-				else {
 				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "H.O.R.I.Z.O.N.";
                 Char3speech.text = "No power source detected. \n Directive: Continue search elsewhere.";	
-				}
 				nextButton.SetActive(false);
                 allowSpace = false;
                 Choice1a.SetActive(true); // function Choice1aFunct() - search desk
@@ -186,7 +167,7 @@ public void next(){
 										}
 				else {
                 Char1name.text = "You";
-                Char1speech.text = "Hopefully we can find a power cell elsewhere.";
+                Char1speech.text = "Hopefully my luck improves.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -278,6 +259,112 @@ public void next(){
                 Choice1b.SetActive(true); // function Choice1bFunct() - move on to kitchen
         }
      }
+	 else {    // if you're here, engiAlready must be true!
+		primeInt = primeInt + 1;
+		if (primeInt == 1){
+                // AudioSource.Play();
+        }
+        else if (primeInt == 2){
+                ArtChar1.SetActive(true);
+                DialogueDisplay.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "The engineering storage room is just as cluttered as you left it.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+       else if (primeInt ==3){
+                Char1name.text = "You";
+                Char1speech.text = "So many crates, and no time to dig through them. Maybe that desk I saw earlier will have something useful.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==4){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You make your way between shelves and stacks of boxes, returning to the messy desk.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==5){
+                Char1name.text = "You";
+                Char1speech.text = "So many papers. Nothing immediately useful, but what's in the drawers?";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==6){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You pull open the drawers to reveal more papers, mixed in with various nuts, bolts, and other spare mechanical parts.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 7){
+                Char1name.text = "You";
+                Char1speech.text = "There's got to be a better way to store all this. Wait, what’s under these papers?";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 8){
+                Char1name.text = "You";
+                Char1speech.text = "Wow, that’s a thick manual. And what does this sticky note on it say? The handwriting is awful. Hmm…";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 9){
+                Char1name.text = "You";
+                Char1speech.text = "“Just swapped the hydrator’s power cell, should be good for a while more. Take care of it yourself next time. Disconnection protocol is on p.480.”";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+       else if (primeInt == 10){
+                Char1name.text = "You";
+                Char1speech.text = "Sounds like this is about the kitchen’s hydrator. There was something useful here after all!";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+				GameHandler.foundManual = true;
+                nextButton.SetActive(false);
+                allowSpace = false;
+                Choice1b.SetActive(true); // function Choice1bFunct() - move on to kitchen
+        }
+		else if (primeInt == 51){
+				if (GameHandler.foundManual == true){
+                Char1name.text = "You";
+                Char1speech.text = "Let's go get that power cell.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+										}
+				else {
+                Char1name.text = "You";
+                Char1speech.text = "Hopefully my luck improves.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+				}
+				nextButton.SetActive(false);
+                allowSpace = false;
+				NextScene1Button.SetActive(true);
+        }
+	 }
+}
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
         public void Choice1aFunct(){

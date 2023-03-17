@@ -14,7 +14,8 @@ public class GameHandler : MonoBehaviour {
 		public static bool foundManual = false;
 		public static bool kitchenAlready = false;
 		public static bool engiAlready = false;
-
+		public static bool seenPantry = false;
+		public static bool seenHydrator = false;
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
         public AudioMixer MyMusicMixer;
