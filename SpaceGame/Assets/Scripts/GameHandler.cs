@@ -8,14 +8,16 @@ using UnityEngine.Audio;
 public class GameHandler : MonoBehaviour {
 
         public static int batteries = 0;
-		public static bool sawCorridorA = false;
-		public static bool sawCorridorB = false;
-		public static bool sawCorridorC = false;
+		public static bool corridorCAlready = false;
 		public static bool foundManual = false;
 		public static bool kitchenAlready = false;
 		public static bool engiAlready = false;
 		public static bool seenPantry = false;
 		public static bool seenHydrator = false;
+		public static bool armoryAlready = false;
+		public static bool barracksAlready = false;
+		public static bool cargoAlready = false;
+		public static bool guardsAlert = false;
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
         public AudioMixer MyMusicMixer;
