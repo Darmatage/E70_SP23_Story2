@@ -8,16 +8,21 @@ using UnityEngine.Audio;
 public class GameHandler : MonoBehaviour {
 
         public static int batteries = 0;
-		public static bool corridorCAlready = false;
-		public static bool foundManual = false;
-		public static bool kitchenAlready = false;
-		public static bool engiAlready = false;
-		public static bool seenPantry = false;
-		public static bool seenHydrator = false;
-		public static bool armoryAlready = false;
+		public static bool corridorCAlready = false;           // have you visited corridor C already?
+		public static bool corridorBAlready = false;           // have you visited corridor B already?
+		public static bool foundManual = false;                 // have you found the hydrator manual in engineering?
+		public static bool kitchenAlready = false;             // have you been to the kitchen already?
+		public static bool engiAlready = false;               // have you looked in engineering storage?
+		public static bool seenPantry = false;               // have you investigated the kitchen's pantry?
+		public static bool seenHydrator = false;            // have you investigated the kitchen's hydrator?
+		public static bool armoryAlready = false;          // have you visited the armory already?
+		public static bool armoryCell = false;          // have you retrieved the power cell from the armory's back room?
 		public static bool barracksAlready = false;
-		public static bool cargoAlready = false;
-		public static bool guardsAlert = false;
+		public static bool airlockAlready = false;
+		public static bool cargoAlready = false;           
+		public static bool guardsAlert = false;            // have you alerted the guards in the armory?
+		public static bool guardsTension = false;         // should you see the 'armory escape' dialogue when returning to corridor c?
+		public static bool hasScrewdriver = false;       // got screwdriver from barracks?
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
         public AudioMixer MyMusicMixer;
