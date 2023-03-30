@@ -1361,12 +1361,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameHandler: {fileID: 0}
   primeInt: 1
-  Char1name: {fileID: 675474075478465310}
-  Char1speech: {fileID: 675474075478465309}
-  Char2name: {fileID: 675474075478465308}
-  Char2speech: {fileID: 675474075478465307}
-  Char3name: {fileID: 1693955064}
-  Char3speech: {fileID: 69620925}
+  PlayerYouName: {fileID: 675474075478465310}
+  PlayerYouSpeech: {fileID: 675474075478465309}
+  NarratorName: {fileID: 675474075478465308}
+  NarratorSpeech: {fileID: 675474075478465307}
+  HorizonName: {fileID: 1693955064}
+  HorizonSpeech: {fileID: 69620925}
   DialogueDisplay: {fileID: 675474075478465306}
   ArtChar1: {fileID: 1046077599}
   ArtBG1: {fileID: 1069896938}
@@ -1375,6 +1375,7 @@ MonoBehaviour:
   Choice1c: {fileID: 1795396676}
   NextScene1Button: {fileID: 1534819587}
   nextButton: {fileID: 1457130529}
+  audioSource: {fileID: 0}
   engiSetup: 0
 --- !u!1001 &1795396674
 PrefabInstance:
