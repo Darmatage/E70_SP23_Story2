@@ -7,12 +7,12 @@ using UnityEngine.Audio;
 
 public class Scene3Dialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
-        public Text Char1name;
-        public Text Char1speech;
-        public Text Char2name;
-        public Text Char2speech;
-		public Text Char3name;
-		public Text Char3speech;
+        public Text PlayerYouName;
+        public Text PlayerYouSpeech;
+        public Text NarratorName;
+        public Text NarratorSpeech;
+		public Text HorizonName;
+		public Text HorizonSpeech;
         public GameObject DialogueDisplay;
         public GameObject ArtChar1;
        //public GameObject ArtChar1b;
@@ -24,7 +24,7 @@ public class Scene3Dialogue : MonoBehaviour {
         public GameObject NextScene2Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
-       //public AudioSource audioSource;
+       public AudioSource audioSource;
         private bool allowSpace = true;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
@@ -39,6 +39,7 @@ void Start(){
         nextButton.SetActive(true);
 
      // Find the gameHandler:
+     audioSource = GetComponent<AudioSource>();
      // gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
    }
 
@@ -58,101 +59,101 @@ public void next(){
         }
         else if (primeInt == 2){
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "...";
-                Char2speech.text = "You enter the corridor marked “Resources,” doing your best to move quickly without making too much noise.";
-				Char3name.text = "";
-                Char3speech.text = "";
+                PlayerYouName.text = "";
+                PlayerYouSpeech.text = "";
+                NarratorName.text = "...";
+                NarratorSpeech.text = "You enter the corridor marked “Resources,” doing your best to move quickly without making too much noise.";
+				HorizonName.text = "";
+                HorizonSpeech.text = "";
         }
        else if (primeInt ==3){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "...";
-                Char2speech.text = "Compared to the area you just left, this hallway is almost pristine. Turning a corner, you find the end of the corridor - and two more doors.";
-				Char3name.text = "";
-                Char3speech.text = "";
+                PlayerYouName.text = "";
+                PlayerYouSpeech.text = "";
+                NarratorName.text = "...";
+                NarratorSpeech.text = "Compared to the area you just left, this hallway is almost pristine. Turning a corner, you find the end of the corridor - and two more doors.";
+				HorizonName.text = "";
+                HorizonSpeech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
-                Char1name.text = "You";
-                Char1speech.text = "Let’s see… we’ve got the kitchen, and engineering storage.";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
+                PlayerYouName.text = "You";
+                PlayerYouSpeech.text = "Let’s see… we’ve got the kitchen, and engineering storage.";
+                NarratorName.text = "";
+                NarratorSpeech.text = "";
+				HorizonName.text = "";
+                HorizonSpeech.text = "";
         }
        else if (primeInt == 5){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "H.O.R.I.Z.O.N.";
-                Char3speech.text = "Analyzing… \n Directive: Search engineering storage.";
+                PlayerYouName.text = "";
+                PlayerYouSpeech.text = "";
+                NarratorName.text = "";
+                NarratorSpeech.text = "";
+				HorizonName.text = "H.O.R.I.Z.O.N.";
+                HorizonSpeech.text = "Analyzing… \n Directive: Search engineering storage.";
         }
        else if (primeInt == 6){
-                Char1name.text = "You";
-                Char1speech.text = "I’ll decide on my own, thanks.";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
+                PlayerYouName.text = "You";
+                PlayerYouSpeech.text = "I’ll decide on my own, thanks.";
+                NarratorName.text = "";
+                NarratorSpeech.text = "";
+				HorizonName.text = "";
+                HorizonSpeech.text = "";
         }
        else if (primeInt == 7){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "H.O.R.I.Z.O.N.";
-                Char3speech.text = "WARNING: all crew members are advised to follow directives issued by this unit. Directives are optimally generated for maximum safety and efficiency.";
+                PlayerYouName.text = "";
+                PlayerYouSpeech.text = "";
+                NarratorName.text = "";
+                NarratorSpeech.text = "";
+				HorizonName.text = "H.O.R.I.Z.O.N.";
+                HorizonSpeech.text = "WARNING: all crew members are advised to follow directives issued by this unit. Directives are optimally generated for maximum safety and efficiency.";
         }
 		else if (primeInt == 8){
-                Char1name.text = "You";
-                Char1speech.text = "I thought you said your data library was offline. How would you know which way to go if you can’t tell me anything about the ship’s status?";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
+                PlayerYouName.text = "You";
+                PlayerYouSpeech.text = "I thought you said your data library was offline. How would you know which way to go if you can’t tell me anything about the ship’s status?";
+                NarratorName.text = "";
+                NarratorSpeech.text = "";
+				HorizonName.text = "";
+                HorizonSpeech.text = "";
         }
 		else if (primeInt == 9){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "H.O.R.I.Z.O.N.";
-                Char3speech.text = "Unit: H.O.R.I.Z.O.N. is equipped with advanced deductive algorithms and logic calculators. ";
+                PlayerYouName.text = "";
+                PlayerYouSpeech.text = "";
+                NarratorName.text = "";
+                NarratorSpeech.text = "";
+				HorizonName.text = "H.O.R.I.Z.O.N.";
+                HorizonSpeech.text = "Unit: H.O.R.I.Z.O.N. is equipped with advanced deductive algorithms and logic calculators. ";
         }
 		else if (primeInt == 10){
-                Char1name.text = "You";
-                Char1speech.text = "…So, you’re guessing.";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
+                PlayerYouName.text = "You";
+                PlayerYouSpeech.text = "…So, you’re guessing.";
+                NarratorName.text = "";
+                NarratorSpeech.text = "";
+				HorizonName.text = "";
+                HorizonSpeech.text = "";
         }
 		else if (primeInt == 11){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "H.O.R.I.Z.O.N.";
-                Char3speech.text = "WARNING: Hardware Anthropomorphization detected.";
+                PlayerYouName.text = "";
+                PlayerYouSpeech.text = "";
+                NarratorName.text = "";
+                NarratorSpeech.text = "";
+				HorizonName.text = "H.O.R.I.Z.O.N.";
+                HorizonSpeech.text = "WARNING: Hardware Anthropomorphization detected.";
         }
 		else if (primeInt == 12){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "H.O.R.I.Z.O.N.";
-                Char3speech.text = "Do not assign human qualities to this unit’s calculations, which are calibrated to deliver mathematically optimized solutions with unmatched precision.";
+                PlayerYouName.text = "";
+                PlayerYouSpeech.text = "";
+                NarratorName.text = "";
+                NarratorSpeech.text = "";
+				HorizonName.text = "H.O.R.I.Z.O.N.";
+                HorizonSpeech.text = "Do not assign human qualities to this unit’s calculations, which are calibrated to deliver mathematically optimized solutions with unmatched precision.";
         }
        else if (primeInt == 13){
-                Char1name.text = "You";
-                Char1speech.text = "Yeah, well, it’s still a guess.";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
+                PlayerYouName.text = "You";
+                PlayerYouSpeech.text = "Yeah, well, it’s still a guess.";
+                NarratorName.text = "";
+                NarratorSpeech.text = "";
+				HorizonName.text = "";
+                HorizonSpeech.text = "";
                 // Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -162,23 +163,23 @@ public void next(){
 
 // ENCOUNTER AFTER CHOICE #1
        else if (primeInt == 16){
-                Char1name.text = "You";
-                Char1speech.text = "That’s my guess too.";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
+                PlayerYouName.text = "You";
+                PlayerYouSpeech.text = "That’s my guess too.";
+                NarratorName.text = "";
+                NarratorSpeech.text = "";
+				HorizonName.text = "";
+                HorizonSpeech.text = "";
 				nextButton.SetActive(false);
                 allowSpace = false;
 				NextScene1Button.SetActive(true);
         }
        else if (primeInt == 21){
-                Char1name.text = "You";
-                Char1speech.text = "Food is one of the most important things for the crew, so the facilities for storing and preparing it probably have their own backup power.";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
+                PlayerYouName.text = "You";
+                PlayerYouSpeech.text = "Food is one of the most important things for the crew, so the facilities for storing and preparing it probably have their own backup power.";
+                NarratorName.text = "";
+                NarratorSpeech.text = "";
+				HorizonName.text = "";
+                HorizonSpeech.text = "";
                 nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene2Button.SetActive(true);
@@ -187,10 +188,10 @@ public void next(){
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
         public void Choice1aFunct(){
-                Char1name.text = "YOU";
-                Char1speech.text = "That being said, engineering storage does sound like the kind of place you’d find a power cell.";
-                Char2name.text = "";
-                Char2speech.text = "";
+                PlayerYouName.text = "YOU";
+                PlayerYouSpeech.text = "That being said, engineering storage does sound like the kind of place you’d find a power cell.";
+                NarratorName.text = "";
+                NarratorSpeech.text = "";
                 primeInt = 15;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
@@ -198,10 +199,10 @@ public void next(){
                 allowSpace = true;
         }
         public void Choice1bFunct(){
-                Char1name.text = "YOU";
-                Char1speech.text = "I see why you’d pick engineering, but we’re going in here.";
-                Char2name.text = "";
-                Char2speech.text = "";
+                PlayerYouName.text = "YOU";
+                PlayerYouSpeech.text = "I see why you’d pick engineering, but we’re going in here.";
+                NarratorName.text = "";
+                NarratorSpeech.text = "";
                 primeInt = 20;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
@@ -210,9 +211,11 @@ public void next(){
         }
 
         public void SceneChange1(){
+               audioSource.Play();
                SceneManager.LoadScene("Scene4a");
         }
         public void SceneChange2(){
+            audioSource.Play();
                 SceneManager.LoadScene("Scene4b");
         }
 }
