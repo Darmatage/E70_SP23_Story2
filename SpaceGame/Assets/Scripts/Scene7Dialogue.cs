@@ -237,7 +237,10 @@ public void next(){
                 Char2name.text = "...";
                 Char2speech.text = "The voices continue their hushed argument.";
 				Char3name.text = "";
-                Char3speech.text = "";	
+                Char3speech.text = "";
+				nextButton.SetActive(false);
+				allowSpace = false;
+				NextScene1Button.SetActive(true);				
 			}
 			else{
                 Char1name.text = "YOU";
@@ -246,10 +249,10 @@ public void next(){
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";
+				nextButton.SetActive(false);
+				allowSpace = false;
+				NextScene1Button.SetActive(true);
 			}
-			nextButton.SetActive(false);
-            allowSpace = false;
-			NextScene1Button.SetActive(true);
         }
 		
      }
@@ -270,26 +273,27 @@ public void next(){
                 Char3speech.text = "";
 				nextButton.SetActive(false);
 				allowSpace = false;
-				if (GameHandler.hasScrewdriver == false) {
-					Choice1b.SetActive(true);                         // ChoiceB: Investigate Barracks, if you haven't gotten the screwdriver yet
-				}
-				if (GameHandler.airlockAlready == false) {
-					Choice1d.SetActive(true);                             // ChoiceD: Investigate Airlock, if you haven't decided it's not helpful yet.	
-				}
-				if (GameHandler.armoryCell == false) {
-					Choice1c.SetActive(true);                             // ChoiceC: Investigate Cargo, if you haven't retrieved the battery from the armory's back room yet
-				}
-				if (GameHandler.corridorBAlready == true) {            // if you've already been through the central bottleneck, then you need 3 batts to move on
-					if (GameHandler.batteries > 2) {
-						Choice1e.SetActive(true); // ChoiceE: Move On
+					if (GameHandler.hasScrewdriver == false) {
+						Choice1b.SetActive(true);                         // ChoiceB: Investigate Barracks, if you haven't gotten the screwdriver yet
+					}
+					if (GameHandler.airlockAlready == false) {
+						Choice1d.SetActive(true);                             // ChoiceD: Investigate Airlock, if you haven't decided it's not helpful yet.	
+					}
+					if (GameHandler.armoryCell == false) {
+						Choice1c.SetActive(true);                             // ChoiceC: Investigate Cargo, if you haven't retrieved the battery from the armory's back room yet
+					}
+					if (GameHandler.corridorBAlready == true) {            // if you've already been through the central bottleneck, then you need 3 batts to move on
+						if (GameHandler.batteries > 2) {
+							Choice1e.SetActive(true); // ChoiceE: Move On
+						}
+					}
+					else {                                                 // but if you haven't seen the midpoint yet, then you only need 1 battery to move on!
+						if (GameHandler.batteries > 0) {
+							Choice1e.SetActive(true); // ChoiceE: Move On
+						}	
 					}
 				}
-				else {                                                 // but if you haven't seen the midpoint yet, then you only need 1 battery to move on!
-					if (GameHandler.batteries > 0) {
-						Choice1e.SetActive(true); // ChoiceE: Move On
-					}	
-				}
-				}	
+				
 			}
 			else {                                         // The alert just happened! dodge those beams!
 				primeInt = primeInt + 1;
@@ -581,6 +585,30 @@ public void next(){
 					}	
 				}
 			}
+			else if (primeInt == 30){
+					if (GameHandler.armoryAlready == true) {
+						Char1name.text = "";
+						Char1speech.text = "";
+						Char2name.text = "...";
+						Char2speech.text = "The voices continue their hushed argument.";
+						Char3name.text = "";
+						Char3speech.text = "";
+						nextButton.SetActive(false);
+						allowSpace = false;
+						NextScene1Button.SetActive(true);				
+					}
+					else{
+						Char1name.text = "YOU";
+						Char1speech.text = "Sounds like there's people in there...";
+						Char2name.text = "";
+						Char2speech.text = "";
+						Char3name.text = "";
+						Char3speech.text = "";
+						nextButton.SetActive(false);
+						allowSpace = false;
+						NextScene1Button.SetActive(true);
+					}
+				}
 		}
 	 }
 }                    // bottom of next function
@@ -615,12 +643,13 @@ public void next(){
 				Choice1c.SetActive(false);
 				Choice1d.SetActive(false);
 				Choice1e.SetActive(false);
+				NextScene2Button.SetActive(true);
         }
 		public void Choice1cFunct(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "You enter the cargo bay.";
+                Char2speech.text = "You go toward the cargo bay.";
 				Char3name.text = "";
                 Char3speech.text = "";
                 primeInt = 49;
@@ -629,6 +658,7 @@ public void next(){
 				Choice1c.SetActive(false);
 				Choice1d.SetActive(false);
 				Choice1e.SetActive(false);
+				NextScene3Button.SetActive(true);
         }
 		public void Choice1dFunct(){
                 Char1name.text = "";
@@ -643,10 +673,11 @@ public void next(){
 				Choice1c.SetActive(false);
 				Choice1d.SetActive(false);
 				Choice1e.SetActive(false);
+				NextScene4Button.SetActive(true);
         }
 		public void Choice1eFunct(){        // Choice E: Move On
                 Char1name.text = "You";
-                Char1speech.text = "We don't have time to look around.";
+                Char1speech.text = "We don't have any more time to look around.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -657,8 +688,7 @@ public void next(){
 				Choice1c.SetActive(false);
 				Choice1d.SetActive(false);
 				Choice1e.SetActive(false);
-                nextButton.SetActive(true);
-                allowSpace = true;
+				NextScene5Button.SetActive(true);
         }
 		public void Choice1fFunct(){        // Choice F: After alerting guards, this determines the dialogue that you'll see based on where you are in the story.
                 Char1name.text = "YOU";
