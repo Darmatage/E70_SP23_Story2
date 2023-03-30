@@ -162,7 +162,7 @@ public void next(){
                 allowSpace = false;
                 NextScene2Button.SetActive(true);
         }
-     }
+     }                                                       // END OF NEXT FUNCTION
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
         public void Choice1aFunct(){

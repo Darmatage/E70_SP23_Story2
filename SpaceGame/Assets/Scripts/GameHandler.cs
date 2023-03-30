@@ -26,6 +26,11 @@ public class GameHandler : MonoBehaviour {
 		public static bool guardsTension = false;         // should you see the 'armory escape' dialogue when returning to corridor c?
 		public static bool hasScrewdriver = false;       // got screwdriver from barracks?
         public static bool GameisPaused = false;
+		public static bool cryoAlready = false;          // have you visited cryo yet?
+		public static bool cryoCells = false;          // did you take the power cells from the cryo facility?
+		public static bool medbayAlready = false;              // have you visited the medbay yet?
+		public static bool capQuartersAlready = false;              // have you visited the captain's quarters yet?
+		public static bool capsGun = false;                    // did you take the captain's gun?
         public GameObject pauseMenuUI;
         public AudioMixer MyMusicMixer;
         public static float volumeLevel = 1.0f;
