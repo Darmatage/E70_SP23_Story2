@@ -19,7 +19,9 @@ public class GameHandler : MonoBehaviour {
 		public static bool armoryCell = false;          // have you retrieved the power cell from the armory's back room?
 		public static bool barracksAlready = false;
 		public static bool airlockAlready = false;
-		public static bool cargoAlready = false;           
+		public static bool ventAlready = false;           //have you investigated the vent in cargo yet?
+		public static bool cargoAlready = false;           //have you visited the cargo hold already?
+		public static bool cratesAlready = false;           //have you searched the cargo crates already?
 		public static bool guardsAlert = false;            // have you alerted the guards in the armory?
 		public static bool guardsTension = false;         // should you see the 'armory escape' dialogue when returning to corridor c?
 		public static bool hasScrewdriver = false;       // got screwdriver from barracks?

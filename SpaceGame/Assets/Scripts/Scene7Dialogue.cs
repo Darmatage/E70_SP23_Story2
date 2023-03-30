@@ -237,7 +237,10 @@ public void next(){
                 Char2name.text = "...";
                 Char2speech.text = "The voices continue their hushed argument.";
 				Char3name.text = "";
-                Char3speech.text = "";	
+                Char3speech.text = "";
+				nextButton.SetActive(false);
+				allowSpace = false;
+				NextScene1Button.SetActive(true);				
 			}
 			else{
                 Char1name.text = "YOU";
@@ -246,10 +249,10 @@ public void next(){
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";
+				nextButton.SetActive(false);
+				allowSpace = false;
+				NextScene1Button.SetActive(true);
 			}
-			nextButton.SetActive(false);
-            allowSpace = false;
-			NextScene1Button.SetActive(true);
         }
 		
      }
@@ -289,7 +292,8 @@ public void next(){
 						Choice1e.SetActive(true); // ChoiceE: Move On
 					}	
 				}
-				}	
+				}
+				
 			}
 			else {                                         // The alert just happened! dodge those beams!
 				primeInt = primeInt + 1;
@@ -581,6 +585,30 @@ public void next(){
 					}	
 				}
 			}
+			else if (primeInt == 30){
+					if (GameHandler.armoryAlready == true) {
+						Char1name.text = "";
+						Char1speech.text = "";
+						Char2name.text = "...";
+						Char2speech.text = "The voices continue their hushed argument.";
+						Char3name.text = "";
+						Char3speech.text = "";
+						nextButton.SetActive(false);
+						allowSpace = false;
+						NextScene1Button.SetActive(true);				
+					}
+					else{
+						Char1name.text = "YOU";
+						Char1speech.text = "Sounds like there's people in there...";
+						Char2name.text = "";
+						Char2speech.text = "";
+						Char3name.text = "";
+						Char3speech.text = "";
+						nextButton.SetActive(false);
+						allowSpace = false;
+						NextScene1Button.SetActive(true);
+					}
+				}
 		}
 	 }
 }                    // bottom of next function
@@ -615,12 +643,13 @@ public void next(){
 				Choice1c.SetActive(false);
 				Choice1d.SetActive(false);
 				Choice1e.SetActive(false);
+				NextScene2Button.SetActive(true);
         }
 		public void Choice1cFunct(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "You enter the cargo bay.";
+                Char2speech.text = "You go toward the cargo bay.";
 				Char3name.text = "";
                 Char3speech.text = "";
                 primeInt = 49;
@@ -629,6 +658,7 @@ public void next(){
 				Choice1c.SetActive(false);
 				Choice1d.SetActive(false);
 				Choice1e.SetActive(false);
+				NextScene3Button.SetActive(true);
         }
 		public void Choice1dFunct(){
                 Char1name.text = "";
@@ -643,6 +673,7 @@ public void next(){
 				Choice1c.SetActive(false);
 				Choice1d.SetActive(false);
 				Choice1e.SetActive(false);
+				NextScene4Button.SetActive(true);
         }
 		public void Choice1eFunct(){        // Choice E: Move On
                 Char1name.text = "You";
