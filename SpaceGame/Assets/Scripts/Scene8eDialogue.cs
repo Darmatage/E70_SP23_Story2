@@ -18,10 +18,7 @@ public class Scene8eDialogue : MonoBehaviour {
        //public GameObject ArtChar1b;
        //public GameObject ArtChar2;
         public GameObject ArtBG1;
-        public GameObject Choice1a;
-        public GameObject Choice1b;
         public GameObject NextScene1Button;
-        public GameObject NextScene2Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
        //public AudioSource audioSource;
@@ -32,10 +29,7 @@ void Start(){
         DialogueDisplay.SetActive(false);
         ArtChar1.SetActive(false);
         ArtBG1.SetActive(true);
-        Choice1a.SetActive(false);
-        Choice1b.SetActive(false);
         NextScene1Button.SetActive(false);
-        NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
 
      // Find the gameHandler:
@@ -61,14 +55,14 @@ public void next(){
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You shimmy through the narrow ventilation shaft, trying not to make too much noise.";
 				Char3name.text = "";
                 Char3speech.text = "";
         }
        else if (primeInt ==3){
-                Char1name.text = "";
-                Char1speech.text = "";
+                Char1name.text = "YOU";
+                Char1speech.text = "Phew, warm in here. Luckily, it can't be that far to the grate in the armory.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -78,14 +72,14 @@ public void next(){
        else if (primeInt == 4){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You climb around a few tight turns before finding yourself facing a metal grate like the one you just came through.";
 				Char3name.text = "";
                 Char3speech.text = "";
         }
        else if (primeInt == 5){
-                Char1name.text = "";
-                Char1speech.text = "";
+                Char1name.text = "YOU";
+                Char1speech.text = "Oh, please don't be screwed shut...";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -95,107 +89,183 @@ public void next(){
        else if (primeInt == 6){
                Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You give the grate a careful prod.";
 				Char3name.text = "";
                 Char3speech.text = "";
         }
        else if (primeInt ==7){
-                Char1name.text = "";
-                Char1speech.text = "";
+                Char1name.text = "YOU";
+                Char1speech.text = "Oh, thank goodness. Some kind of fastener clip. I'll just take these off...";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";
         }
-       else if (primeInt == 8){
+		else if (primeInt ==8){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "The grate comes loose in your hands, and you set it aside as you gingerly crawl through the new opening.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==9){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "Power source detected.";
+        }
+		else if (primeInt ==10){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You open your mouth to respond, but you stop yourself as you take in the space you're crawling into.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==11){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You're on the floor between a couple boxes. By the sound of voices coming through the open doorway of this small room, this must be the back room of the armory.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==12){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "The boxes give you some cover as you right yourself and peer over them. You can see several crewmembers in the larger room beyond the doorway.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==13){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "Thankfully, none of them seem to be paying attention to the back room.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==14){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "Power source detected. \n Directive: Retrieve power cell.";
+        }
+		else if (primeInt ==15){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You suppress an annoyed response to the AI's obvious statement, looking around the room.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==16){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "And there is is. Against the back wall of the small room sits a charging rack for the laser rifles held by the crew.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==17){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "For a moment you entertain the idea of attempting to communicate with them, but you push it aside.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==18){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You're about to have what you need. Better not to risk complications.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==19){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "The cell is slotted into a mercifully simple port on the side of the charging rack.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==20){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You take hold of the exposed end, clenching the handle tight as you begin withdrawing it.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==21){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You move agonizingly slowly to avoid making noise.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==22){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "All the while, you keep an ear aimed at the door behind you, waiting for any change in the muffled conversation happening in the other room.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==23){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "Your luck holds. Finally, the full weight of the cell settles into your hands as the last few inches pull free.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt ==24){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "Power cell retrieved. \n Directive: Continue on.";
+        }
+		else if (primeInt ==25){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "You hold back a sigh as you nestle the cell into your battery array and turn back toward the grate you came through.";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+       else if (primeInt == 26){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "The journey through the cramped space is easier the second time around, and you soon find yourself crawling out into the cargo bay and returning to the corridor.";
 				Char3name.text = "";
                 Char3speech.text = "";
                 // Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
-                Choice1a.SetActive(true); // function Choice1aFunct()
-                Choice1b.SetActive(true); // function Choice1bFunct()
-        }
-
-// ENCOUNTER AFTER CHOICE #1
-       else if (primeInt == 100){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
-        }
-       else if (primeInt == 101){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
-                nextButton.SetActive(false);
-                allowSpace = false;
-                NextScene1Button.SetActive(true);
-        }
-
-       else if (primeInt == 200){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
-        }
-       else if (primeInt == 201){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
-                nextButton.SetActive(false);
-                allowSpace = false;
-                NextScene2Button.SetActive(true);
+				NextScene1Button.SetActive(true);
         }
      }
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
-        public void Choice1aFunct(){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
-                primeInt = 99;
-                Choice1a.SetActive(false);
-                Choice1b.SetActive(false);
-                nextButton.SetActive(true);
-                allowSpace = true;
-        }
-        public void Choice1bFunct(){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
-                primeInt = 199;
-                Choice1a.SetActive(false);
-                Choice1b.SetActive(false);
-                nextButton.SetActive(true);
-                allowSpace = true;
-        }
+       
 
         public void SceneChange1(){
-               SceneManager.LoadScene("Scene2a");
-        }
-        public void SceneChange2(){
-                SceneManager.LoadScene("Scene2b");
+				GameHandler.batteries = GameHandler.batteries + 1;
+				GameHandler.armoryCell = true;
+				SceneManager.LoadScene("Scene7");
         }
 }
