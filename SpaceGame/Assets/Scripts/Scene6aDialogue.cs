@@ -16,9 +16,12 @@ public class Scene6aDialogue : MonoBehaviour {
 		public Text Char4name;
 		public Text Char4speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
-       //public GameObject ArtChar1b;
-       //public GameObject ArtChar2;
+        public GameObject ArtChar1a;
+		public GameObject ArtChar1b;
+		public GameObject ArtChar1c;
+		public GameObject ArtChar1d;
+		public GameObject ArtChar1e;
+	   
         public GameObject ArtBG1;
         public GameObject Choice1a;           // talk
         public GameObject Choice1b;               // shoot
@@ -35,7 +38,12 @@ public class Scene6aDialogue : MonoBehaviour {
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false);
+        ArtChar1a.SetActive(false);
+		ArtChar1b.SetActive(false);
+		ArtChar1c.SetActive(false);
+		ArtChar1d.SetActive(false);
+		ArtChar1e.SetActive(false);
+		
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -64,7 +72,7 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-               ArtChar1.SetActive(true);
+               
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -87,6 +95,7 @@ public void next(){
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
+		   ArtChar1c.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -178,6 +187,8 @@ public void next(){
                 Char4speech.text = "";
         }
        else if (primeInt == 13){
+		   ArtChar1c.SetActive(false);
+		   ArtChar1a.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -254,7 +265,7 @@ public void next(){
                 Char4speech.text = "";
 				nextButton.SetActive(false);
                 allowSpace = false;
-				NextScene2Button.SetActive(false);
+				NextScene2Button.SetActive(true);
         }
        else if (primeInt == 101){                            // you chose to shoot
                 Char1name.text = ""; 
