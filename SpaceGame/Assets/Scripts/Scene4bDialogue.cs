@@ -666,6 +666,7 @@ public void next(){
 
         public void SceneChange1(){          //onward
                audioSourceDoor.Play();
+			   GameHandler.batteries = GameHandler.batteries + 1;
 			   StartCoroutine(SceneChangeDelay("Scene5"));
         }
 		public void SceneChange2(){            // back to engineering

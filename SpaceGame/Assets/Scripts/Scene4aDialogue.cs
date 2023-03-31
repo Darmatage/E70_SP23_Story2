@@ -15,9 +15,11 @@ public class Scene4aDialogue : MonoBehaviour {
 		public Text HorizonName;
 		public Text HorizonSpeech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
-       //public GameObject ArtChar1b;
-       //public GameObject ArtChar2;
+        public GameObject DeskArt_1;
+		public GameObject DeskArt_2;
+		public GameObject DeskArt_3;
+		public GameObject DeskArt_4;
+		public GameObject BookArt;
         public GameObject ArtBG1;
         public GameObject Choice1a;  // search desk choice
         public GameObject Choice1b; // move on to kitchen choice
@@ -31,7 +33,11 @@ public class Scene4aDialogue : MonoBehaviour {
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false);
+        DeskArt_1.SetActive(false);
+		DeskArt_2.SetActive(false);
+		DeskArt_3.SetActive(false);
+		DeskArt_4.SetActive(false);
+		BookArt.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -59,7 +65,6 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-                ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 PlayerYouName.text = "";
                 PlayerYouSpeech.text = "";
@@ -143,6 +148,7 @@ public void next(){
                 HorizonSpeech.text = "";	
         }
 		else if (primeInt ==12){
+				DeskArt_1.SetActive(true);
 				PlayerYouName.text = "";
                 PlayerYouSpeech.text = "";
                 NarratorName.text = "";
@@ -158,6 +164,10 @@ public void next(){
 // ENCOUNTER AFTER CHOICE #1
        else if (primeInt == 51){
 				if (GameHandler.foundManual == true){
+				DeskArt_1.SetActive(false);
+				DeskArt_3.SetActive(false);
+				DeskArt_4.SetActive(false);
+				BookArt.SetActive(false);
                 PlayerYouName.text = "You";
                 PlayerYouSpeech.text = "Let's go get that power cell.";
                 NarratorName.text = "";
@@ -166,6 +176,10 @@ public void next(){
                 HorizonSpeech.text = "";
 										}
 				else {
+				DeskArt_1.SetActive(false);
+				DeskArt_3.SetActive(false);
+				DeskArt_4.SetActive(false);
+				BookArt.SetActive(false);
                 PlayerYouName.text = "You";
                 PlayerYouSpeech.text = "Hopefully my luck improves.";
                 NarratorName.text = "";
@@ -179,6 +193,8 @@ public void next(){
         }
 
        else if (primeInt == 14){
+				DeskArt_1.SetActive(false);
+				DeskArt_2.SetActive(true);
                 PlayerYouName.text = "";
                 PlayerYouSpeech.text = "";
                 NarratorName.text = "...";
@@ -187,6 +203,8 @@ public void next(){
                 HorizonSpeech.text = "";
         }
 		else if (primeInt == 15){
+				DeskArt_2.SetActive(false);
+				DeskArt_3.SetActive(true);
                 PlayerYouName.text = "";
                 PlayerYouSpeech.text = "";
                 NarratorName.text = "...";
@@ -215,6 +233,8 @@ public void next(){
                 Choice1b.SetActive(true); // function Choice1bFunct() - move on to kitchen
         }
 		else if (primeInt == 19){
+				DeskArt_3.SetActive(false);
+				DeskArt_4.SetActive(true);
                 PlayerYouName.text = "";
                 PlayerYouSpeech.text = "";
                 NarratorName.text = "...";
@@ -231,6 +251,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
 		else if (primeInt == 21){
+				BookArt.SetActive(true);
                 PlayerYouName.text = "You";
                 PlayerYouSpeech.text = "Wow, that’s a thick manual. And what does this sticky note on it say? The handwriting is awful. Hmm…";
                 NarratorName.text = "";
@@ -265,7 +286,6 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-                ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 PlayerYouName.text = "";
                 PlayerYouSpeech.text = "";
@@ -291,6 +311,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
 		else if (primeInt ==5){
+				DeskArt_3.SetActive(true);
                 PlayerYouName.text = "You";
                 PlayerYouSpeech.text = "So many papers. Nothing immediately useful, but what's in the drawers?";
                 NarratorName.text = "";
@@ -299,6 +320,8 @@ public void next(){
                 HorizonSpeech.text = "";
         }
 		else if (primeInt ==6){
+				DeskArt_3.SetActive(false);
+				DeskArt_4.SetActive(true);
                 PlayerYouName.text = "";
                 PlayerYouSpeech.text = "";
                 NarratorName.text = "...";
@@ -315,6 +338,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
 		else if (primeInt == 8){
+				BookArt.SetActive(true);
                 PlayerYouName.text = "You";
                 PlayerYouSpeech.text = "Wow, that’s a thick manual. And what does this sticky note on it say? The handwriting is awful. Hmm…";
                 NarratorName.text = "";
@@ -344,6 +368,10 @@ public void next(){
         }
 		else if (primeInt == 51){
 				if (GameHandler.foundManual == true){
+				DeskArt_1.SetActive(false);
+				DeskArt_3.SetActive(false);
+				DeskArt_4.SetActive(false);
+				BookArt.SetActive(false);
                 PlayerYouName.text = "You";
                 PlayerYouSpeech.text = "Let's go get that power cell.";
                 NarratorName.text = "";
@@ -352,6 +380,10 @@ public void next(){
                 HorizonSpeech.text = "";
 										}
 				else {
+				DeskArt_1.SetActive(false);
+				DeskArt_3.SetActive(false);
+				DeskArt_4.SetActive(false);
+				BookArt.SetActive(false);
                 PlayerYouName.text = "You";
                 PlayerYouSpeech.text = "Hopefully my luck improves.";
                 NarratorName.text = "";
