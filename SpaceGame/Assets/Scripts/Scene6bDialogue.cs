@@ -14,9 +14,9 @@ public class Scene6bDialogue : MonoBehaviour {
 		public Text Char3name;
 		public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
-       //public GameObject ArtChar1b;
-       //public GameObject ArtChar2;
+        public GameObject CapArt_01;
+		public GameObject CapArt_02;
+		public GameObject CapArt_03;
         public GameObject ArtBG1;
         public GameObject Choice1a;               // leave
         public GameObject Choice1b;              // investigate body
@@ -33,7 +33,9 @@ public class Scene6bDialogue : MonoBehaviour {
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false);
+        CapArt_01.SetActive(true);
+		CapArt_02.SetActive(false);
+		CapArt_03.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -63,7 +65,6 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-            //    ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -119,6 +120,8 @@ public void next(){
                 Char3speech.text = "";
         }
        else if (primeInt == 9){
+				CapArt_01.SetActive(false);
+				CapArt_02.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -198,6 +201,8 @@ public void next(){
                 allowSpace = true;
         }
 		public void Choice1cFunct(){                      //choice 1c: take gun?
+				CapArt_02.SetActive(false);
+				CapArt_03.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "Whoever did this is still out there. I’ll have a better chance of defending myself with this.";
                 Char2name.text = "";
@@ -224,7 +229,9 @@ public void next(){
                 allowSpace = true;
         }
 		public void Choice1eFunct(){                      //choice 1e: TAKE GUN!
-                Char1name.text = "YOU";
+                CapArt_02.SetActive(false);
+				CapArt_03.SetActive(true);
+				Char1name.text = "YOU";
                 Char1speech.text = "I guess I’ll be safer this way, at least.";
                 Char2name.text = "";
                 Char2speech.text = "";

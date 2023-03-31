@@ -57,14 +57,13 @@ public class Scene9Dialogue : MonoBehaviour {
             // AudioSource.Play();
         }
         else if (primeInt == 2){
-            ArtChar1.SetActive(true);
             DialogueDisplay.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "H.O.R.I.Z.O.N.";
-            Char3speech.text = "Please reassemble the battery array.";
+            Char2name.text = "...";
+            Char2speech.text = "You return to the generator room, the boxy machine looming before you.";
+            Char3name.text = "";
+            Char3speech.text = "";
         }
         else if (primeInt ==3){
             Char1name.text = "";
@@ -72,7 +71,7 @@ public class Scene9Dialogue : MonoBehaviour {
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "H.O.R.I.Z.O.N.";
-            Char3speech.text = "Attach the three batteries and reinstall.";
+            Char3speech.text = "Directive: Insert battery array.";
             //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 4){
