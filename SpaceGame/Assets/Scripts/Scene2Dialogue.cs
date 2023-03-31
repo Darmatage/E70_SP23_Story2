@@ -169,7 +169,7 @@ public void next(){
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
 				HorizonName.text = "H.O.R.I.Z.O.N.";
-                HorizonSpeech.text = "Bridge Bulkead Status: Lockdown. Re-start generator to restore access.";
+                HorizonSpeech.text = "Bridge Bulkhead Status: Lockdown. Re-start generator to restore access.";
         }
 		else if (primeInt == 15){
                 PlayerYouName.text = "You";
@@ -197,7 +197,7 @@ public void next(){
         }
        else if (primeInt == 18){
                 PlayerYouName.text = "You";
-                PlayerYouSpeech.text = "We need to get the power up and running again, before we start losing gravity and life support!”";
+                PlayerYouSpeech.text = "We need to get the power up and running again, before we start losing gravity and life support!";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
 				HorizonName.text = "";

@@ -70,7 +70,7 @@ public void next(){
                 PlayerYouName.text = "";
                 PlayerYouSpeech.text = "";
                 NarratorName.text = "...";
-                NarratorSpeech.text = "Compared to the area you just left, this hallway is almost pristine. Turning a corner, you find the end of the corridor - and two more doors.";
+                NarratorSpeech.text = "Compared to the area you just left, this hallway is almost pristine. Turning a corner, you find two more doors.";
 				HorizonName.text = "";
                 HorizonSpeech.text = "";
                 //gameHandler.AddPlayerStat(1);
