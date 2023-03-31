@@ -27,7 +27,7 @@ public class Scene5Dialogue : MonoBehaviour {
 		public GameObject NextScene4Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
-       //public AudioSource audioSource;
+       public AudioSource audioSource;
         private bool allowSpace = true;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
@@ -190,26 +190,37 @@ public void next(){
 
         public void SceneChange1(){                                //medbay
 				GameHandler.corridorBAlready = true;
-               SceneManager.LoadScene("Scene6a");
+               audioSource.Play();
+			   StartCoroutine(SceneChangeDelay("Scene6a"));
         }
         public void SceneChange2(){                            //captain
 				GameHandler.corridorBAlready = true;
-                SceneManager.LoadScene("Scene6b");
+                audioSource.Play();
+				StartCoroutine(SceneChangeDelay("Scene6b"));
         }
 		public void SceneChange3(){                             //cryo
 				GameHandler.corridorBAlready = true;
-                SceneManager.LoadScene("Scene6c");
+                audioSource.Play();
+				StartCoroutine(SceneChangeDelay("Scene6c"));
         }
 		public void SceneChange4(){                         //onward
 				GameHandler.corridorBAlready = true;
 				if (GameHandler.batteries >= 3) {
-					SceneManager.LoadScene("Scene9");
+					audioSource.Play();
+					StartCoroutine(SceneChangeDelay("Scene9"));
 				}
 				else if (GameHandler.corridorCAlready == true){
-					SceneManager.LoadScene("Scene3");
+					audioSource.Play();
+					StartCoroutine(SceneChangeDelay("Scene3"));
 				}
 				else {
-					SceneManager.LoadScene("Scene7");
+					audioSource.Play();
+					StartCoroutine(SceneChangeDelay("Scene7"));
 				}
         }
+		
+		IEnumerator SceneChangeDelay(string newScene){
+			yield return new WaitForSeconds(1f);
+			SceneManager.LoadScene(newScene);
+		}
 }

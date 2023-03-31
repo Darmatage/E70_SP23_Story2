@@ -39,7 +39,7 @@ void Start(){
         nextButton.SetActive(true);
 
      // Find the gameHandler:
-     audioSource = GetComponent<AudioSource>();
+     //audioSource = GetComponent<AudioSource>();
      // gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
    }
 
@@ -212,10 +212,15 @@ public void next(){
 
         public void SceneChange1(){
                audioSource.Play();
-               SceneManager.LoadScene("Scene4a");
+			   StartCoroutine(SceneChangeDelay("Scene4a"));
         }
         public void SceneChange2(){
             audioSource.Play();
-                SceneManager.LoadScene("Scene4b");
+				StartCoroutine(SceneChangeDelay("Scene4b"));
         }
+		
+		IEnumerator SceneChangeDelay(string newScene){
+			yield return new WaitForSeconds(1f);
+			SceneManager.LoadScene(newScene);
+		}
 }

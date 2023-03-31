@@ -26,7 +26,7 @@ public class Scene4aDialogue : MonoBehaviour {
         public GameObject nextButton;
        public AudioSource audioSource;
         private bool allowSpace = true;
-		public bool engiSetup = false;
+		//public bool engiSetup = false;
 		
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
@@ -38,7 +38,7 @@ void Start(){
 		Choice1c.SetActive(false);
         NextScene1Button.SetActive(false);
         nextButton.SetActive(true);
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
      // Find the gameHandler:
      // gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
    }
@@ -411,6 +411,12 @@ public void next(){
         public void SceneChange1(){
             audioSource.Play();
 			GameHandler.engiAlready = true;
-            SceneManager.LoadScene("Scene4b");
+			StartCoroutine(SceneChangeDelay("Scene4b"));
         }
+		
+		IEnumerator SceneChangeDelay(string newScene){
+			yield return new WaitForSeconds(1f);
+			SceneManager.LoadScene(newScene);
+		}
+		
 }

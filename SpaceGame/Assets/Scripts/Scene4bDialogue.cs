@@ -31,7 +31,8 @@ public class Scene4bDialogue : MonoBehaviour {
 		public GameObject NextScene3Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
-       //public AudioSource audioSource;
+       public AudioSource audioSourceDoor;
+	   public AudioSource audioSourceZap;
         private bool allowSpace = true;
 		public bool redPull = false;
 		public bool greenPull = false;
@@ -664,13 +665,23 @@ public void next(){
         }
 
         public void SceneChange1(){          //onward
-               SceneManager.LoadScene("Scene5");
+               audioSourceDoor.Play();
+			   StartCoroutine(SceneChangeDelay("Scene5"));
         }
 		public void SceneChange2(){            // back to engineering
                GameHandler.kitchenAlready = true;
-			   SceneManager.LoadScene("Scene4a");
+			   audioSourceDoor.Play();
+			   StartCoroutine(SceneChangeDelay("Scene4a"));
         }
 		public void SceneChange3(){            // uh oh...
-               SceneManager.LoadScene("End_Zap");
+               audioSourceZap.Play();
+			   StartCoroutine(SceneChangeDelay("End_Zap"));
         }
+		
+		IEnumerator SceneChangeDelay(string newScene){
+			yield return new WaitForSeconds(1f);
+			SceneManager.LoadScene(newScene);
+		}	
+		
+		
 }
