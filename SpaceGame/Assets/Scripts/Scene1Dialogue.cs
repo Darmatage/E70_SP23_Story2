@@ -304,6 +304,7 @@ public void next(){
 
 // Investigate Generator Choice
        else if (primeInt == 101){
+		   ArtChar1a.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -643,6 +644,7 @@ public void next(){
                 allowSpace = true;
         }
 		public void Choice1cFunct(){
+			ArtChar1a.SetActive(false);
                 Char1name.text = "YOU";
                 Char1speech.text = "Who is that, anyway?";
                 Char2name.text = "";
