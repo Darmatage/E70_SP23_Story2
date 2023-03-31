@@ -27,20 +27,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene4b.unity
     guid: 6fd9c7c8923e6fd4fba8d9a59760e82d
   - enabled: 1
-    path: Assets/Scenes/Scene7.unity
-    guid: 2157dfba14f845c42887f568ab56e3d0
-  - enabled: 1
-    path: Assets/Scenes/End_Win.unity
-    guid: 1280bebaa59ae4f47885bee6500aae98
-  - enabled: 1
-    path: Assets/Scenes/End_Lose.unity
-    guid: 8251646df595ceb4e8e7ab3da41388b5
-  - enabled: 1
-    path: Assets/Scenes/End_Zap.unity
-    guid: 3402ad0aab60b0947bd1bd20022dcde1
-  - enabled: 1
     path: Assets/Scenes/Scene5.unity
     guid: 3c0e45884eb18a043846a1c292a3ba58
+  - enabled: 1
+    path: Assets/Scenes/Scene6a.unity
+    guid: fa057c9fe2cca7544ad310f794fbafeb
+  - enabled: 1
+    path: Assets/Scenes/Scene6b.unity
+    guid: f5d6f637477fb3e4cb3abc783d7156a2
+  - enabled: 1
+    path: Assets/Scenes/Scene6c.unity
+    guid: a9e82b1ab0ae9f348a98ad1be7d6fe7d
+  - enabled: 1
+    path: Assets/Scenes/Scene7.unity
+    guid: 2157dfba14f845c42887f568ab56e3d0
   - enabled: 1
     path: Assets/Scenes/Scene8a.unity
     guid: 33d918b256b0c4a4da2cb47d19fa3c6c
@@ -57,12 +57,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene8e.unity
     guid: 7127bb7ada1d6134ca19cf6c3eaeb32b
   - enabled: 1
-    path: Assets/Scenes/Scene6a.unity
-    guid: fa057c9fe2cca7544ad310f794fbafeb
+    path: Assets/Scenes/Scene9.unity
+    guid: 1510c258f6e71f64782c992077a72cb1
   - enabled: 1
-    path: Assets/Scenes/Scene6b.unity
-    guid: f5d6f637477fb3e4cb3abc783d7156a2
+    path: Assets/Scenes/Scene10.unity
+    guid: 5a0dbdee82dd3de4ca500ad09bc0e671
   - enabled: 1
-    path: Assets/Scenes/Scene6c.unity
-    guid: a9e82b1ab0ae9f348a98ad1be7d6fe7d
+    path: Assets/Scenes/End_Win.unity
+    guid: 1280bebaa59ae4f47885bee6500aae98
+  - enabled: 1
+    path: Assets/Scenes/End_Lose.unity
+    guid: 8251646df595ceb4e8e7ab3da41388b5
+  - enabled: 1
+    path: Assets/Scenes/End_Zap.unity
+    guid: 3402ad0aab60b0947bd1bd20022dcde1
+  - enabled: 1
+    path: Assets/Scenes/End_LoseBlood.unity
+    guid: 3c73e5883b425104989d5f9995af08f6
   m_configObjects: {}

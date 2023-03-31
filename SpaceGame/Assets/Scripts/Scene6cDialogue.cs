@@ -23,7 +23,7 @@ public class Scene6cDialogue : MonoBehaviour {
         public GameObject NextScene1Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
-       //public AudioSource audioSource;
+       public AudioSource audioSource;
         private bool allowSpace = true;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
@@ -362,6 +362,14 @@ public void next(){
 
         public void SceneChange1(){
 				GameHandler.cryoAlready = true;
-               SceneManager.LoadScene("Scene5");
+                audioSource.Play();    
+                StartCoroutine(SceneChangeDelay("Scene5"));
         }
+
+		IEnumerator SceneChangeDelay(string newScene){
+			yield return new WaitForSeconds(1f);
+			SceneManager.LoadScene(newScene);
+		}
+		
+		
 }

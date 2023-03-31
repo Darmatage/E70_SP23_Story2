@@ -123,6 +123,68 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &54018622
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8438615561915502652, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+      propertyPath: m_Name
+      value: AudioDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438615561915502654, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438615561915502654, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 766
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438615561915502654, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 384.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438615561915502654, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438615561915502654, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438615561915502654, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438615561915502654, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438615561915502654, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438615561915502654, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438615561915502654, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438615561915502654, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+--- !u!82 &54018623 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8438615561915502655, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+  m_PrefabInstance: {fileID: 54018622}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &139615855 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6394648684724046655, guid: 7a3c3a3b41586af4caff08ab288cc93d, type: 3}
@@ -1744,6 +1806,7 @@ MonoBehaviour:
   Choice1e: {fileID: 662372947}
   NextScene1Button: {fileID: 1045264335}
   nextButton: {fileID: 1840111603}
+  audioSource: {fileID: 54018623}
   seenGenerator: 0
   theDarkness: {fileID: 2009775351}
 --- !u!114 &1820069890 stripped

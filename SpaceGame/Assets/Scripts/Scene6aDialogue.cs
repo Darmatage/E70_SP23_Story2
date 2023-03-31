@@ -28,7 +28,8 @@ public class Scene6aDialogue : MonoBehaviour {
         public GameObject NextScene2Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
-       //public AudioSource audioSource;
+       public AudioSource audioSource;
+	   public AudioSource audioSourceLaser;
         private bool allowSpace = true;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
@@ -594,9 +595,17 @@ public void next(){
         public void SceneChange1(){                           // leave
 				GameHandler.medbayAlready = true;
 				GameHandler.batteries = GameHandler.batteries + 1;
-               SceneManager.LoadScene("Scene5");
+			   audioSource.Play();    
+                StartCoroutine(SceneChangeDelay("Scene5"));   
         }
+		
         public void SceneChange2(){                 		//DEATH
-                SceneManager.LoadScene("Scene2b");
+		        audioSourceLaser.Play();    
+                StartCoroutine(SceneChangeDelay("End_LoseBlood"));
         }
+
+		IEnumerator SceneChangeDelay(string newScene){
+			yield return new WaitForSeconds(1f);
+			SceneManager.LoadScene(newScene);
+		}
 }

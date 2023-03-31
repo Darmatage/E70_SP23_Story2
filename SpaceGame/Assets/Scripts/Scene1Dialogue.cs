@@ -26,7 +26,7 @@ public class Scene1Dialogue : MonoBehaviour {
         public GameObject NextScene1Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
-       //public AudioSource audioSource;
+       public AudioSource audioSource;
         private bool allowSpace = true;
 		public bool seenGenerator = false;
 		public GameObject theDarkness;
@@ -682,8 +682,14 @@ public void next(){
         }
 
         public void SceneChange1(){
-               SceneManager.LoadScene("Scene2");
+            audioSource.Play();
+			StartCoroutine(SceneChangeDelay("Scene2"));
         }
+		
+		IEnumerator SceneChangeDelay(string newScene){
+			yield return new WaitForSeconds(1f);
+			SceneManager.LoadScene(newScene);
+		}
 		
 		IEnumerator FadeIn(GameObject fadeImage){
                 float alphaLevel = 0;
