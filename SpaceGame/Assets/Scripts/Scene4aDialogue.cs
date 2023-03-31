@@ -24,7 +24,7 @@ public class Scene4aDialogue : MonoBehaviour {
 		public GameObject Choice1c; // search drawer choice
         public GameObject NextScene1Button;
         public GameObject nextButton;
-       public AudioSource audioSource;
+        public AudioSource audioSource;
         private bool allowSpace = true;
 		//public bool engiSetup = false;
 		
@@ -64,13 +64,13 @@ public void next(){
                 PlayerYouName.text = "";
                 PlayerYouSpeech.text = "";
                 NarratorName.text = "...";
-                NarratorSpeech.text = "The room is even darker than the those you just left, thanks to the maze of boxes and crates obscuring many of the emergency lights.";
+                NarratorSpeech.text = "The room is even darker than the those you just left, occupied by a dense maze of boxes and crates.";
 				HorizonName.text = "";
                 HorizonSpeech.text = "";
         }
        else if (primeInt ==3){
                 PlayerYouName.text = "You";
-                PlayerYouSpeech.text = "Wow. There’s practically enough stuff in here to build a whole second second ship! I wonder how it all stays organized?";
+                PlayerYouSpeech.text = "Wow. There’s practically enough stuff in here to build a whole second ship! I wonder how it all stays organized?";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
 				HorizonName.text = "";
