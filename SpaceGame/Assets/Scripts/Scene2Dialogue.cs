@@ -44,7 +44,7 @@ void Start(){
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
 
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
      // Find the gameHandler:
      // gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
    }
@@ -316,12 +316,19 @@ public void next(){
         public void SceneChange1(){
                // TODO: Add door open close sound. 
                audioSource.Play();
-               SceneManager.LoadScene("Scene3");
+               StartCoroutine(SceneChangeDelay("Scene3"));
         }
         public void SceneChange2(){
                 // TODO: Add door open close sound. 
                 audioSource.Play();    
-                SceneManager.LoadScene("Scene7");
-        }	
+                StartCoroutine(SceneChangeDelay("Scene7"));
+        }
+
+		IEnumerator SceneChangeDelay(string newScene){
+			yield return new WaitForSeconds(1f);
+			SceneManager.LoadScene(newScene);
+		}
+
+		
 		
 }

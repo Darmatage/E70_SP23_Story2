@@ -479,7 +479,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 38d5672e212c141c7aa816cd4c5d16f3, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1189,7 +1189,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8619c67f5f56000468077726c5dc900f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b93bfe12fb37d23408e17dc7f2128e74, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1628,7 +1628,7 @@ MonoBehaviour:
   NextScene1Button: {fileID: 1709971343}
   NextScene2Button: {fileID: 1626980018}
   nextButton: {fileID: 1834683378}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 515172214}
 --- !u!1 &1834683378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 970081408660598748, guid: 2e058bc48dc1f8640ab43d0f24f30422, type: 3}
