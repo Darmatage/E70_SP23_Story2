@@ -14,9 +14,11 @@ public class Scene1Dialogue : MonoBehaviour {
 		public Text Char3name;
 		public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1a;
-       //public GameObject ArtChar1b;
-       //public GameObject ArtChar2;
+        public GameObject GeneratorArt;
+		public GameObject GenBodyArt_1;
+		public GameObject GenBodyArt_2;
+		public GameObject BrokenRifleArt;
+		public GameObject ArrayArt;
         public GameObject ArtBG1;
         public GameObject Choice1a;
         public GameObject Choice1b;
@@ -34,7 +36,11 @@ public class Scene1Dialogue : MonoBehaviour {
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
-        ArtChar1a.SetActive(false);
+        GeneratorArt.SetActive(false);
+		GenBodyArt_1.SetActive(false);
+		GenBodyArt_2.SetActive(false);
+		BrokenRifleArt.SetActive(false);
+		ArrayArt.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -65,7 +71,7 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-               //ArtChar1a.SetActive(true);
+               
 			    StartCoroutine(FadeOut(theDarkness));
 			    
                 DialogueDisplay.SetActive(true);
@@ -304,7 +310,7 @@ public void next(){
 
 // Investigate Generator Choice
        else if (primeInt == 101){
-		   ArtChar1a.SetActive(true);
+				GeneratorArt.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -353,6 +359,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 107){
+				GeneratorArt.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -367,6 +374,7 @@ public void next(){
 		
 // Investigate Body Choice
        else if (primeInt == 201){
+				GenBodyArt_1.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -391,6 +399,8 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 204){
+				GenBodyArt_1.SetActive(false);
+				GenBodyArt_2.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -463,6 +473,7 @@ public void next(){
                 Char3speech.text = "WARNING: emergency power reserves critically low. Locate replacement power cells immediately.";
         }
 		else if (primeInt == 213){
+				GenBodyArt_2.SetActive(false);
                 Char1name.text = "You";
                 Char1speech.text = "Yes, I'll find those too.";
                 Char2name.text = "";
@@ -479,6 +490,7 @@ public void next(){
 				}
         }
 		else if (primeInt == 220){
+				GeneratorArt.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -519,6 +531,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 225){
+				GeneratorArt.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -554,6 +567,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 253){
+				BrokenRifleArt.SetActive(true);
                 Char1name.text = "You";
                 Char1speech.text = "What…? A laser rifle… completely empty. It must have been discharged all at once, considering how heat-warped the barrel is.";
                 Char2name.text = "";
@@ -570,6 +584,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 255){
+				BrokenRifleArt.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -586,8 +601,9 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 257){
+				ArrayArt.SetActive(true);
                 Char1name.text = "You";
-                Char1speech.text = "I’f I don’t want to be walking around with my arms full the whole time, I should take one of these.";
+                Char1speech.text = "If I don’t want to be walking around with my arms full the whole time, I should take one of these.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -602,6 +618,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 259){
+				ArrayArt.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -644,7 +661,7 @@ public void next(){
                 allowSpace = true;
         }
 		public void Choice1cFunct(){
-			ArtChar1a.SetActive(false);
+				GeneratorArt.SetActive(false);
                 Char1name.text = "YOU";
                 Char1speech.text = "Who is that, anyway?";
                 Char2name.text = "";
