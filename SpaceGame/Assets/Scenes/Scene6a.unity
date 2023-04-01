@@ -829,7 +829,7 @@ GameObject:
   - component: {fileID: 646330579}
   - component: {fileID: 646330578}
   m_Layer: 5
-  m_Name: ImageChar1c
+  m_Name: DoctorIdle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1061,7 +1061,7 @@ GameObject:
   - component: {fileID: 1015673565}
   - component: {fileID: 1015673564}
   m_Layer: 5
-  m_Name: ImageChar1e
+  m_Name: DoctorThreatening
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1142,7 +1142,7 @@ GameObject:
   - component: {fileID: 1046077602}
   - component: {fileID: 1046077601}
   m_Layer: 5
-  m_Name: ImageChar1a
+  m_Name: DoctorAttacking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1734,7 +1734,7 @@ GameObject:
   - component: {fileID: 1429478113}
   - component: {fileID: 1429478112}
   m_Layer: 5
-  m_Name: ImageChar1d
+  m_Name: DoctorInjured
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1882,7 +1882,7 @@ GameObject:
   - component: {fileID: 1561523442}
   - component: {fileID: 1561523441}
   m_Layer: 5
-  m_Name: ImageChar1b
+  m_Name: DoctorDead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2105,11 +2105,11 @@ MonoBehaviour:
   Char4name: {fileID: 606454257}
   Char4speech: {fileID: 1848221815}
   DialogueDisplay: {fileID: 355972026}
-  ArtChar1a: {fileID: 1046077599}
-  ArtChar1b: {fileID: 1561523439}
-  ArtChar1c: {fileID: 646330576}
-  ArtChar1d: {fileID: 1429478110}
-  ArtChar1e: {fileID: 1015673562}
+  DoctorAttacking: {fileID: 1046077599}
+  DoctorDead: {fileID: 1561523439}
+  DoctorIdle: {fileID: 646330576}
+  DoctorInjured: {fileID: 1429478110}
+  DoctorThreatening: {fileID: 1015673562}
   ArtBG1: {fileID: 1069896938}
   Choice1a: {fileID: 354898624}
   Choice1b: {fileID: 1546100314}
