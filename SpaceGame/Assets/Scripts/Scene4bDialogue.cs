@@ -14,7 +14,16 @@ public class Scene4bDialogue : MonoBehaviour {
 		public Text Char3name;
 		public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
+        public GameObject ArtHydratorAllWires;
+        public GameObject ArtHydratorRedCut;
+        public GameObject ArtHydratorBlueCut;
+        public GameObject ArtHydratorGreenCut;
+        public GameObject ArtHydratorRedBlueCut;
+        public GameObject ArtHydratorRedGreenCut;
+        public GameObject ArtHydratorAllWiresCut;
+        public GameObject ArtHydratorBatteryRemoved;
+        public GameObject OpenPantry;
+        public GameObject ClosedPantry;
        //public GameObject ArtChar1b;
        //public GameObject ArtChar2;
         public GameObject ArtBG1;
@@ -40,8 +49,18 @@ public class Scene4bDialogue : MonoBehaviour {
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false);
-        ArtBG1.SetActive(true);
+        ArtHydratorAllWires.SetActive(true);
+        ClosedPantry.SetActive(true);
+
+        ArtHydratorRedCut.SetActive(false);
+        ArtHydratorBlueCut.SetActive(false);
+        ArtHydratorGreenCut.SetActive(false);
+        ArtHydratorRedBlueCut.SetActive(false);
+        ArtHydratorRedGreenCut.SetActive(false);
+        ArtHydratorAllWiresCut.SetActive(false);
+        ArtHydratorBatteryRemoved.SetActive(false);
+        
+        OpenPantry.SetActive(false);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
 		Choice1c.SetActive(false);
@@ -256,7 +275,7 @@ public void next(){
 				Choice1f.SetActive(true); // blue	
 				}
         }
-		else if (primeInt == 101){                                   // After successful power cell retrieval
+		else if (primeInt == 101){  // After successful power cell retrieval                          
                 Char1name.text = "You";
                 Char1speech.text = "That's it, the cell's disconnected!";
                 Char2name.text = "";
@@ -264,7 +283,9 @@ public void next(){
 				Char3name.text = "";
                 Char3speech.text = "";
         }
-		else if (primeInt == 102){                                   // After successful power cell retrieval
+		else if (primeInt == 102){
+                ArtHydratorAllWiresCut.SetActive(false);
+                ArtHydratorBatteryRemoved.SetActive(true);                                   // After successful power cell retrieval
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -495,6 +516,9 @@ public void next(){
 				Choice1g.SetActive(false);
                 nextButton.SetActive(true);
                 allowSpace = true;
+                // Open the Pantry
+                ClosedPantry.SetActive(false);
+                OpenPantry.SetActive(true);
         }
         public void Choice1bFunct(){     // investigate hydrator
                 if (GameHandler.seenHydrator == true){
@@ -558,6 +582,9 @@ public void next(){
                 primeInt = 50;
 				redPull = true;
                 Choice1d.SetActive(false);
+                // Art to show red wire cut
+                ArtHydratorAllWires.SetActive(false);
+                ArtHydratorRedCut.SetActive(true);
         }
 		public void Choice1eFunct(){     //green wire
 			if (redPull == true){
@@ -570,6 +597,9 @@ public void next(){
                 primeInt = 50;
 				greenPull = true;
                 Choice1e.SetActive(false);
+                // Art to show Red and Green Wire Cut
+                ArtHydratorRedCut.SetActive(false);
+                ArtHydratorRedGreenCut.SetActive(true);
 			}
 			else {
 				Char1name.text = "";
@@ -585,6 +615,9 @@ public void next(){
 				Choice1e.SetActive(false);
 				Choice1f.SetActive(false);
 				NextScene3Button.SetActive(true); 
+                // Art to show red wire cut
+                ArtHydratorAllWires.SetActive(false);
+                ArtHydratorGreenCut.SetActive(true);
 			}
         }
 		public void Choice1fFunct(){     // blue wire
@@ -601,8 +634,14 @@ public void next(){
 					Choice1c.SetActive(false);
 					nextButton.SetActive(true);
 					allowSpace = true;
+                    // Art to Show All Wires Cut
+                    ArtHydratorRedGreenCut.SetActive(false);
+                    ArtHydratorAllWiresCut.SetActive(true);
 					}
 					else {
+                    // Art to show red wire cut
+                    ArtHydratorRedCut.SetActive(false);
+                    ArtHydratorRedBlueCut.SetActive(true); 
 					Char1name.text = "";
 					Char1speech.text = "";
 					Char2name.text = "...";
@@ -629,7 +668,10 @@ public void next(){
 					Choice1d.SetActive(false);
 					Choice1e.SetActive(false);
 					Choice1f.SetActive(false);
-					NextScene3Button.SetActive(true);    
+					NextScene3Button.SetActive(true);   
+                    // Art to show red wire cut
+                    ArtHydratorAllWires.SetActive(false);
+                    ArtHydratorBlueCut.SetActive(true); 
 			}   
         }
 		public void Choice1gFunct(){     // back to engineering
@@ -662,6 +704,9 @@ public void next(){
                 Choice1h.SetActive(false);
                 nextButton.SetActive(true);
                 allowSpace = true;
+                // Close the Pantry
+                OpenPantry.SetActive(false);
+                ClosedPantry.SetActive(true);
         }
 
         public void SceneChange1(){          //onward
