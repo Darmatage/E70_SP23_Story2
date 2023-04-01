@@ -16,11 +16,11 @@ public class Scene6aDialogue : MonoBehaviour {
 		public Text Char4name;
 		public Text Char4speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1a;
-		public GameObject ArtChar1b;
-		public GameObject ArtChar1c;
-		public GameObject ArtChar1d;
-		public GameObject ArtChar1e;
+        public GameObject DoctorAttacking;
+		public GameObject DoctorDead;
+		public GameObject DoctorIdle;
+		public GameObject DoctorInjured;
+		public GameObject DoctorThreatening;
 	   
         public GameObject ArtBG1;
         public GameObject Choice1a;           // talk
@@ -38,11 +38,11 @@ public class Scene6aDialogue : MonoBehaviour {
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
-        ArtChar1a.SetActive(false);
-		ArtChar1b.SetActive(false);
-		ArtChar1c.SetActive(false);
-		ArtChar1d.SetActive(false);
-		ArtChar1e.SetActive(false);
+        DoctorIdle.SetActive(false);
+        DoctorAttacking.SetActive(false);
+		DoctorDead.SetActive(false);
+		DoctorInjured.SetActive(false);
+		DoctorThreatening.SetActive(false);
 		
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
@@ -95,11 +95,11 @@ public void next(){
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
-		   ArtChar1c.SetActive(true);
+		   DoctorIdle.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "Peering through the half-open door reveals a figure, crouched between rows of empty cots.";
+                Char2speech.text = "Peering through the half-open door reveals a figure, along the rows of empty cots.";
 				Char3name.text = "";
                 Char3speech.text = "";
 				Char4name.text = "";
@@ -187,12 +187,12 @@ public void next(){
                 Char4speech.text = "";
         }
        else if (primeInt == 13){
-		   ArtChar1c.SetActive(false);
-		   ArtChar1a.SetActive(true);
+        DoctorIdle.SetActive(false);
+                DoctorThreatening.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "The doctor shoots upright, a bundle of items tumbling from his arms.";
+                Char2speech.text = "The doctor shoots upright, raising his arms.";
 				Char3name.text = "";
                 Char3speech.text = "";
 				Char4name.text = "";
@@ -229,6 +229,8 @@ public void next(){
                 Char4speech.text = "";
         }
 		else if (primeInt == 17){
+           DoctorThreatening.SetActive(false);
+		   DoctorAttacking.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -244,7 +246,8 @@ public void next(){
 				Choice1b.SetActive(true);
 				}
         }
-		else if (primeInt == 21){                      // you chose to talk
+		else if (primeInt == 21){   
+                audioSourceLaser.Play();                       // you chose to talk
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -611,7 +614,6 @@ public void next(){
         }
 		
         public void SceneChange2(){                 		//DEATH
-		        audioSourceLaser.Play();    
                 StartCoroutine(SceneChangeDelay("End_LoseBlood"));
         }
 
