@@ -15,9 +15,17 @@ public class Scene8eDialogue : MonoBehaviour {
 		public Text Char3speech;
         public GameObject DialogueDisplay;
         public GameObject ArtChar1;
-       //public GameObject ArtChar1b;
-       //public GameObject ArtChar2;
+		public GameObject ArtChar2;
+		public GameObject ArtChar3;
+		public GameObject ArtChar4;
+		public GameObject ArtChar5;
+		public GameObject ArtChar6;
         public GameObject ArtBG1;
+		public GameObject ArtBG2;
+		public GameObject ArtBG3;
+		public GameObject ArtBG4;
+		public GameObject ArtBG5;
+		public GameObject ArtBG6;
         public GameObject NextScene1Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
@@ -28,7 +36,17 @@ public class Scene8eDialogue : MonoBehaviour {
 void Start(){  
         DialogueDisplay.SetActive(false);
         ArtChar1.SetActive(false);
+		ArtChar2.SetActive(false);
+		ArtChar3.SetActive(false);
+		ArtChar4.SetActive(false);
+		ArtChar5.SetActive(false);
+		ArtChar6.SetActive(false);
         ArtBG1.SetActive(true);
+		ArtBG2.SetActive(false);
+		ArtBG3.SetActive(false);
+		ArtBG4.SetActive(false);
+		ArtBG5.SetActive(false);
+		ArtBG6.SetActive(false);
         NextScene1Button.SetActive(false);
         nextButton.SetActive(true);
 
@@ -51,7 +69,6 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-            //    ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -61,7 +78,8 @@ public void next(){
                 Char3speech.text = "";
         }
        else if (primeInt ==3){
-                Char1name.text = "YOU";
+                
+				Char1name.text = "YOU";
                 Char1speech.text = "Phew, warm in here. Luckily, it can't be that far to the grate in the armory.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -70,7 +88,9 @@ public void next(){
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
-                Char1name.text = "";
+                ArtBG2.SetActive(true);
+				ArtBG1.SetActive(false);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "You climb around a few tight turns before finding yourself facing a metal grate like the one you just came through.";
@@ -103,7 +123,9 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt ==8){
-                Char1name.text = "";
+                ArtBG3.SetActive(true);
+				ArtBG2.SetActive(false);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "The grate comes loose in your hands, and you set it aside as you gingerly crawl through the new opening.";
@@ -119,7 +141,9 @@ public void next(){
                 Char3speech.text = "Power source detected.";
         }
 		else if (primeInt ==10){
-                Char1name.text = "";
+                ArtBG4.SetActive(true);
+				ArtBG3.SetActive(false);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "You open your mouth to respond, but you stop yourself as you take in the space you're crawling into.";
@@ -167,7 +191,10 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt ==16){
-                Char1name.text = "";
+				ArtChar1.SetActive(true);
+                ArtBG5.SetActive(true);
+				ArtBG4.SetActive(false);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "And there is is. Against the back wall of the small room sits a charging rack for the laser rifles held by the crew.";
@@ -199,7 +226,9 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt ==20){
-                Char1name.text = "";
+                ArtChar1.SetActive(false);
+				ArtChar2.SetActive(true);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "You take hold of the exposed end, clenching the handle tight as you begin withdrawing it.";
@@ -207,7 +236,9 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt ==21){
-                Char1name.text = "";
+                ArtChar2.SetActive(false);
+				ArtChar3.SetActive(true);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "You move agonizingly slowly to avoid making noise.";
@@ -215,7 +246,9 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt ==22){
-                Char1name.text = "";
+                ArtChar3.SetActive(false);
+				ArtChar4.SetActive(true);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "All the while, you keep an ear aimed at the door behind you, waiting for any change in the muffled conversation happening in the other room.";
@@ -223,7 +256,9 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt ==23){
-                Char1name.text = "";
+                ArtChar4.SetActive(false);
+				ArtChar5.SetActive(true);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "Your luck holds. Finally, the full weight of the cell settles into your hands as the last few inches pull free.";
@@ -231,7 +266,9 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt ==24){
-                Char1name.text = "";
+                ArtChar5.SetActive(false);
+				ArtChar6.SetActive(true);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -239,7 +276,10 @@ public void next(){
                 Char3speech.text = "Power cell retrieved. \n Directive: Continue on.";
         }
 		else if (primeInt ==25){
-                Char1name.text = "";
+                ArtChar6.SetActive(false);
+				ArtBG4.SetActive(true);
+				ArtBG5.SetActive(false);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "You hold back a sigh as you nestle the cell into your battery array and turn back toward the grate you came through.";
@@ -247,7 +287,9 @@ public void next(){
                 Char3speech.text = "";
         }
        else if (primeInt == 26){
-                Char1name.text = "";
+				ArtBG6.SetActive(true);
+				ArtBG4.SetActive(false);
+			    Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "The journey through the cramped space is easier the second time around, and you soon find yourself crawling out into the cargo bay and returning to the corridor.";
