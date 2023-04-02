@@ -77,7 +77,7 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "You enter the corridor marked “Crew Quarters,” moving through hallways spattered with laser burns. Occasionally, you pass another body.";
+                Char2speech.text = "You travel through hallways spattered with laser burns. Occasionally, you pass another body.";
 				Char3name.text = "";
                 Char3speech.text = "";
         }

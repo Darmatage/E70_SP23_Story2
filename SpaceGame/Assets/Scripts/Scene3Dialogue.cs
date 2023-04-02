@@ -62,7 +62,7 @@ public void next(){
                 PlayerYouName.text = "";
                 PlayerYouSpeech.text = "";
                 NarratorName.text = "...";
-                NarratorSpeech.text = "You enter the corridor marked “Resources,” doing your best to move quickly without making too much noise.";
+                NarratorSpeech.text = "You pass down the corridor,” doing your best to move quickly without making too much noise.";
 				HorizonName.text = "";
                 HorizonSpeech.text = "";
         }

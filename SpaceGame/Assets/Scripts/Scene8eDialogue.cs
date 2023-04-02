@@ -96,7 +96,7 @@ public void next(){
         }
        else if (primeInt ==7){
                 Char1name.text = "YOU";
-                Char1speech.text = "Oh, thank goodness. Some kind of fastener clip. I'll just take these off...";
+                Char1speech.text = "Thank goodness. Some kind of fastener clip. I'll just take these off...";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
