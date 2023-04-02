@@ -14,10 +14,8 @@ public class Scene3Dialogue : MonoBehaviour {
 		public Text HorizonName;
 		public Text HorizonSpeech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
-       //public GameObject ArtChar1b;
-       //public GameObject ArtChar2;
         public GameObject ArtBG1;
+		public GameObject ArtBG2;
         public GameObject Choice1a;
         public GameObject Choice1b;
         public GameObject NextScene1Button;
@@ -29,9 +27,10 @@ public class Scene3Dialogue : MonoBehaviour {
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
-        DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false);
+        
+		DialogueDisplay.SetActive(false);
         ArtBG1.SetActive(true);
+		ArtBG2.SetActive(false);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
         NextScene1Button.SetActive(false);
@@ -67,6 +66,8 @@ public void next(){
                 HorizonSpeech.text = "";
         }
        else if (primeInt ==3){
+				ArtBG2.SetActive(true);
+				ArtBG1.SetActive(false);
                 PlayerYouName.text = "";
                 PlayerYouSpeech.text = "";
                 NarratorName.text = "...";
