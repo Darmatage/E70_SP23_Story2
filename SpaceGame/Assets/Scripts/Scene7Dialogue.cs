@@ -14,10 +14,10 @@ public class Scene7Dialogue : MonoBehaviour {
 		public Text Char3name;
 		public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
-       //public GameObject ArtChar1b;
-       //public GameObject ArtChar2;
         public GameObject ArtBG1;
+		public GameObject ArtBG2;
+		public GameObject ArtBG3;
+		public GameObject ArtBG4;
         public GameObject Choice1a;             //armory
         public GameObject Choice1b;             // barracks
 		public GameObject Choice1c;            // cargo
@@ -37,8 +37,6 @@ public class Scene7Dialogue : MonoBehaviour {
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false);
-        ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
 		Choice1c.SetActive(false);
@@ -51,6 +49,35 @@ void Start(){
 		NextScene4Button.SetActive(false);
 		NextScene5Button.SetActive(false);
         nextButton.SetActive(true);
+		if (GameHandler.corridorCAlready == false) {
+			ArtBG1.SetActive(true);
+			ArtBG2.SetActive(false);
+			ArtBG3.SetActive(false);
+			ArtBG4.SetActive(false);
+		}
+		else {
+			if (GameHandler.guardsAlert == false) {
+			ArtBG2.SetActive(true);
+			ArtBG1.SetActive(false);
+			ArtBG3.SetActive(false);
+			ArtBG4.SetActive(false);
+			}
+			else {
+				if (GameHandler.guardsTension == true) {
+					ArtBG4.SetActive(true);
+					ArtBG2.SetActive(false);
+					ArtBG3.SetActive(false);
+					ArtBG1.SetActive(false);
+				}
+				else {
+					ArtBG2.SetActive(true);
+					ArtBG1.SetActive(false);
+					ArtBG3.SetActive(false);
+					ArtBG4.SetActive(false);
+				}
+			}
+		}
+		
 
      // Find the gameHandler:
      // gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
@@ -72,7 +99,6 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-                ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -180,7 +206,11 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt ==15){
-                Char1name.text = "";
+                ArtBG1.SetActive(false);
+				ArtBG2.SetActive(true);
+				ArtBG3.SetActive(false);
+				ArtBG4.SetActive(false);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "You round a corner to discover that the next stretch of hallway contains several doors.";
@@ -366,7 +396,11 @@ public void next(){
                 Char3speech.text = "";
 				}
 				else if (primeInt == 10){
-                Char1name.text = "";
+                ArtBG2.SetActive(false);
+				ArtBG3.SetActive(true);
+				ArtBG1.SetActive(false);
+				ArtBG4.SetActive(false);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "Suddenly a laser beam is fired through the armory door, along with an incomprehensible shout. Smoke curls from the already ruined wall panel as it melts even further.";
@@ -374,7 +408,11 @@ public void next(){
                 Char3speech.text = "";
 				}
 				else if (primeInt == 11){
-                Char1name.text = "YOU";
+                ArtBG3.SetActive(false);
+				ArtBG4.SetActive(true);
+				ArtBG1.SetActive(false);
+				ArtBG2.SetActive(false);
+				Char1name.text = "YOU";
                 Char1speech.text = "They're... they're not chasing me.";
                 Char2name.text = "";
                 Char2speech.text = "";
