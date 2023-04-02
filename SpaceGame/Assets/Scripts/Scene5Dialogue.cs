@@ -14,10 +14,8 @@ public class Scene5Dialogue : MonoBehaviour {
 		public Text Char3name;
 		public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
-       //public GameObject ArtChar1b;
-       //public GameObject ArtChar2;
         public GameObject ArtBG1;
+		public GameObject ArtBG2;
         public GameObject Choice1a;                  // MEDBAY
         public GameObject Choice1b;                   // CAPTAINS QUARTERS
 		public GameObject Choice1c;                  // cryo
@@ -32,9 +30,10 @@ public class Scene5Dialogue : MonoBehaviour {
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
-        DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false);
+        if (GameHandler.corridorBAlready == false) {
+		DialogueDisplay.SetActive(false);
         ArtBG1.SetActive(true);
+		ArtBG2.SetActive(false);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
 		Choice1c.SetActive(false);
@@ -43,7 +42,20 @@ void Start(){
 		NextScene3Button.SetActive(false);
 		NextScene4Button.SetActive(false);
         nextButton.SetActive(true);
-
+		}
+		else {
+		DialogueDisplay.SetActive(false);
+        ArtBG2.SetActive(true);
+		ArtBG1.SetActive(false);
+        Choice1a.SetActive(false);
+        Choice1b.SetActive(false);
+		Choice1c.SetActive(false);
+        NextScene1Button.SetActive(false);
+        NextScene2Button.SetActive(false);
+		NextScene3Button.SetActive(false);
+		NextScene4Button.SetActive(false);
+        nextButton.SetActive(true);	
+		}
      // Find the gameHandler:
      // gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
    }
@@ -64,7 +76,6 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-               ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -83,7 +94,9 @@ public void next(){
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
-                Char1name.text = "";
+                ArtBG2.SetActive(true);
+				ArtBG1.SetActive(false);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "You find yourself in a wider hall, with doors set in the walls.";
@@ -117,10 +130,10 @@ public void next(){
 	 else {                                                            // not your first time in corridor B!
 		primeInt = primeInt + 1;
         if (primeInt == 1){
-                // AudioSource.Play();
+            ArtBG2.SetActive(true);
+			ArtBG1.SetActive(false);
         }
         else if (primeInt == 2){
-               ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -131,17 +144,20 @@ public void next(){
 				// Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
-				if (GameHandler.medbayAlready == false) {
-                Choice1a.SetActive(true); // CHOICE: MEDBAY
-				}
-				if (GameHandler.capQuartersAlready == false) {
-                Choice1b.SetActive(true); // CHOICE: CAPTAIN'S QUARTERS
-				}
-				if (GameHandler.cryoAlready == false) {
-				Choice1c.SetActive(true); //  CHOICE: CRYO
-				}
+				
 				if (GameHandler.batteries >= 2) {        // got cells? then git!
 				NextScene4Button.SetActive(true);
+				}
+				else {
+					if (GameHandler.medbayAlready == false) {
+						Choice1a.SetActive(true); // CHOICE: MEDBAY
+					}
+					if (GameHandler.capQuartersAlready == false) {
+						Choice1b.SetActive(true); // CHOICE: CAPTAIN'S QUARTERS
+					}
+					if (GameHandler.cryoAlready == false) {
+						Choice1c.SetActive(true); //  CHOICE: CRYO
+					}	
 				}
         }
 	 }
@@ -206,16 +222,13 @@ public void next(){
 		public void SceneChange4(){                         //onward
 				GameHandler.corridorBAlready = true;
 				if (GameHandler.batteries >= 3) {
-					audioSource.Play();
-					StartCoroutine(SceneChangeDelay("Scene9"));
+					SceneManager.LoadScene("Scene9");
 				}
 				else if (GameHandler.corridorCAlready == true){
-					audioSource.Play();
-					StartCoroutine(SceneChangeDelay("Scene3"));
+					SceneManager.LoadScene("Scene3");
 				}
 				else {
-					audioSource.Play();
-					StartCoroutine(SceneChangeDelay("Scene7"));
+					SceneManager.LoadScene("Scene7");
 				}
         }
 		
