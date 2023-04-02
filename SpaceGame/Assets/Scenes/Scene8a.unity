@@ -1854,7 +1854,10 @@ MonoBehaviour:
   Char4name: {fileID: 1888511018}
   Char4speech: {fileID: 1455508645}
   DialogueDisplay: {fileID: 5589024293150988415}
-  ArtChar1: {fileID: 1046077599}
+  GuardArtIdle: {fileID: 1046077599}
+  GuardArtAlert: {fileID: 1561523439}
+  GuardArtHostile: {fileID: 646330576}
+  GuardArtShooting: {fileID: 10863092}
   ArtBG1: {fileID: 1051186833}
   Choice1a: {fileID: 6493944099614529797}
   Choice1b: {fileID: 898679598}

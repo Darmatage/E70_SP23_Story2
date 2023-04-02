@@ -14,9 +14,7 @@ public class Scene8bDialogue : MonoBehaviour {
 		public Text Char3name;
 		public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
-       //public GameObject ArtChar1b;
-       //public GameObject ArtChar2;
+		public GameObject ToolboxArt;
         public GameObject ArtBG1;
         public GameObject Choice1a;                                 // search foot locker
         public GameObject Choice1b;                                 // search hanging uniforms)
@@ -29,7 +27,7 @@ public class Scene8bDialogue : MonoBehaviour {
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false);
+        ToolboxArt.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -130,7 +128,8 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 33){
-                Char1name.text = "YOU";
+                ToolboxArt.SetActive(true);
+				Char1name.text = "YOU";
                 Char1speech.text = "... and a small box.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -170,7 +169,8 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 38){
-                Char1name.text = "YOU";
+                ToolboxArt.SetActive(false);
+				Char1name.text = "YOU";
                 Char1speech.text = "Doesn't seem like there's much else in here. Time to move on.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -198,6 +198,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 73){
+				ToolboxArt.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "Looks like a toolbox. Poorly maintained.";
                 Char2name.text = "";
@@ -214,7 +215,8 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 75){
-                Char1name.text = "YOU";
+                ToolboxArt.SetActive(false);
+				Char1name.text = "YOU";
                 Char1speech.text = "Doesn't seem like there's much else in here. Time to move on.";
                 Char2name.text = "";
                 Char2speech.text = "";

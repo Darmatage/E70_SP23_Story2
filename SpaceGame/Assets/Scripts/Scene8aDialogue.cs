@@ -16,9 +16,10 @@ public class Scene8aDialogue : MonoBehaviour {
 		public Text Char4name;
 		public Text Char4speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
-       //public GameObject ArtChar1b;
-       //public GameObject ArtChar2;
+        public GameObject GuardArtIdle;
+		public GameObject GuardArtAlert;
+		public GameObject GuardArtHostile;
+		public GameObject GuardArtShooting;
         public GameObject ArtBG1;
         public GameObject Choice1a;                         // talk
         public GameObject Choice1b;                         // leave
@@ -34,7 +35,10 @@ public class Scene8aDialogue : MonoBehaviour {
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false);
+        GuardArtIdle.SetActive(false);
+		GuardArtAlert.SetActive(false);
+		GuardArtHostile.SetActive(false);
+		GuardArtShooting.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -87,6 +91,10 @@ public void next(){
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
+				GuardArtIdle.SetActive(true);
+				GuardArtAlert.SetActive(false);
+				GuardArtHostile.SetActive(false);
+				GuardArtShooting.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -215,6 +223,10 @@ public void next(){
                 Char4speech.text = "";
         }
 		else if (primeInt == 23){
+				GuardArtIdle.SetActive(false);
+				GuardArtAlert.SetActive(true);
+				GuardArtHostile.SetActive(false);
+				GuardArtShooting.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -225,7 +237,11 @@ public void next(){
                 Char4speech.text = "";
         }
 		else if (primeInt == 24){
-                Char1name.text = "";
+                GuardArtIdle.SetActive(false);
+				GuardArtAlert.SetActive(false);
+				GuardArtHostile.SetActive(true);
+				GuardArtShooting.SetActive(false);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "Immediately, several weapons are pointed toward you as other crew members scramble to take up their arms.";
@@ -260,7 +276,11 @@ public void next(){
                 Choice1d.SetActive(true); // CHOICE 1d: FLEE
         }
 		else if (primeInt == 31){                                                         //Choice 1c: TALK MORE
-                Char1name.text = "";
+                GuardArtIdle.SetActive(false);
+				GuardArtAlert.SetActive(false);
+				GuardArtHostile.SetActive(false);
+				GuardArtShooting.SetActive(true);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "Several members of the crew open fire at the same time, the beams striking you simultaneously and sending you tumbling to the floor.";
@@ -273,7 +293,11 @@ public void next(){
 				NextScene2Button.SetActive(true);
         }
 		else if (primeInt == 41){                                                   //Choice 1d: Flee!
-                Char1name.text = "";
+                GuardArtIdle.SetActive(false);
+				GuardArtAlert.SetActive(false);
+				GuardArtHostile.SetActive(false);
+				GuardArtShooting.SetActive(true);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "You hurl yourself back toward the door just as several crew members open fire.";
@@ -353,6 +377,6 @@ public void next(){
                SceneManager.LoadScene("Scene7");                      
         }
         public void SceneChange2(){                                        // Scene Change 2: Game Over
-                SceneManager.LoadScene("Scene2b");
+                SceneManager.LoadScene("End_LoseBlood");
         }
 }

@@ -14,9 +14,8 @@ public class Scene8cDialogue : MonoBehaviour {
 		public Text Char3name;
 		public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
-       //public GameObject ArtChar1b;
-       //public GameObject ArtChar2;
+        public GameObject VentArt;
+        public GameObject TubeArt;
         public GameObject ArtBG1;
         public GameObject Choice1a;                   //CHOICE 1a: Search crates
         public GameObject Choice1b;					//CHOICE 1B: Search Shaft
@@ -32,7 +31,8 @@ public class Scene8cDialogue : MonoBehaviour {
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false);
+        VentArt.SetActive(false);
+		TubeArt.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -62,18 +62,17 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-                // ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "H.O.R.I.Z.O.N.";
-                Char3speech.text = "The cargo bay has sustained some damage. Please proceed with caution.";
+                Char3speech.text = "The cargo bay appears undisturbed. Regardless, proceed with caution.";
         }
        else if (primeInt ==3){
                 Char1name.text = "YOU";
-                Char1speech.text = "Any idea what happened in here?";
+                Char1speech.text = "This place is big. I wonder how long it would take to search.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -147,8 +146,9 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 15){
+				TubeArt.SetActive(true);
                 Char1name.text = "YOU";
-                Char1speech.text = "Anyway, what's in these tubes?";
+                Char1speech.text = "Anyway, I've got one open. What's in these tubes?";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -199,7 +199,8 @@ public void next(){
                 Choice1c.SetActive(true); // leave crates
         }
 		else if (primeInt == 30){             					// you've left the crates!
-                Char1name.text = "YOU";
+                TubeArt.SetActive(false);
+				Char1name.text = "YOU";
                 Char1speech.text = "Hmm...";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -237,7 +238,8 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 44){              
-                Char1name.text = "";
+                VentArt.SetActive(true);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "The screws holding the grate in place are quite stiff, but no match for your new tool. The metal sheet clangs to the floor a moment later.";
@@ -308,7 +310,6 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-                ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -349,7 +350,8 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 44){              
-                Char1name.text = "";
+                VentArt.SetActive(true);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "The screws holding the grate in place are quite stiff, but no match for your new tool. The metal sheet clangs to the floor a moment later.";
