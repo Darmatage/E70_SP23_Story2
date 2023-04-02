@@ -14,10 +14,10 @@ public class Scene6cDialogue : MonoBehaviour {
 		public Text Char3name;
 		public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
-       //public GameObject ArtChar1b;
-       //public GameObject ArtChar2;
         public GameObject ArtBG1;
+		public GameObject ArtBG2;
+		public GameObject ArtBG3;
+		public GameObject ArtBG4;
         public GameObject Choice1a;                             // TAKE CELLS
         public GameObject Choice1b;                                 // LEAVE
         public GameObject NextScene1Button;
@@ -29,8 +29,10 @@ public class Scene6cDialogue : MonoBehaviour {
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false);
         ArtBG1.SetActive(true);
+		ArtBG2.SetActive(false);
+		ArtBG3.SetActive(false);
+		ArtBG4.SetActive(false);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
         NextScene1Button.SetActive(false);
@@ -55,7 +57,6 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-            //    ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -286,6 +287,8 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 54){
+				ArtBG2.SetActive(true);
+				ArtBG1.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -294,6 +297,8 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 55){
+				ArtBG3.SetActive(true);
+				ArtBG2.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -302,6 +307,8 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 56){
+				ArtBG4.SetActive(true);
+				ArtBG3.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
