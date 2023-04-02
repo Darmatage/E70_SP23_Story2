@@ -287,6 +287,6 @@ public void next(){
         }
         public void SceneChange2(){                         // game over
 				GameHandler.airlockAlready = true;
-                SceneManager.LoadScene("Scene2b");
+                SceneManager.LoadScene("End_Ejected");
         }
 }
