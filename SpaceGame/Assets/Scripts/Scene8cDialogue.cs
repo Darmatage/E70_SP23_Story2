@@ -25,7 +25,7 @@ public class Scene8cDialogue : MonoBehaviour {
         public GameObject NextScene2Button;           // leave room
         public GameObject nextButton;
        //public GameHandler gameHandler;
-       //public AudioSource audioSource;
+       public AudioSource audioVentOpen;
         private bool allowSpace = true;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
@@ -239,6 +239,7 @@ public void next(){
         }
 		else if (primeInt == 44){              
                 VentArt.SetActive(true);
+                audioVentOpen.Play();
 				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
