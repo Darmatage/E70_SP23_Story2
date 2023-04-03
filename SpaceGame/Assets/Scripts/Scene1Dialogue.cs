@@ -86,7 +86,7 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "*BEEP*...BEEP*...BEEP*...BEEP*...BEEP*... \n BEEP*...";
+                Char2speech.text = "A slow, steady beeping sound rouses you awake.";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
@@ -106,7 +106,7 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "The beeping sound continues steadily. Where is it coming from? As you look around, you suddenly hear a voice.";
+                Char2speech.text = "The beeping sound continues. Where is it coming from? As you look around, you suddenly hear a voice.";
         }
 		else if (primeInt == 7){
                 Char1name.text = "";
