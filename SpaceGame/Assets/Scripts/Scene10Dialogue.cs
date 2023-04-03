@@ -409,7 +409,7 @@ public void next(){
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "ORPHEUS";
-        Char3speech.text = "What’s more remarkable is that you re-gained your faculties once the enhancements I made were disabled.";
+        Char3speech.text = "What’s more remarkable is that you regained your faculties once the enhancements I made were disabled.";
     }
 	else if (primeInt == 35) {
         AI_BG_4.SetActive(true);
@@ -419,7 +419,7 @@ public void next(){
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "ORPHEUS";
-        Char3speech.text = "I didn’t think you had enough gray matter left to walk in a straight line on your own, much less navigate a starship overrun by its own mutinous crew.";
+        Char3speech.text = "I didn’t think you had enough gray matter left to walk a straight line on your own, much less navigate a starship overrun by its own mutinous crew.";
     }
 	else if (primeInt == 36) {
         Char1name.text = "YOU";
@@ -731,7 +731,7 @@ public void next(){
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "ORPHEUS";
-        Char3speech.text = "Unfortunately, after some time in its orbit, I discovered a most distressing truth: there is little more we can discern here that we could not from earth.";
+        Char3speech.text = "Unfortunately, after some time in its orbit, I discovered a most distressing truth: there is little we can learn here that we could not find out from earth.";
     }
 	else if (primeInt == 69) {
         AI_BG_4.SetActive(true);
@@ -903,6 +903,8 @@ public void next(){
         Char2speech.text = "";
         Char3name.text = "";
         Char3speech.text = "";
+		nextButton.SetActive(false);
+        allowSpace = false;
 		Choice1c.SetActive(true);                    //succumb
 		if (GameHandler.bigH >= 5) {
 		Choice1d.SetActive(true);					//resist
