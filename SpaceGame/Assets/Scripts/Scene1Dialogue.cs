@@ -281,7 +281,7 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "You look around the room, and quickly find the generator - a bulky, mechanical object that stretches nearly wall-to-wall at one end of the room.";
+                Char2speech.text = "You look around the room, and quickly find the generator - a bulky, mechanical object lurking at one end of the room.";
 				Char3name.text = "";
                 Char3speech.text = "";
         }
