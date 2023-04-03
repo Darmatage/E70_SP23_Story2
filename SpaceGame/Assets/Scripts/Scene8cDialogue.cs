@@ -77,7 +77,6 @@ public void next(){
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";
-                //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
                 Char1name.text = "";
@@ -94,7 +93,6 @@ public void next(){
                 Char2speech.text = "";
 				Char3name.text = "H.O.R.I.Z.O.N.";
                 Char3speech.text = "There are options for investigation.";
-                //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
                Char1name.text = "";
