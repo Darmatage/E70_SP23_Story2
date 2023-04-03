@@ -25,7 +25,9 @@ public class Scene8dDialogue : MonoBehaviour {
         public GameObject NextScene2Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
-       //public AudioSource audioSource;
+       public AudioSource audioButtonPress;
+       public AudioSource audioAlarm;
+       public AudioSource audioAirLockOpen;
         private bool allowSpace = true;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
@@ -170,6 +172,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 20){
+                audioButtonPress.Play();
                 Char1name.text = "YOU";
                 Char1speech.text = "What was that?";
                 Char2name.text = "";
@@ -212,6 +215,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 25){
+
                 Char1name.text = "YOU";
                 Char1speech.text = "Let me out! I can help you!";
                 Char2name.text = "";
@@ -220,6 +224,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 26){
+                audioAlarm.Play();
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
@@ -236,6 +241,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 28){
+                audioAirLockOpen.Play();
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
