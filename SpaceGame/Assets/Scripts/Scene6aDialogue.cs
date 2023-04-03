@@ -588,8 +588,8 @@ public void next(){
 				Char3name.text = "";
                 Char3speech.text = "";
                 primeInt = 150;
-                Choice1a.SetActive(false);
-                Choice1b.SetActive(false);
+                Choice1c.SetActive(false);
+                Choice1d.SetActive(false);
                 nextButton.SetActive(true);
                 allowSpace = true;
         }
@@ -601,8 +601,8 @@ public void next(){
 				Char3name.text = "";
                 Char3speech.text = "";
                 primeInt = 109;
-                Choice1a.SetActive(false);
-                Choice1b.SetActive(false);
+                Choice1c.SetActive(false);
+                Choice1d.SetActive(false);
                 nextButton.SetActive(true);
                 allowSpace = true;
         }

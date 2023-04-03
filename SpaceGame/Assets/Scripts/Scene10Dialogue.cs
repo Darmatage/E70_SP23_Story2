@@ -1453,7 +1453,7 @@ public void next(){
 				}
         }
 		public void SceneChange1(){               // succumb
-			SceneManager.LoadScene("End_submit");
+			SceneManager.LoadScene("End_Succumb");
         }
 		public void SceneChange2(){                 //resist, took cells
 			SceneManager.LoadScene("End_drift");

@@ -66,7 +66,7 @@ EditorBuildSettings:
     path: Assets/Scenes/End_Win.unity
     guid: 1280bebaa59ae4f47885bee6500aae98
   - enabled: 1
-    path: Assets/Scenes/End_Lose.unity
+    path: Assets/Scenes/End_Succumb.unity
     guid: 8251646df595ceb4e8e7ab3da41388b5
   - enabled: 1
     path: Assets/Scenes/End_Zap.unity
