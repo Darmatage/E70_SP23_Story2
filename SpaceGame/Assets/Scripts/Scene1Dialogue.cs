@@ -29,6 +29,7 @@ public class Scene1Dialogue : MonoBehaviour {
         public GameObject nextButton;
        //public GameHandler gameHandler;
        public AudioSource audioSource;
+       public AudioSource audioBeep;
         private bool allowSpace = true;
 		public bool seenGenerator = false;
 		public GameObject theDarkness;
@@ -71,9 +72,8 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-               
 			    StartCoroutine(FadeOut(theDarkness));
-			    
+			    StartCoroutine(PlayLooped());
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -729,7 +729,19 @@ public void next(){
                         fadeImage.GetComponent<Image>().color = new Color(0, 0, 0, alphaLevel);
                         Debug.Log("Alpha is: " + alphaLevel);
                 }
-        } 
+        }
+
+        IEnumerator PlayLooped()
+        {
+            // Play the sound once
+            audioBeep.Play();
+
+            // Wait for 1 second before playing the sound again
+            yield return new WaitForSeconds(2f);
+
+            // Call this coroutine again to play the sound on loop
+            StartCoroutine(PlayLooped());
+        }
 		
 		
 }
