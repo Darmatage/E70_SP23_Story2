@@ -146,7 +146,13 @@ public void next(){
                 allowSpace = false;
 				
 				if (GameHandler.batteries >= 2) {        // got cells? then git!
-				NextScene4Button.SetActive(true);
+					if (GameHandler.cryoAlready == true) {
+						NextScene4Button.SetActive(true);
+					}
+					else {
+						NextScene4Button.SetActive(true);
+						Choice1c.SetActive(true); //  CHOICE: CRYO
+					}
 				}
 				else {
 					if (GameHandler.medbayAlready == false) {
