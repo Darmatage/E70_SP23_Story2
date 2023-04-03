@@ -1327,7 +1327,7 @@ public void next(){
 	else if (primeInt == 184) {                                 
         Char1name.text = "";
         Char1speech.text = "";
-        Char2name.text = "///";
+        Char2name.text = "...";
         Char2speech.text = " It’s been a long day, and you need to rest. Someone else can worry about it.";
         Char3name.text = "";
         Char3speech.text = "";

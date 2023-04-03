@@ -494,7 +494,8 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 44){              
-                VentArt.SetActive(true);
+                audioVentOpen.Play();
+				VentArt.SetActive(true);
 				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";

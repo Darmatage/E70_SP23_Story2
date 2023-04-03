@@ -383,9 +383,9 @@ public void next(){
                StartCoroutine(SceneChangeDelay("Scene7"));                              
         }
         public void SceneChange2(){                                        // Scene Change 2: Game Over
-                // SceneManager.LoadScene("End_LoseBlood");
-                audioDoor.Play();    
-               StartCoroutine(SceneChangeDelay("End_LoseBlood"));         
+                SceneManager.LoadScene("End_LoseBlood");
+                //audioDoor.Play();    
+               //StartCoroutine(SceneChangeDelay("End_LoseBlood"));         
         }
 
         IEnumerator SceneChangeDelay(string newScene){
