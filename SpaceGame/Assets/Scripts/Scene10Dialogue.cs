@@ -1069,7 +1069,7 @@ public void next(){
         Static_Art_1.SetActive(true);
 		Static_Art_2.SetActive(false);
 		Char1name.text = "YOU";
-        Char1speech.text = "I  am not your tool!";
+        Char1speech.text = "I am not your tool!";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";
@@ -1316,7 +1316,7 @@ public void next(){
         Char3name.text = "";
         Char3speech.text = "";
     }
-	else if (primeInt == 182) {                                 
+	else if (primeInt == 183) {                                 
         Char1name.text = "";
         Char1speech.text = "";
         Char2name.text = "...";
@@ -1324,7 +1324,7 @@ public void next(){
         Char3name.text = "";
         Char3speech.text = "";
     }
-	else if (primeInt == 182) {                                 
+	else if (primeInt == 184) {                                 
         Char1name.text = "";
         Char1speech.text = "";
         Char2name.text = "///";
@@ -1332,7 +1332,7 @@ public void next(){
         Char3name.text = "";
         Char3speech.text = "";
     }
-	else if (primeInt == 182) {                                 
+	else if (primeInt == 185) {                                 
         Console_Art_4.SetActive(false);
 		Char1name.text = "";
         Char1speech.text = "";
@@ -1341,7 +1341,7 @@ public void next(){
         Char3name.text = "";
         Char3speech.text = "";
     }
-	else if (primeInt == 182) {                                 
+	else if (primeInt == 186) {                                 
         Char1name.text = "";
         Char1speech.text = "";
         Char2name.text = "...";
@@ -1352,7 +1352,7 @@ public void next(){
 		nextButton.SetActive(false);
         allowSpace = false;
     }
-	else if (primeInt == 182) {                                 
+	else if (primeInt == 187) {                                 
         Char1name.text = "";
         Char1speech.text = "";
         Char2name.text = "";
