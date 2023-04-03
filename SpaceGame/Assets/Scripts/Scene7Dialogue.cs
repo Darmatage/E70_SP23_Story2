@@ -457,7 +457,7 @@ public void next(){
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "H.O.R.I.Z.O.N.";
-                Char3speech.text = "Directive: employ stealth tactics to continue search.";
+                Char3speech.text = "Directive: employ Stealth to continue search.";
 				nextButton.SetActive(false);
 				allowSpace = false;
 				Choice1f.SetActive(true); // ChoiceF: Continue dialogue, dependent on story status

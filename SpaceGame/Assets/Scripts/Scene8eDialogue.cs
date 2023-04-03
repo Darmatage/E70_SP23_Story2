@@ -146,7 +146,7 @@ public void next(){
 				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "You open your mouth to respond, but you stop yourself as you take in the space you're crawling into.";
+                Char2speech.text = "You open your mouth to respond, but you stop as you take in the space you're crawling into.";
 				Char3name.text = "";
                 Char3speech.text = "";
         }

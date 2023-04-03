@@ -244,7 +244,7 @@ public void next(){
         }
         public void Choice1bFunct(){                                             // search uniforms
                 Char1name.text = "YOU";
-                Char1speech.text = "I'll check the uniforms first.";
+                Char1speech.text = "I'll check the clothes first.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
