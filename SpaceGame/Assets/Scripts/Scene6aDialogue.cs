@@ -281,7 +281,9 @@ public void next(){
                 Char4speech.text = "";
         }
 		else if (primeInt == 102){                     
-                Char1name.text = "";
+                DoctorAttacking.SetActive(false);
+				DoctorDead.SetActive(true);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "His gun blazes a line across the ceiling as he falls back, finally shutting off as the fall knocks it from his twitching hand.";
@@ -335,7 +337,8 @@ public void next(){
 				Choice1d.SetActive(true);              //work
         }
 		else if (primeInt == 110){                 //you're working.       
-                Char1name.text = "YOU";
+                DoctorDead.SetActive(false);
+				Char1name.text = "YOU";
                 Char1speech.text = "Just gotta keep moving… Gotta save the ship.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -489,7 +492,8 @@ public void next(){
                 Char4speech.text = "";
         }
 		else if (primeInt == 160){                     
-                Char1name.text = "YOU";
+                DoctorDead.SetActive(false);
+				Char1name.text = "YOU";
                 Char1speech.text = "Just gotta keep moving… Gotta save the ship.";
                 Char2name.text = "";
                 Char2speech.text = "";
