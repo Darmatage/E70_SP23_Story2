@@ -26,6 +26,8 @@ public class Scene9Dialogue : MonoBehaviour {
     //public GameHandler gameHandler;
     //public AudioSource audioSource;
     private bool allowSpace = true;
+    public AudioSource audioBeep;
+
 
     // initial visibility settings. Any new images or buttons need to also be SetActive(false);
     void Start(){  
@@ -39,7 +41,7 @@ public class Scene9Dialogue : MonoBehaviour {
 		ArtBG3.SetActive(false);
         NextScene1Button.SetActive(false);
         nextButton.SetActive(true);
-
+        audioBeep.Play();
         // Find the gameHandler:
         // gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
     }
@@ -68,6 +70,7 @@ public class Scene9Dialogue : MonoBehaviour {
             Char3speech.text = "";
         }
         else if (primeInt ==3){
+            audioBeep.Play();
             ArtBG2.SetActive(true);
 			ArtBG1.SetActive(false);
 			Char1name.text = "";
@@ -95,6 +98,7 @@ public class Scene9Dialogue : MonoBehaviour {
             Char3speech.text = "";
         }
         else if (primeInt == 6){
+            audioBeep.Play();
 			ArtChar1.SetActive(false);
 			ArtChar2.SetActive(true);
 			Char1name.text = "";

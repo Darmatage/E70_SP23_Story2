@@ -50,7 +50,7 @@ void Start(){
 		Choice1e.SetActive(false);
         NextScene1Button.SetActive(false);
         nextButton.SetActive(true);
-
+        StartCoroutine(BeepSoundLooped());
      // Find the gameHandler:
      // gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
    }
@@ -67,13 +67,12 @@ void Update(){         // use spacebar as Next button
 public void next(){
         primeInt = primeInt + 1;
         if (primeInt == 1){
-			
 			theDarkness.SetActive(true);
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
 			    StartCoroutine(FadeOut(theDarkness));
-			    StartCoroutine(PlayLooped());
+			    
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -731,16 +730,16 @@ public void next(){
                 }
         }
 
-        IEnumerator PlayLooped()
+        IEnumerator BeepSoundLooped()
         {
             // Play the sound once
             audioBeep.Play();
 
             // Wait for 1 second before playing the sound again
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(6f);
 
             // Call this coroutine again to play the sound on loop
-            StartCoroutine(PlayLooped());
+            StartCoroutine(BeepSoundLooped());
         }
 		
 		
