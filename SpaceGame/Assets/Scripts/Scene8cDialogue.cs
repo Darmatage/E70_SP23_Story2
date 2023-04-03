@@ -355,6 +355,110 @@ public void next(){
 					Choice1a.SetActive(true); // search crates
 				}
         }
+		// ENCOUNTER AFTER CHOICE #1 - crates
+       else if (primeInt == 11){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "The most effective way to determine that would be to search them.";
+        }
+		else if (primeInt == 12){
+                Char1name.text = "YOU";
+                Char1speech.text = "Was that sass?";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 13){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "This unit is incapable of 'sass'.";
+        }
+		else if (primeInt == 14){
+                Char1name.text = "YOU";
+                Char1speech.text = "Right.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 15){
+				TubeArt.SetActive(true);
+                Char1name.text = "YOU";
+                Char1speech.text = "Anyway, I've got one open. What's in these tubes?";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 16){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "Those tubes appear to contain Quasarite. This material is converted to energy by the generator, allowing the ship to move.";
+        }
+		else if (primeInt == 17){
+                Char1name.text = "YOU";
+                Char1speech.text = "Can we use it to re-start the generator?";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+        }
+		else if (primeInt == 18){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "Negative. The process requires an external power source.";
+        }
+		else if (primeInt == 19){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "The generator will not re-start without the battery array.";
+        }
+		else if (primeInt == 20){
+                Char1name.text = "YOU";
+                Char1speech.text = "Then I'm wasting time here.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+				GameHandler.cratesAlready = true;
+				nextButton.SetActive(false);
+                allowSpace = false;
+                Choice1c.SetActive(true); // leave crates
+        }
+		else if (primeInt == 30){             					// you've left the crates!
+                TubeArt.SetActive(false);
+				Char1name.text = "YOU";
+                Char1speech.text = "Hmm...";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+				nextButton.SetActive(false);
+                allowSpace = false;
+				if (GameHandler.armoryAlready == true) {
+				Choice1b.SetActive(true); // investigate vent
+				}
+				if (GameHandler.hasScrewdriver == true) {
+                Choice1b.SetActive(true); // search shaft
+				}
+				Choice1d.SetActive(true); // leave room
+        }
 		else if (primeInt == 41){              // you're investigating the shaft, and you have the screwdriver!
                 if (GameHandler.armoryAlready == true) {
 				Char1name.text = "";
