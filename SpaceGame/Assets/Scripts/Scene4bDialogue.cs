@@ -153,12 +153,16 @@ public void next(){
                 allowSpace = false;
 				if (GameHandler.seenPantry == true){
                 Choice1b.SetActive(true); //  Choice1bFunct() - investigate hydrator
+				if (GameHandler.foundManual == false) {
 				Choice1g.SetActive(true); //  Choice1gFunct() - back to engineering
+				}
 				}
 				else{
 				Choice1a.SetActive(true); // Choice1aFunct() - search pantry
                 Choice1b.SetActive(true); //  Choice1bFunct() - investigate hydrator
+				if (GameHandler.foundManual == false) {
 				Choice1g.SetActive(true); //  Choice1gFunct() - back to engineering
+				}
 				}
         }
        else if (primeInt == 8){
@@ -255,7 +259,6 @@ public void next(){
                 Char3speech.text = "";
 				nextButton.SetActive(false);
                 allowSpace = false;
-                Choice1c.SetActive(true); // leave hydrator
                 Choice1d.SetActive(true); // red
 				Choice1e.SetActive(true); // green
 				Choice1f.SetActive(true); // blue	
@@ -445,7 +448,6 @@ public void next(){
                 Char3speech.text = "";
 				nextButton.SetActive(false);
                 allowSpace = false;
-                Choice1c.SetActive(true); // leave hydrator
                 Choice1d.SetActive(true); // red
 				Choice1e.SetActive(true); // green
 				Choice1f.SetActive(true); // blue	
