@@ -76,7 +76,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
        else if (primeInt ==3){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "So many scorch marks on the walls… and two more of the crew cut down...";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -85,7 +85,7 @@ public void next(){
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "It looks like a battlefield out here. Was there a mutiny or something?";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -101,7 +101,7 @@ public void next(){
                 HorizonSpeech.text = "Analyzing… Result: Probable.";
         }
       else if (primeInt == 6){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "You don’t know? Shouldn’t you be connected to the rest of the ship? What do the logs show?";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -117,7 +117,7 @@ public void next(){
                 HorizonSpeech.text = "Data library offline. Re-start generator to restore access.";
         }
        else if (primeInt == 8){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Right. But as far as I can tell, whoever did this is probably still around somewhere. You really don’t have any useful information about what happened?";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -126,7 +126,7 @@ public void next(){
         }
 		
 		else if (primeInt ==9){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "If I’m going to be searching all over for replacement power cells, I’d like to have some idea of what I might be running into, or at least how extensive any damage is.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -140,7 +140,7 @@ public void next(){
                 HorizonSpeech.text = "Data library offline. Re-start generator to restore access.";
         }
 		else if (primeInt == 11){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Great, just great… \n Wait, that door over there! That leads to the bridge.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -148,7 +148,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
 		else if (primeInt == 12){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "The ship’s computer will probably be offline, but maybe the Captain’s still in there? There’s got to be some useful information, at least.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -172,7 +172,7 @@ public void next(){
                 HorizonSpeech.text = "Bridge Bulkhead Status: Lockdown. Re-start generator to restore access.";
         }
 		else if (primeInt == 15){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "It’s been sealed? A mutiny sounds more and more likely. If someone locked themselves in here, it would probably be the Captain.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -188,7 +188,7 @@ public void next(){
 		
 		// after CHOICE #1a - bang on door:
 		else if (primeInt == 17){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Hello? Is anyone in there? I don’t know what’s going on, but the ship is in danger!";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -196,7 +196,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
        else if (primeInt == 18){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "We need to get the power up and running again, before we start losing gravity and life support!";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -288,7 +288,7 @@ public void next(){
                 allowSpace = true;
         }
         public void Choice1bFunct(){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "No way to get through a door that thick, and there probably won’t be a spare power cell on the bridge anyway. I should search elsewhere.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -301,7 +301,7 @@ public void next(){
                 allowSpace = true;
         }
 		public void Choice1cFunct(){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "I don’t have much time, I’d better look elsewhere.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";

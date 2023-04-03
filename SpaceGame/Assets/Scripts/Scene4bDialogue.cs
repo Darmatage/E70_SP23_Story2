@@ -113,7 +113,7 @@ public void next(){
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Hmm, a few plates left on the tables, meals unfinished. Whatever happened must have started suddenly.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -130,7 +130,7 @@ public void next(){
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
-               Char1name.text = "You";
+               Char1name.text = "YOU";
                 Char1speech.text = "A pantry, and the hydrator. Not much of a kitchen, but you make do when you’re in space.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -143,7 +143,7 @@ public void next(){
         }
   
 		else if (primeInt ==61){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Hmm...";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -197,7 +197,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt ==23){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Beef, chicken, even chocolate. Not a bad selection. ";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -205,7 +205,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt ==24){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Huh. For some reason, I can’t remember which of these was my favorite.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -221,7 +221,7 @@ public void next(){
                 Char3speech.text = "WARNING: Emergency Power Reserves critically low. Restore Main Power immediately.";
         }
 		else if (primeInt ==26){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Yeah yeah, I know. I can eat when the ship’s out of danger.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -234,7 +234,7 @@ public void next(){
         }
 		// ENCOUNTER AFTER hydrator choice
 		else if (primeInt ==51){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Ah, here we go. The power cell, hooked up to the back. There’s a few different cables, actually.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -251,7 +251,7 @@ public void next(){
         }
 		else if (primeInt ==53){
 				if (GameHandler.foundManual == true){
-				Char1name.text = "You";
+				Char1name.text = "YOU";
                 Char1speech.text = "Let's see what the manual says... \n Alright, Disconnection Protocol... red, green, then blue!";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -264,7 +264,7 @@ public void next(){
 				Choice1f.SetActive(true); // blue	
 				}	
 				else{
-				Char1name.text = "You";
+				Char1name.text = "YOU";
                 Char1speech.text = "Hopefully I do this right.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -279,7 +279,7 @@ public void next(){
 				}
         }
 		else if (primeInt == 101){  // After successful power cell retrieval                          
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "That's it, the cell's disconnected!";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -305,7 +305,7 @@ public void next(){
                 Char3speech.text = "Power Cell retrieved. Please proceed.";
         }
 		else if (primeInt == 104){                                 
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Don't have to tell me twice. Let's keep moving.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -350,7 +350,7 @@ public void next(){
         }
   
 		else if (primeInt ==61){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Hmm...";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -386,7 +386,7 @@ public void next(){
         }
 		else if (primeInt ==23){
                 GameHandler.bigH = GameHandler.bigH + 1;
-				Char1name.text = "You";
+				Char1name.text = "YOU";
                 Char1speech.text = "Beef, chicken, even chocolate. Not a bad selection. ";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -394,7 +394,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt ==24){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Huh. For some reason, I can’t remember which of these was my favorite.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -410,7 +410,7 @@ public void next(){
                 Char3speech.text = "WARNING: Emergency Power Reserves critically low. Restore Main Power immediately.";
         }
 		else if (primeInt ==26){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Yeah yeah, I know. I can eat when the ship’s out of danger.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -423,7 +423,7 @@ public void next(){
         }
 		// ENCOUNTER AFTER hydrator choice
 		else if (primeInt ==51){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Ah, here we go. The power cell, hooked up to the back. There’s a few different cables, actually.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -440,7 +440,7 @@ public void next(){
         }
 		else if (primeInt ==53){
 				if (GameHandler.foundManual == true){
-				Char1name.text = "You";
+				Char1name.text = "YOU";
                 Char1speech.text = "Let's see what the manual says... \n Alright, Disconnection Protocol... red, green, then blue!";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -453,7 +453,7 @@ public void next(){
 				Choice1f.SetActive(true); // blue	
 				}	
 				else{
-				Char1name.text = "You";
+				Char1name.text = "YOU";
                 Char1speech.text = "Hopefully I do this right.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -468,7 +468,7 @@ public void next(){
 				}
         }
 		else if (primeInt == 101){                                   // After successful power cell retrieval
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "That's it, the cell's disconnected!";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -507,7 +507,7 @@ public void next(){
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
         public void Choice1aFunct(){   // search pantry
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Let's see what's in here.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -526,7 +526,7 @@ public void next(){
         public void Choice1bFunct(){     // investigate hydrator
                 if (GameHandler.seenHydrator == true){
                 primeInt = 52;
-				Char1name.text = "You";
+				Char1name.text = "YOU";
                 Char1speech.text = "Hmm...";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -534,7 +534,7 @@ public void next(){
                 Char3speech.text = "";
 				}
 				else {
-				Char1name.text = "You";
+				Char1name.text = "YOU";
                 Char1speech.text = "A simple machine, but an important one. And it’s still on. Let’s see…";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -551,7 +551,7 @@ public void next(){
 		public void Choice1cFunct(){     // leave hydrator
                 if (GameHandler.seenHydrator == true){
                 primeInt = 60;
-				Char1name.text = "You";
+				Char1name.text = "YOU";
                 Char1speech.text = "Hmm...";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -559,7 +559,7 @@ public void next(){
                 Char3speech.text = "";
 				}
 				else {
-				Char1name.text = "You";
+				Char1name.text = "YOU";
                 Char1speech.text = "Ok, one moment. If I get fried, I can’t get the ship back online. Maybe I can figure out a better way.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -679,11 +679,11 @@ public void next(){
         }
 		public void Choice1gFunct(){     // back to engineering
 			if (GameHandler.engiAlready == false) {
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Maybe I can find something useful in Engineering Storage.";
 			}
 			else {
-				Char1name.text = "You";
+				Char1name.text = "YOU";
                 Char1speech.text = "Maybe there's something I missed in Engineering.";
 			}
                 Char2name.text = "";
@@ -697,7 +697,7 @@ public void next(){
                 NextScene2Button.SetActive(true);
         }
 		public void Choice1hFunct(){     // close pantry
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Not hungry anyway.";
                 Char2name.text = "";
                 Char2speech.text = "";

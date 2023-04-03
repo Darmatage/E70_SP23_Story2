@@ -74,7 +74,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
        else if (primeInt ==3){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Wow. There’s practically enough stuff in here to build a whole second ship! I wonder how it all stays organized?";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -100,7 +100,7 @@ public void next(){
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "So the ship’s inventory wasn’t important enough to store in your internal database, but the fact that the ship’s AI hates the engineers’ mess was?";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -108,7 +108,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
        else if (primeInt ==7){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Interesting set of priorities.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -132,7 +132,7 @@ public void next(){
                 HorizonSpeech.text = "For queries or suggestions regarding sub-unit programming, please re-activate the Primary Intelligence.";
         }
 		else if (primeInt ==10){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "I’m working on it. Unfortunately, none of these crates look like the kind you’d store a power cell in.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -140,7 +140,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
 		else if (primeInt ==11){
-				PlayerYouName.text = "You";
+				PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Hmm... \n Oh look, behind this shelf here. I wonder if this desk belonged to the chief engineer? A lot of papers on it.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -213,7 +213,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
 		else if (primeInt == 16){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Hmm, not much of this is immediately useful.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -243,7 +243,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
 		else if (primeInt == 20){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "I think I’m beginning to see where the Prime Intelligence’s dissatisfaction was coming from. Wait, what’s this?";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -252,7 +252,7 @@ public void next(){
         }
 		else if (primeInt == 21){
 				BookArt.SetActive(true);
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Wow, that’s a thick manual. And what does this sticky note on it say? The handwriting is awful. Hmm…";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -260,7 +260,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
 		else if (primeInt == 22){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "“Just swapped the hydrator’s power cell, should be good for a while more. Take care of it yourself next time. Disconnection protocol is on p.480.”";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -268,7 +268,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
        else if (primeInt == 23){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Sounds like this is about the kitchen’s hydrator. I’d better take this and see if the cell it mentions is still there.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -295,7 +295,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
        else if (primeInt ==3){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "So many crates, and no time to dig through them. Maybe that desk I saw earlier will have something useful.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -312,7 +312,7 @@ public void next(){
         }
 		else if (primeInt ==5){
 				DeskArt_3.SetActive(true);
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "So many papers. Nothing immediately useful, but what's in the drawers?";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -330,7 +330,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
 		else if (primeInt == 7){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "There's got to be a better way to store all this. Wait, what’s under these papers?";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -339,7 +339,7 @@ public void next(){
         }
 		else if (primeInt == 8){
 				BookArt.SetActive(true);
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Wow, that’s a thick manual. And what does this sticky note on it say? The handwriting is awful. Hmm…";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -347,7 +347,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
 		else if (primeInt == 9){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "“Just swapped the hydrator’s power cell, should be good for a while more. Take care of it yourself next time. Disconnection protocol is on p.480.”";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -355,7 +355,7 @@ public void next(){
                 HorizonSpeech.text = "";
         }
        else if (primeInt == 10){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Sounds like this is about the kitchen’s hydrator. There was something useful here after all!";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -372,7 +372,7 @@ public void next(){
 				DeskArt_3.SetActive(false);
 				DeskArt_4.SetActive(false);
 				BookArt.SetActive(false);
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Let's go get that power cell.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -400,7 +400,7 @@ public void next(){
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
         public void Choice1aFunct(){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Now hold on a moment, there might be something useful here.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -413,7 +413,7 @@ public void next(){
                 allowSpace = true;
         }
         public void Choice1bFunct(){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Ok, time to keep moving.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -427,7 +427,7 @@ public void next(){
                 allowSpace = true;
         }
 		public void Choice1cFunct(){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "I know, just a moment longer. I haven’t looked in here yet.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";

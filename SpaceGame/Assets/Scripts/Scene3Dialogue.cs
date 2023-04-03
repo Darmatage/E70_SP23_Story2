@@ -77,7 +77,7 @@ public void next(){
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Let’s see… we’ve got the kitchen, and engineering storage.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -93,7 +93,7 @@ public void next(){
                 HorizonSpeech.text = "Analyzing… \n Directive: Search engineering storage.";
         }
        else if (primeInt == 6){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "I’ll decide on my own, thanks.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -125,7 +125,7 @@ public void next(){
                 HorizonSpeech.text = "Unit: H.O.R.I.Z.O.N. is equipped with advanced deductive algorithms and logic calculators. ";
         }
 		else if (primeInt == 10){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "…So, you’re guessing.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -149,7 +149,7 @@ public void next(){
                 HorizonSpeech.text = "Do not assign human qualities to this unit’s calculations, which are calibrated to deliver mathematically optimized solutions with unmatched precision.";
         }
        else if (primeInt == 13){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Yeah, well, it’s still a guess.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -164,7 +164,7 @@ public void next(){
 
 // ENCOUNTER AFTER CHOICE #1
        else if (primeInt == 16){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "That’s my guess too.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
@@ -175,7 +175,7 @@ public void next(){
 				NextScene1Button.SetActive(true);
         }
        else if (primeInt == 21){
-                PlayerYouName.text = "You";
+                PlayerYouName.text = "YOU";
                 PlayerYouSpeech.text = "Food is one of the most important things for the crew, so the facilities for storing and preparing it probably have their own backup power.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";

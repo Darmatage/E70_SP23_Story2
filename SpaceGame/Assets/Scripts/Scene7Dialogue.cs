@@ -114,7 +114,6 @@ public void next(){
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";
-                //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
                 Char1name.text = "";
@@ -131,7 +130,6 @@ public void next(){
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";
-                //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
                Char1name.text = "";
@@ -238,9 +236,11 @@ public void next(){
                 Choice1a.SetActive(true); // ChoiceA: Investigate Armory
                 Choice1b.SetActive(true); // ChoiceB: Investigate Barracks
 				Choice1c.SetActive(true); // ChoiceC: Investigate Cargo Bay
-                Choice1d.SetActive(true); // ChoiceD: Investigate Airlock
 				if (GameHandler.batteries > 2) {
 				Choice1e.SetActive(true); // ChoiceE: Move On (only if 3 batteries already)	
+				}
+				if (GameHandler.batteries < 3) {
+				Choice1d.SetActive(true); // Choiced: airlock (only if not 3 batteries already)	
 				}
         }
 
