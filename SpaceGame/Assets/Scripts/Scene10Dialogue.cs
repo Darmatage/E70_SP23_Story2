@@ -1184,7 +1184,7 @@ public void next(){
 		Char1name.text = "";
         Char1speech.text = "";
         Char2name.text = "...";
-        Char2speech.text = "The sudden silence is deafening, or would be were it not for the sound of your heart pounding in your ears.";
+        Char2speech.text = "The sudden silence is deafening, or would be were it not for your heart pounding in your ears.";
         Char3name.text = "";
         Char3speech.text = "";
     }

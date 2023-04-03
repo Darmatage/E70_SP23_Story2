@@ -42,7 +42,6 @@ public class Scene9Dialogue : MonoBehaviour {
 		ArtBG3.SetActive(false);
         NextScene1Button.SetActive(false);
         nextButton.SetActive(true);
-        audioBeep.Play();
         // Find the gameHandler:
         // gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
     }

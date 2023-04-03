@@ -783,14 +783,14 @@ public void next(){
 		public void SceneChange5(){                  		// After Choice E: Proceed onward, to generator return (3 batteries) or to Corridor B
 				GameHandler.corridorCAlready = true;
 				if (GameHandler.corridorBAlready == true) {
-                // SceneManager.LoadScene("Scene9");
-                audioDoor.Play();    
-               StartCoroutine(SceneChangeDelay("Scene9"));         
+                 SceneManager.LoadScene("Scene9");
+                //audioDoor.Play();    
+               //StartCoroutine(SceneChangeDelay("Scene9"));         
 				}
 				else {
-				// SceneManager.LoadScene("Scene5");	
-                audioDoor.Play();    
-               StartCoroutine(SceneChangeDelay("Scene5"));         
+				SceneManager.LoadScene("Scene5");	
+                //audioDoor.Play();    
+               //StartCoroutine(SceneChangeDelay("Scene5"));         
 				}
         }
 

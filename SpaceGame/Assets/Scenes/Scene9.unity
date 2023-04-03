@@ -1577,6 +1577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioBeep
       objectReference: {fileID: 0}
+    - target: {fileID: 2191082266699253634, guid: 31e17eea8b75644f68eb864ded50ef15, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: d332092a82d734f4f9ac7549ee6f00f9, type: 2}
     - target: {fileID: 2191082266699253635, guid: 31e17eea8b75644f68eb864ded50ef15, type: 3}
       propertyPath: m_RootOrder
       value: 4
