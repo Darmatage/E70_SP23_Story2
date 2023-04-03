@@ -539,6 +539,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2134477119283230364, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
   m_PrefabInstance: {fileID: 733908326}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &462446717 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8438615561915502655, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+  m_PrefabInstance: {fileID: 1853654188}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &636830286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,6 +1824,7 @@ MonoBehaviour:
   NextScene5Button: {fileID: 1137174740}
   nextButton: {fileID: 434543315}
   gameHandler: {fileID: 69103049}
+  audioDoor: {fileID: 462446717}
 --- !u!1 &1825200822
 GameObject:
   m_ObjectHideFlags: 0

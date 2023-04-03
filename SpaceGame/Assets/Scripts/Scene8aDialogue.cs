@@ -30,6 +30,7 @@ public class Scene8aDialogue : MonoBehaviour {
         public GameObject nextButton;
        //public GameHandler gameHandler;
        public AudioSource audioLaserMany;
+       public AudioSource audioDoor;
         private bool allowSpace = true;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
@@ -377,9 +378,18 @@ public void next(){
         }
 
         public void SceneChange1(){                                        //Scene Change 1: Leave Armory
-               SceneManager.LoadScene("Scene7");                      
+            //    SceneManager.LoadScene("Scene7"); 
+            audioDoor.Play();    
+               StartCoroutine(SceneChangeDelay("Scene7"));                              
         }
         public void SceneChange2(){                                        // Scene Change 2: Game Over
-                SceneManager.LoadScene("End_LoseBlood");
+                // SceneManager.LoadScene("End_LoseBlood");
+                audioDoor.Play();    
+               StartCoroutine(SceneChangeDelay("End_LoseBlood"));         
         }
+
+        IEnumerator SceneChangeDelay(string newScene){
+			yield return new WaitForSeconds(2f);
+			SceneManager.LoadScene(newScene);
+		}        
 }

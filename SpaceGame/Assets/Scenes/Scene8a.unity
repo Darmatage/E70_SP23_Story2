@@ -330,6 +330,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8438615561915502655, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
 --- !u!1001 &221744926
@@ -589,6 +593,11 @@ GameObject:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5171385881763407660, guid: b7f68486a517c8c4ba6831fb2cb1ce99, type: 3}
   m_PrefabInstance: {fileID: 270813044}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &298838638 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8438615561915502655, guid: ed58195d44e9b4b429d71184d051b3bd, type: 3}
+  m_PrefabInstance: {fileID: 134063246}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &434543314
 PrefabInstance:
@@ -1867,6 +1876,7 @@ MonoBehaviour:
   NextScene2Button: {fileID: 2065086053}
   nextButton: {fileID: 434543315}
   audioLaserMany: {fileID: 1859317893}
+  audioDoor: {fileID: 298838638}
 --- !u!1 &1859317892
 GameObject:
   m_ObjectHideFlags: 0

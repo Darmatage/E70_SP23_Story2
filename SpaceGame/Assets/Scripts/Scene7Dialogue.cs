@@ -31,7 +31,7 @@ public class Scene7Dialogue : MonoBehaviour {
 		public GameObject NextScene5Button;
         public GameObject nextButton;
         public GameHandler gameHandler;
-       //public AudioSource audioSource;
+       public AudioSource audioDoor;
         private bool allowSpace = true;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
@@ -758,27 +758,44 @@ public void next(){
 
         public void SceneChange1(){							// After Choice A:enter armory
 			   GameHandler.corridorCAlready = true;
-               SceneManager.LoadScene("Scene8a");          
+            //    SceneManager.LoadScene("Scene8a"); 
+               audioDoor.Play();    
+               StartCoroutine(SceneChangeDelay("Scene8a"));         
         }
         public void SceneChange2(){                        // After Choice B:proceed to barracks
 				GameHandler.corridorCAlready = true;
-                SceneManager.LoadScene("Scene8b");
+                // SceneManager.LoadScene("Scene8b");
+                audioDoor.Play();    
+               StartCoroutine(SceneChangeDelay("Scene8b"));         
         }
 		public void SceneChange3(){							//After Choice C:proceed to cargo
 				GameHandler.corridorCAlready = true;
-                SceneManager.LoadScene("Scene8c");      
+                // SceneManager.LoadScene("Scene8c");
+                audioDoor.Play();    
+               StartCoroutine(SceneChangeDelay("Scene8c"));               
         }
 		public void SceneChange4(){							//After Choice D: proceed to airlock
 				GameHandler.corridorCAlready = true;
-                SceneManager.LoadScene("Scene8d");   
+                // SceneManager.LoadScene("Scene8d"); 
+                audioDoor.Play();    
+               StartCoroutine(SceneChangeDelay("Scene8d"));           
         }
 		public void SceneChange5(){                  		// After Choice E: Proceed onward, to generator return (3 batteries) or to Corridor B
 				GameHandler.corridorCAlready = true;
 				if (GameHandler.corridorBAlready == true) {
-                SceneManager.LoadScene("Scene9");
+                // SceneManager.LoadScene("Scene9");
+                audioDoor.Play();    
+               StartCoroutine(SceneChangeDelay("Scene9"));         
 				}
 				else {
-				SceneManager.LoadScene("Scene5");	
+				// SceneManager.LoadScene("Scene5");	
+                audioDoor.Play();    
+               StartCoroutine(SceneChangeDelay("Scene5"));         
 				}
         }
+
+        IEnumerator SceneChangeDelay(string newScene){
+			yield return new WaitForSeconds(2f);
+			SceneManager.LoadScene(newScene);
+		}
 }

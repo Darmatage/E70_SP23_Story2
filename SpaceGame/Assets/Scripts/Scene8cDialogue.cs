@@ -26,6 +26,7 @@ public class Scene8cDialogue : MonoBehaviour {
         public GameObject nextButton;
        //public GameHandler gameHandler;
        public AudioSource audioVentOpen;
+       public AudioSource audioDoor;
         private bool allowSpace = true;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
@@ -506,10 +507,19 @@ public void next(){
 
         public void SceneChange1(){                     // into the vents!
 			 GameHandler.cargoAlready = true;
-             SceneManager.LoadScene("Scene8e");
+            //  SceneManager.LoadScene("Scene8e");
+             audioDoor.Play();    
+               StartCoroutine(SceneChangeDelay("Scene8e"));         
         }
         public void SceneChange2(){                 // back to corridor
 				GameHandler.cargoAlready = true;
-                SceneManager.LoadScene("Scene7");
+                // SceneManager.LoadScene("Scene7");
+                audioDoor.Play();    
+               StartCoroutine(SceneChangeDelay("Scene7"));         
         }
+
+        IEnumerator SceneChangeDelay(string newScene){
+			yield return new WaitForSeconds(2f);
+			SceneManager.LoadScene(newScene);
+		} 
 }

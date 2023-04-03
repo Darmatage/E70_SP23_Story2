@@ -21,7 +21,7 @@ public class Scene8bDialogue : MonoBehaviour {
         public GameObject NextScene1Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
-       //public AudioSource audioSource;
+       public AudioSource audioDoor;
         private bool allowSpace = true;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
@@ -258,6 +258,13 @@ public void next(){
 
         public void SceneChange1(){
 				 GameHandler.hasScrewdriver = true;
-                 SceneManager.LoadScene("Scene7");
+                //  SceneManager.LoadScene("Scene7");
+                 audioDoor.Play();    
+               StartCoroutine(SceneChangeDelay("Scene7"));         
         }
+
+        IEnumerator SceneChangeDelay(string newScene){
+			yield return new WaitForSeconds(2f);
+			SceneManager.LoadScene(newScene);
+		}    
 }

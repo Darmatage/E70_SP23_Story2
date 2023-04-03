@@ -27,6 +27,7 @@ public class Scene9Dialogue : MonoBehaviour {
     //public AudioSource audioSource;
     private bool allowSpace = true;
     public AudioSource audioBeep;
+    public AudioSource audioDoor;
 
 
     // initial visibility settings. Any new images or buttons need to also be SetActive(false);
@@ -248,9 +249,15 @@ public class Scene9Dialogue : MonoBehaviour {
    // }
 
     public void SceneChange1(){
-        SceneManager.LoadScene("Scene10");
+        audioDoor.Play();
+        // SceneManager.LoadScene("Scene10");
+        StartCoroutine(SceneChangeDelay("Scene10"));
     }
 
+    IEnumerator SceneChangeDelay(string newScene){
+			yield return new WaitForSeconds(2f);
+			SceneManager.LoadScene(newScene);
+	}
    // public void SceneChange2(){
       //  SceneManager.LoadScene("Scene2b");
    // }
