@@ -28,6 +28,7 @@ public class Scene8eDialogue : MonoBehaviour {
 		public GameObject ArtBG6;
         public GameObject NextScene1Button;
         public GameObject nextButton;
+        public AudioSource audioVentOpen;
        //public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
@@ -123,6 +124,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt ==8){
+                audioVentOpen.Play();
                 ArtBG3.SetActive(true);
 				ArtBG2.SetActive(false);
 				Char1name.text = "";

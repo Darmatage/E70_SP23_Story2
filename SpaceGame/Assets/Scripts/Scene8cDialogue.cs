@@ -27,6 +27,7 @@ public class Scene8cDialogue : MonoBehaviour {
        //public GameHandler gameHandler;
        public AudioSource audioVentOpen;
        public AudioSource audioDoor;
+       
         private bool allowSpace = true;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
