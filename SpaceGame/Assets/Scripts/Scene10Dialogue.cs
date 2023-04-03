@@ -340,7 +340,7 @@ public void next(){
 		Char1name.text = "";
         Char1speech.text = "";
         Char2name.text = "...";
-        Char2speech.text = "Your vision blurs for a moment as you feel a bizarre, staticky sensation in your head.";
+        Char2speech.text = "Your vision blurs for a moment as you feel a bizarre, static-y sensation in your head.";
         Char3name.text = "";
         Char3speech.text = "";
     }

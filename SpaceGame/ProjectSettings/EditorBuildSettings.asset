@@ -75,6 +75,9 @@ EditorBuildSettings:
     path: Assets/Scenes/End_LoseBlood.unity
     guid: 3c73e5883b425104989d5f9995af08f6
   - enabled: 1
+    path: Assets/Scenes/End_Drift.unity
+    guid: 11579925f6b5cf34ca3b72cec3a9a8e2
+  - enabled: 1
     path: Assets/Scenes/End_Ejected.unity
     guid: 103806730c068cb419f03a8e95116e3e
   m_configObjects: {}
