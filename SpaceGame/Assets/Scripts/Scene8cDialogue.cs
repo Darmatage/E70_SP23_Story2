@@ -693,8 +693,7 @@ public void next(){
 
         public void SceneChange1(){                     // into the vents!
 			 GameHandler.cargoAlready = true;
-             audioDoor.Play();    
-               StartCoroutine(SceneChangeDelay("Scene8e"));         
+             SceneManager.LoadScene("Scene8e");         
         }
         public void SceneChange2(){                 // back to corridor
 				GameHandler.cargoAlready = true;
