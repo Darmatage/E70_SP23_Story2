@@ -29,7 +29,7 @@ public class Scene8aDialogue : MonoBehaviour {
         public GameObject NextScene2Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
-       //public AudioSource audioSource;
+       public AudioSource audioLaserMany;
         private bool allowSpace = true;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
@@ -276,7 +276,8 @@ public void next(){
                 Choice1c.SetActive(true); // Choice 1c: TALK MORE
                 Choice1d.SetActive(true); // CHOICE 1d: FLEE
         }
-		else if (primeInt == 31){                                                         //Choice 1c: TALK MORE
+		else if (primeInt == 31){       
+                audioLaserMany.Play();                                                  //Choice 1c: TALK MORE
                 GuardArtIdle.SetActive(false);
 				GuardArtAlert.SetActive(false);
 				GuardArtHostile.SetActive(false);
@@ -293,7 +294,8 @@ public void next(){
                 allowSpace = false;
 				NextScene2Button.SetActive(true);
         }
-		else if (primeInt == 41){                                                   //Choice 1d: Flee!
+		else if (primeInt == 41){        
+                audioLaserMany.Play();                                       //Choice 1d: Flee!
                 GuardArtIdle.SetActive(false);
 				GuardArtAlert.SetActive(false);
 				GuardArtHostile.SetActive(false);
