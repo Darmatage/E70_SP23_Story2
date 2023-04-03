@@ -99,7 +99,7 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "You find yourself in a dark room, illuminated only partially by red emergency lights along the edges of the floor.";
+                Char2speech.text = "You find yourself in a dark room, barely illuminated by emergency lighting.";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
