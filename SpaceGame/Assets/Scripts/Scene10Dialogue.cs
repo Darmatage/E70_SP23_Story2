@@ -1348,7 +1348,7 @@ public void next(){
         Char2speech.text = "By the time your head follows a few moments later, you’re already gone.";
         Char3name.text = "";
         Char3speech.text = "";
-		NextScene2Button.SetActive(true);
+		NextScene3Button.SetActive(true);
 		nextButton.SetActive(false);
         allowSpace = false;
     }
