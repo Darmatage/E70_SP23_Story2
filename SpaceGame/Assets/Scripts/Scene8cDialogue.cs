@@ -109,6 +109,9 @@ public void next(){
 				if (GameHandler.armoryAlready == true) {
                 Choice1b.SetActive(true); // search shaft
 				}
+				if (GameHandler.hasScrewdriver == true) {
+                Choice1b.SetActive(true); // search shaft
+				}
         }
 
 // ENCOUNTER AFTER CHOICE #1 - crates
@@ -209,6 +212,9 @@ public void next(){
                 allowSpace = false;
 				if (GameHandler.armoryAlready == true) {
 				Choice1b.SetActive(true); // investigate vent
+				}
+				if (GameHandler.hasScrewdriver == true) {
+                Choice1b.SetActive(true); // search shaft
 				}
 				Choice1d.SetActive(true); // leave room
         }
@@ -326,12 +332,22 @@ public void next(){
 				}
         }
 		else if (primeInt == 41){              // you're investigating the shaft, and you have the screwdriver!
-                Char1name.text = "";
+                if (GameHandler.armoryAlready == true) {
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "H.O.R.I.Z.O.N.";
                 Char3speech.text = "The ventilation shaft likely connects to the rear of the armory.";
+				}
+				else {
+				Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "The ventilation shaft may be useful for navigating the ship.";	
+				}
         }
 		else if (primeInt == 42){              
                 Char1name.text = "YOU";
@@ -359,17 +375,31 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 45){              
-                Char1name.text = "YOU";
-                Char1speech.text = "If I crawl quietly, they won't even know I'm there. Probably.";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
-				GameHandler.ventAlready = true;
-				nextButton.SetActive(false);
-                allowSpace = false;
-				NextScene1Button.SetActive(true);     // on to the rear armory!
-        }
+					if (GameHandler.armoryAlready == true) {
+						Char1name.text = "YOU";
+						Char1speech.text = "If I crawl quietly, they won't even know I'm there. Probably.";
+						Char2name.text = "";
+						Char2speech.text = "";
+						Char3name.text = "";
+						Char3speech.text = "";
+						GameHandler.ventAlready = true;
+						nextButton.SetActive(false);
+						allowSpace = false;
+						NextScene1Button.SetActive(true);     // on to the rear armory!
+					}
+					else {
+					Char1name.text = "YOU";
+					Char1speech.text = "Here goes nothing.";
+					Char2name.text = "";
+					Char2speech.text = "";
+					Char3name.text = "";
+					Char3speech.text = "";	
+					GameHandler.ventAlready = true;
+					nextButton.SetActive(false);
+					allowSpace = false;
+					NextScene1Button.SetActive(true);     // on to the rear armory!
+				}
+		}
 		else if (primeInt == 61){                 // you at the grate, no screwdriver tho! rekt
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -431,6 +461,11 @@ public void next(){
                 nextButton.SetActive(true);
                 allowSpace = true;
         }
+		
+		
+		
+		
+		
         public void Choice1bFunct(){                             // investigate vent
 			if (GameHandler.armoryAlready == true) {               // you already saw the armory
 				if (GameHandler.hasScrewdriver == true) {
@@ -465,6 +500,22 @@ public void next(){
 				}
 			}
 			else {                                          // you haven't seen the armory!
+				if (GameHandler.hasScrewdriver == true) {
+				Char1name.text = "YOU";
+				Char1speech.text = "Hm...";
+				Char2name.text = "";
+				Char2speech.text = "";
+				Char3name.text = "";
+				Char3speech.text = "";
+				primeInt = 40;
+				Choice1a.SetActive(false);
+				Choice1b.SetActive(false);
+				Choice1c.SetActive(false);
+				Choice1d.SetActive(true);
+				nextButton.SetActive(true);
+				allowSpace = true;
+				}
+				else {                             // no armory, no screwdriver
 				Char1name.text = "YOU";
 				Char1speech.text = "Pretty big grate. Must be good for airflow. Not much help to me right now though.";
 				Char2name.text = "";
@@ -475,9 +526,15 @@ public void next(){
 				Choice1a.SetActive(false);
 				Choice1b.SetActive(false);
 				Choice1c.SetActive(false);
-				Choice1d.SetActive(true);
+				Choice1d.SetActive(true);	
+				}
 			}
         }
+		
+		
+		
+		
+		
 		public void Choice1cFunct(){                                  // leave crates
                 Char1name.text = "YOU";
                 Char1speech.text = "Let's look elsewhere.";
@@ -507,7 +564,6 @@ public void next(){
 
         public void SceneChange1(){                     // into the vents!
 			 GameHandler.cargoAlready = true;
-            //  SceneManager.LoadScene("Scene8e");
              audioDoor.Play();    
                StartCoroutine(SceneChangeDelay("Scene8e"));         
         }
