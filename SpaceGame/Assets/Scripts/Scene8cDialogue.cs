@@ -219,12 +219,22 @@ public void next(){
 				Choice1d.SetActive(true); // leave room
         }
 		else if (primeInt == 41){              // you're investigating the shaft, and you have the screwdriver!
-                Char1name.text = "";
+                if (GameHandler.armoryAlready == true) {
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "H.O.R.I.Z.O.N.";
                 Char3speech.text = "The ventilation shaft likely connects to the rear of the armory.";
+				}
+				else {
+				Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "H.O.R.I.Z.O.N.";
+                Char3speech.text = "The ventilation shaft may be useful for navigating the ship.";	
+				}
         }
 		else if (primeInt == 42){              
                 Char1name.text = "YOU";
@@ -253,7 +263,8 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 45){              
-                Char1name.text = "YOU";
+                if (GameHandler.armoryAlready == true) {
+				Char1name.text = "YOU";
                 Char1speech.text = "If I crawl quietly, they won't even know I'm there. Probably.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -263,7 +274,20 @@ public void next(){
 				nextButton.SetActive(false);
                 allowSpace = false;
 				NextScene1Button.SetActive(true);     // on to the rear armory!
-        }
+				}
+				else {
+				Char1name.text = "YOU";
+                Char1speech.text = "Here goes nothing.";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "";
+                Char3speech.text = "";
+				GameHandler.ventAlready = true;
+				nextButton.SetActive(false);
+                allowSpace = false;
+				NextScene1Button.SetActive(true);     // on to the rear armory!	
+				}
+		}
 		else if (primeInt == 61){                 // you at the grate, no screwdriver tho! rekt
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -511,7 +535,7 @@ public void next(){
 				Choice1a.SetActive(false);
 				Choice1b.SetActive(false);
 				Choice1c.SetActive(false);
-				Choice1d.SetActive(true);
+				Choice1d.SetActive(false);
 				nextButton.SetActive(true);
 				allowSpace = true;
 				}
