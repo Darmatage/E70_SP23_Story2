@@ -42,6 +42,8 @@ public class Scene10Dialogue : MonoBehaviour {
     public GameObject nextButton;
     private bool allowSpace = true;
 	public bool careLives = false;
+    public AudioSource audioWhir;
+    public AudioSource audioThud;
 
 void Start(){
     DialogueDisplay.SetActive(false);
@@ -214,6 +216,7 @@ public void next(){
         Char3speech.text = "Now, one moment. I must neutralize the remaining mutineers. Sealing Armory…";
     }
 	else if (primeInt == 16) {
+        audioThud.Play();
         Char1name.text = "";
         Char1speech.text = "";
         Char2name.text = "...";
@@ -268,6 +271,7 @@ public void next(){
         Char3speech.text = "An understandable notion, but a futile one. They will not see reason. Regardless, I have a more elegant solution.";
     }
 	else if (primeInt == 20) {
+        audioWhir.Play();
         Char1name.text = "";
         Char1speech.text = "";
         Char2name.text = "...";
