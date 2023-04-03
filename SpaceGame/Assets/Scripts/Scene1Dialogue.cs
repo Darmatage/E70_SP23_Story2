@@ -91,7 +91,7 @@ public void next(){
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "What… what is that?";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -118,7 +118,7 @@ public void next(){
                 Char3speech.text = "Initializing...";
         }
 		else if (primeInt == 8){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Who said that?";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -186,12 +186,12 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "The ship entered that orbit 4 months ago, and is meant to stay another 2 before making the return journey to Earth.";
+                Char2speech.text = "The ship entered that orbit 4 months ago, and is meant to stay another 8 before making the return journey to Earth.";
 				Char3name.text = "";
                 Char3speech.text = "";
         }
 		else if (primeInt == 17){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Generator offline… how could that have happened? Wait, who said that anyway?";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -215,7 +215,7 @@ public void next(){
                 Char3speech.text = "Source of generator disruption: Unknown. Restore main power immediately.";
         }
 		else if (primeInt == 20){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Heuristic Opti… what? Oh, I get it. Your name is supposed to be Horizon, right?";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -231,7 +231,7 @@ public void next(){
                 Char3speech.text = "Colloquial designation recognized.";
         }
 		else if (primeInt == 22){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Could have just gone with that to begin with… Anyway, why can I hear you? I don’t see anyone else here.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -247,7 +247,7 @@ public void next(){
                 Char3speech.text = "Function: guide and assist crew through cybernetic link.";
         }
 		else if (primeInt == 24){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Ah, so you’re in my head. Strange, I don’t remember installing you. Come to think of it, I don’t remember much of anything…";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -263,7 +263,7 @@ public void next(){
                 Char3speech.text = "WARNING: Emergency power reserves critically low. Restore main power immediately.";
         }
 		else if (primeInt == 26){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Right, you said the generator is offline. That’s not good.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -271,7 +271,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 27){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Well, it appears we’re already in the generator room. Let me take a look around before life support systems start failing.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -327,7 +327,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 103){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Let’s see… Oh, well there’s the problem. The power cells are gone.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -335,7 +335,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 104){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Without those, all we’re going to get out of this is error messages.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -351,7 +351,7 @@ public void next(){
                 Char3speech.text = "Assessment: Corroborated. Locate replacement power cells immediately.";
         }
 		else if (primeInt == 106){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Yes, obviously.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -433,7 +433,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 208){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "This… this wasn’t an accident. Who would do something like this? And why?";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -449,7 +449,7 @@ public void next(){
                 Char3speech.text = "Assessment: Sabotage. Power cell damage: irreparable. Locate replacement power cells immediately.";
         }
 		else if (primeInt == 210){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "That’s not very helpful. I may not remember much of the voyage here, but I know something like this should never have happened.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -457,7 +457,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 211){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "I need to find some answers.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -474,7 +474,7 @@ public void next(){
         }
 		else if (primeInt == 213){
 				GenBodyArt_2.SetActive(false);
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Yes, I'll find those too.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -507,7 +507,7 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 222){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Well, that’s where those cells came from. No wonder the power’s out.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -523,7 +523,7 @@ public void next(){
                 Char3speech.text = "Assessment: Corroborated. Locate replacement power cells immediately.";
         }
 		else if (primeInt == 224){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "Yes, obviously.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -568,7 +568,7 @@ public void next(){
         }
 		else if (primeInt == 253){
 				BrokenRifleArt.SetActive(true);
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "What…? A laser rifle… completely empty. It must have been discharged all at once, considering how heat-warped the barrel is.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -576,10 +576,10 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 254){
-                Char1name.text = "You";
-                Char1speech.text = "Must have belonged to whoever is responsible for this.";
-                Char2name.text = "";
-                Char2speech.text = "";
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "...";
+                Char2speech.text = "Looking down at the rifle, you feel a strange, distant sense of revulsion.";
 				Char3name.text = "";
                 Char3speech.text = "";
         }
@@ -602,7 +602,7 @@ public void next(){
         }
 		else if (primeInt == 257){
 				ArrayArt.SetActive(true);
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "If I don’t want to be walking around with my arms full the whole time, I should take one of these.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -635,7 +635,7 @@ public void next(){
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
         public void Choice1aFunct(){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "I'll take a look at the generator.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -648,7 +648,8 @@ public void next(){
                 allowSpace = true;
         }
         public void Choice1bFunct(){
-                Char1name.text = "YOU";
+				GameHandler.bigH = GameHandler.bigH + 1;
+				Char1name.text = "YOU";
                 Char1speech.text = "Oh no...";
                 Char2name.text = "";
                 Char2speech.text = "";

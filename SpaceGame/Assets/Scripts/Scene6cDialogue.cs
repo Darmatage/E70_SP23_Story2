@@ -252,7 +252,8 @@ public void next(){
         }
 
        else if (primeInt == 102){
-                Char1name.text = "";
+                GameHandler.bigH = GameHandler.bigH + 1;
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
                 Char2speech.text = "You return to the hallway.";

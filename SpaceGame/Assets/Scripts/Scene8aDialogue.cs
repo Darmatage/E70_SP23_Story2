@@ -213,7 +213,8 @@ public void next(){
                 Char4speech.text = "";
         }
        else if (primeInt == 22){
-                Char1name.text = "YOU";
+                GameHandler.bigH = GameHandler.bigH + 1;
+				Char1name.text = "YOU";
                 Char1speech.text = "Excuse me? Are you alr-";
                 Char2name.text = "";
                 Char2speech.text = "";

@@ -8,6 +8,7 @@ using UnityEngine.Audio;
 public class GameHandler : MonoBehaviour {
 
         public static int batteries = 0;
+		public static int bigH = 0;
 		public static bool corridorCAlready = false;           // have you visited corridor C already?
 		public static bool corridorBAlready = false;           // have you visited corridor B already?
 		public static bool foundManual = false;                 // have you found the hydrator manual in engineering?

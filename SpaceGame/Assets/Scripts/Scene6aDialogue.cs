@@ -408,7 +408,8 @@ public void next(){
                 Char4speech.text = "";
         }
 		else if (primeInt == 152){                     
-                Char1name.text = "YOU";
+                GameHandler.bigH = GameHandler.bigH + 1;
+				Char1name.text = "YOU";
                 Char1speech.text = "Somehow, that doesn’t make me feel much better…";
                 Char2name.text = "";
                 Char2speech.text = "";

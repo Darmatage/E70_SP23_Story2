@@ -150,7 +150,8 @@ public void next(){
                 Choice1d.SetActive(true); // leave it?
         }
        else if (primeInt == 51){            // you left it
-                Char1name.text = "";
+                GameHandler.bigH = GameHandler.bigH + 1;
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";

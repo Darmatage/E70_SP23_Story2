@@ -382,7 +382,8 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt ==23){
-                Char1name.text = "You";
+                GameHandler.bigH = GameHandler.bigH + 1;
+				Char1name.text = "You";
                 Char1speech.text = "Beef, chicken, even chocolate. Not a bad selection. ";
                 Char2name.text = "";
                 Char2speech.text = "";
