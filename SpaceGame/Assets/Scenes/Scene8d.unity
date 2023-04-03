@@ -920,7 +920,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d5d061794962644e5865f7b96c860b24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29e15b8b2752e48b3bec0ba30cc77d4c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -996,7 +996,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 00a689ddd25fc43ebb8f9610bc3588ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e99a1a456c0774c4aa7cdc18809fc52f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1419,6 +1419,7 @@ MonoBehaviour:
   DialogueDisplay: {fileID: 5589024293150988415}
   ArtChar1: {fileID: 1046077599}
   ArtBG1: {fileID: 1069896938}
+  ArtBG2: {fileID: 1164336296}
   Choice1a: {fileID: 6493944099614529797}
   Choice1b: {fileID: 898679598}
   NextScene1Button: {fileID: 1356167002}

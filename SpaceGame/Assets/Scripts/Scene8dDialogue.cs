@@ -18,6 +18,7 @@ public class Scene8dDialogue : MonoBehaviour {
        //public GameObject ArtChar1b;
        //public GameObject ArtChar2;
         public GameObject ArtBG1;
+        public GameObject ArtBG2;
         public GameObject Choice1a;
         public GameObject Choice1b;
         public GameObject NextScene1Button;
@@ -32,6 +33,7 @@ void Start(){
         DialogueDisplay.SetActive(false);
         ArtChar1.SetActive(false);
         ArtBG1.SetActive(true);
+        ArtBG2.SetActive(false);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
         NextScene1Button.SetActive(false);
@@ -176,6 +178,8 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 21){
+                ArtBG1.SetActive(false);
+                ArtBG2.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
