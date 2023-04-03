@@ -15,13 +15,11 @@ public class Scene9Dialogue : MonoBehaviour {
     public Text Char3speech;
     public GameObject DialogueDisplay;
     public GameObject ArtChar1;
-    //public GameObject ArtChar1b;
-    //public GameObject ArtChar2;
+	public GameObject ArtChar2;
+	public GameObject ArtChar3;
+	public GameObject ArtChar4;
     public GameObject ArtBG1;
-    public GameObject Choice1a;    // go to bridge
-    public GameObject Choice1b;    // remain in generator room
     public GameObject NextScene1Button;
-    public GameObject NextScene2Button;
     public GameObject nextButton;
     //public GameHandler gameHandler;
     //public AudioSource audioSource;
@@ -31,11 +29,11 @@ public class Scene9Dialogue : MonoBehaviour {
     void Start(){  
         DialogueDisplay.SetActive(false);
         ArtChar1.SetActive(false);
+		ArtChar2.SetActive(false);
+		ArtChar3.SetActive(false);
+		ArtChar4.SetActive(false);
         ArtBG1.SetActive(true);
-        Choice1a.SetActive(false);
-        Choice1b.SetActive(false);
         NextScene1Button.SetActive(false);
-        NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
 
         // Find the gameHandler:
@@ -58,6 +56,7 @@ public class Scene9Dialogue : MonoBehaviour {
         }
         else if (primeInt == 2){
             DialogueDisplay.SetActive(true);
+			ArtChar1.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "...";
@@ -75,7 +74,9 @@ public class Scene9Dialogue : MonoBehaviour {
             //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 4){
-            Char1name.text = "YOU";
+            ArtChar1.SetActive(false);
+			ArtChar2.SetActive(true);
+			Char1name.text = "YOU";
             Char1speech.text = "OK, here goes nothing.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -83,7 +84,9 @@ public class Scene9Dialogue : MonoBehaviour {
             Char3speech.text = "";
         }
         else if (primeInt == 5){
-            Char1name.text = "";
+            ArtChar2.SetActive(false);
+			ArtChar3.SetActive(true);
+			Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "...";
             Char2speech.text = "The generator powers on.";
@@ -93,14 +96,16 @@ public class Scene9Dialogue : MonoBehaviour {
         }
         else if (primeInt == 6){
             Char1name.text = "YOU";
-            Char1speech.text = "Hey, it worked!";
+            Char1speech.text = "It worked!";
 			Char2name.text = "";
 			Char2speech.text = "";
 			Char3name.text = "";
 			Char3speech.text = "";
 }
         else if (primeInt == 7){
-            Char1name.text = "";
+            ArtChar3.SetActive(false);
+			ArtChar4.SetActive(true);
+			Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
@@ -113,89 +118,49 @@ public class Scene9Dialogue : MonoBehaviour {
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "H.O.R.I.Z.O.N.";
-            Char3speech.text = "Please proceed to the Bridge to reboot the computer.";
+            Char3speech.text = "Please proceed to the Bridge to reboot the Prime Intelligence.";
             // Turn off "Next" button, turn on "Choice" buttons
             nextButton.SetActive(false);
             allowSpace = false;
-            Choice1a.SetActive(true); // function Choice1aFunct()
-            Choice1b.SetActive(true); // function Choice1bFunct()
+			NextScene1Button.SetActive(true);
         }
 
-        else if (primeInt == 100){
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-        else if (primeInt == 101){
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-            nextButton.SetActive(false);
-            allowSpace = false;
-            NextScene1Button.SetActive(true);
-        }
-
-        else if (primeInt == 200){
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-        else if (primeInt == 201){
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-            nextButton.SetActive(false);
-            allowSpace = false;
-            NextScene2Button.SetActive(true);
-        }
     } // Closing brace for the next() function
 
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
-    public void Choice1aFunct(){
-        Char1name.text = "YOU";
-        Char1speech.text = "OK, let's go to the Bridge.";
-        Char2name.text = "";
-        Char2speech.text = "";
-        Char3name.text = "";
-        Char3speech.text = "";
-        primeInt = 99;
-        Choice1a.SetActive(false);
-        Choice1b.SetActive(false);
-        nextButton.SetActive(true);
-        allowSpace = true;
-    }
+//public void Choice1aFunct(){                                        //choice: go to bridge
+       // Char1name.text = "YOU";
+      //  Char1speech.text = "OK, let's go to the Bridge.";
+      //  Char2name.text = "";
+       // Char2speech.text = "";
+       // Char3name.text = "";
+       // Char3speech.text = "";
+       // primeInt = 99;
+       // Choice1a.SetActive(false);
+       // Choice1b.SetActive(false);
+       // nextButton.SetActive(true);
+        //allowSpace = true;
+   // }
 
-    public void Choice1bFunct(){
-        Char1name.text = "YOU";
-        Char1speech.text = "Maybe I'll just wait in here.";
-        Char2name.text = "";
-        Char2speech.text = "";
-        Char3name.text = "";
-        Char3speech.text = "";
-        primeInt = 149;
-        Choice1a.SetActive(false);
-        Choice1b.SetActive(false);
-        nextButton.SetActive(true);
-        allowSpace = true;
-    }
+   // public void Choice1bFunct(){
+        //Char1name.text = "YOU";
+       // Char1speech.text = "Maybe I'll just wait in here.";
+       // Char2name.text = "";
+       // Char2speech.text = "";
+      //  Char3name.text = "";
+      //  Char3speech.text = "";
+      //  primeInt = 149;
+      //  Choice1a.SetActive(false);
+      //  Choice1b.SetActive(false);
+      //  nextButton.SetActive(true);
+      //  allowSpace = true;
+   // }
 
     public void SceneChange1(){
         SceneManager.LoadScene("Scene10");
     }
 
-    public void SceneChange2(){
-        SceneManager.LoadScene("Scene2b");
-    }
+   // public void SceneChange2(){
+      //  SceneManager.LoadScene("Scene2b");
+   // }
 }
