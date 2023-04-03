@@ -586,6 +586,7 @@ public void next(){
                 primeInt = 10;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
+				Choice1d.SetActive(false);
                 nextButton.SetActive(true);
                 allowSpace = true;
         }
