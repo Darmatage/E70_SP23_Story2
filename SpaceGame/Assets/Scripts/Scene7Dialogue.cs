@@ -758,9 +758,9 @@ public void next(){
 
         public void SceneChange1(){							// After Choice A:enter armory
 			   GameHandler.corridorCAlready = true;
-            //    SceneManager.LoadScene("Scene8a"); 
-               audioDoor.Play();    
-               StartCoroutine(SceneChangeDelay("Scene8a"));         
+               SceneManager.LoadScene("Scene8a"); 
+               //audioDoor.Play();    
+               //StartCoroutine(SceneChangeDelay("Scene8a"));         
         }
         public void SceneChange2(){                        // After Choice B:proceed to barracks
 				GameHandler.corridorCAlready = true;
