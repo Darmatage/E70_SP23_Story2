@@ -156,7 +156,7 @@ public class Scene9Dialogue : MonoBehaviour {
 			ArtChar3.SetActive(false);
 			ArtChar4.SetActive(true);
             Char1name.text = "YOU";
-            Char1speech.text = "Finally…";
+            Char1speech.text = "Finally...";
 			Char2name.text = "";
 			Char2speech.text = "";
 			Char3name.text = "";
@@ -205,7 +205,7 @@ public class Scene9Dialogue : MonoBehaviour {
 		}
 		else if (primeInt == 18){
 			Char1name.text = "YOU";
-            Char1speech.text = "Thank goodness… ";
+            Char1speech.text = "Thank goodness... ";
 			Char2name.text = "";
 			Char2speech.text = "";
 			Char3name.text = "";

@@ -132,7 +132,7 @@ public void next(){
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "H.O.R.I.Z.O.N.";
-                Char3speech.text = "Assessing… \n Quandary detected.";
+                Char3speech.text = "Assessing... \n Quandary detected.";
 				Char4name.text = "";
                 Char4speech.text = "";
         }

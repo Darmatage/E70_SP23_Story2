@@ -88,11 +88,11 @@ public void next(){
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "H.O.R.I.Z.O.N.";
-                Char3speech.text = "Assessing… No life-signs detected.";
+                Char3speech.text = "Assessing... No life-signs detected.";
         }
        else if (primeInt == 5){
                 Char1name.text = "YOU";
-                Char1speech.text = "That uniform… I think that’s the Captain.";
+                Char1speech.text = "That uniform... I think that’s the Captain.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";

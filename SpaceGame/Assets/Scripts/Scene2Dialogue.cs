@@ -77,7 +77,7 @@ public void next(){
         }
        else if (primeInt ==3){
                 PlayerYouName.text = "You";
-                PlayerYouSpeech.text = "So many scorch marks on the walls… and two more of the crew cut down...";
+                PlayerYouSpeech.text = "So many scorch marks on the walls... and two more of the crew cut down...";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
 				HorizonName.text = "";
@@ -98,7 +98,7 @@ public void next(){
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
 				HorizonName.text = "H.O.R.I.Z.O.N.";
-                HorizonSpeech.text = "Analyzing… Result: Probable.";
+                HorizonSpeech.text = "Analyzing... Result: Probable.";
         }
       else if (primeInt == 6){
                 PlayerYouName.text = "You";
@@ -141,7 +141,7 @@ public void next(){
         }
 		else if (primeInt == 11){
                 PlayerYouName.text = "You";
-                PlayerYouSpeech.text = "Great, just great… \n Wait, that door over there! That leads to the bridge.";
+                PlayerYouSpeech.text = "Great, just great... \n Wait, that door over there! That leads to the bridge.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
 				HorizonName.text = "";

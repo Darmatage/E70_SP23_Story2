@@ -88,7 +88,7 @@ public void next(){
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
 				HorizonName.text = "H.O.R.I.Z.O.N.";
-                HorizonSpeech.text = "Analyzing… \n No digestible organization scheme detected.";
+                HorizonSpeech.text = "Analyzing... \n No digestible organization scheme detected.";
         }
        else if (primeInt == 5){
                 PlayerYouName.text = "";
@@ -253,7 +253,7 @@ public void next(){
 		else if (primeInt == 21){
 				BookArt.SetActive(true);
                 PlayerYouName.text = "YOU";
-                PlayerYouSpeech.text = "Wow, that’s a thick manual. And what does this sticky note on it say? The handwriting is awful. Hmm…";
+                PlayerYouSpeech.text = "Wow, that’s a thick manual. And what does this sticky note on it say? The handwriting is awful. Hmm...";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
 				HorizonName.text = "";
@@ -340,7 +340,7 @@ public void next(){
 		else if (primeInt == 8){
 				BookArt.SetActive(true);
                 PlayerYouName.text = "YOU";
-                PlayerYouSpeech.text = "Wow, that’s a thick manual. And what does this sticky note on it say? The handwriting is awful. Hmm…";
+                PlayerYouSpeech.text = "Wow, that’s a thick manual. And what does this sticky note on it say? The handwriting is awful. Hmm...";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
 				HorizonName.text = "";

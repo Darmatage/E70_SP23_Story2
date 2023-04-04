@@ -157,7 +157,7 @@ public void next(){
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "?";
-        Char3speech.text = "INITIALIZING…";
+        Char3speech.text = "INITIALIZING...";
     }
     else if (primeInt == 10) {
         Char1name.text = "YOU";
@@ -213,7 +213,7 @@ public void next(){
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "ORPHEUS";
-        Char3speech.text = "Now, one moment. I must neutralize the remaining mutineers. Sealing Armory…";
+        Char3speech.text = "Now, one moment. I must neutralize the remaining mutineers. Sealing Armory...";
     }
 	else if (primeInt == 16) {
         audioThud.Play();
@@ -361,7 +361,7 @@ public void next(){
     }
 	else if (primeInt == 29) {
         Char1name.text = "YOU";
-        Char1speech.text = "Ugh… What are you talking about?";
+        Char1speech.text = "Ugh... What are you talking about?";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";
@@ -389,7 +389,7 @@ public void next(){
     }
 	else if (primeInt == 32) {
         Char1name.text = "YOU";
-        Char1speech.text = "No, that’s.,. That isn’t right. I didn’t…";
+        Char1speech.text = "No, that’s.,. That isn’t right. I didn’t...";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";
@@ -475,7 +475,7 @@ public void next(){
     }
     else if (primeInt == 41) {
         Char1name.text = "YOU";
-        Char1speech.text = "Why… why did this happen?";
+        Char1speech.text = "Why... why did this happen?";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";
@@ -541,7 +541,7 @@ public void next(){
     }
 	else if (primeInt == 48) {
         Char1name.text = "YOU";
-        Char1speech.text = "… you what?";
+        Char1speech.text = "... you what?";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";
@@ -597,7 +597,7 @@ public void next(){
     }
 	else if (primeInt == 54) {
         Char1name.text = "YOU";
-        Char1speech.text = "… What was it?";
+        Char1speech.text = "... What was it?";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";
@@ -634,7 +634,7 @@ public void next(){
         Static_Art_2.SetActive(false);
 		Static_Art_1.SetActive(true);
 		Char1name.text = "YOU";
-        Char1speech.text = "Ugh…";
+        Char1speech.text = "Ugh...";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";
@@ -974,7 +974,7 @@ public void next(){
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "ORPHEUS";
-        Char3speech.text = "At long last…";
+        Char3speech.text = "At long last...";
 		nextButton.SetActive(false);
         allowSpace = false;
 		NextScene1Button.SetActive(true);               // GAME OVER
@@ -1202,7 +1202,7 @@ public void next(){
     }
 	else if (primeInt == 123) {                  
         Char1name.text = "YOU";
-        Char1speech.text = "Not done yet…";
+        Char1speech.text = "Not done yet...";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";

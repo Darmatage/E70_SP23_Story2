@@ -109,7 +109,7 @@ public void next(){
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "H.O.R.I.Z.O.N.";
-                Char3speech.text = "Analyzing… Power source detected. \n Directive: Proceed to kitchen.";
+                Char3speech.text = "Analyzing... Power source detected. \n Directive: Proceed to kitchen.";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
@@ -535,7 +535,7 @@ public void next(){
 				}
 				else {
 				Char1name.text = "YOU";
-                Char1speech.text = "A simple machine, but an important one. And it’s still on. Let’s see…";
+                Char1speech.text = "A simple machine, but an important one. And it’s still on. Let’s see...";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";

@@ -339,7 +339,7 @@ public void next(){
 		else if (primeInt == 110){                 //you're working.       
                 DoctorDead.SetActive(false);
 				Char1name.text = "YOU";
-                Char1speech.text = "Just gotta keep moving… Gotta save the ship.";
+                Char1speech.text = "Just gotta keep moving... Gotta save the ship.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -413,7 +413,7 @@ public void next(){
 		else if (primeInt == 152){                     
                 GameHandler.bigH = GameHandler.bigH + 1;
 				Char1name.text = "YOU";
-                Char1speech.text = "Somehow, that doesn’t make me feel much better…";
+                Char1speech.text = "Somehow, that doesn’t make me feel much better...";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -463,7 +463,7 @@ public void next(){
         }
 		else if (primeInt == 157){                     
                 Char1name.text = "YOU";
-                Char1speech.text = "There has to have been a better way…";
+                Char1speech.text = "There has to have been a better way...";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
@@ -494,7 +494,7 @@ public void next(){
 		else if (primeInt == 160){                     
                 DoctorDead.SetActive(false);
 				Char1name.text = "YOU";
-                Char1speech.text = "Just gotta keep moving… Gotta save the ship.";
+                Char1speech.text = "Just gotta keep moving... Gotta save the ship.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";

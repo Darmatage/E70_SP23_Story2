@@ -78,7 +78,7 @@ public void next(){
         }
        else if (primeInt == 4){
                 PlayerYouName.text = "YOU";
-                PlayerYouSpeech.text = "Let’s see… we’ve got the kitchen, and engineering storage.";
+                PlayerYouSpeech.text = "Let’s see... we’ve got the kitchen, and engineering storage.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
 				HorizonName.text = "";
@@ -90,7 +90,7 @@ public void next(){
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
 				HorizonName.text = "H.O.R.I.Z.O.N.";
-                HorizonSpeech.text = "Analyzing… \n Directive: Search engineering storage.";
+                HorizonSpeech.text = "Analyzing... \n Directive: Search engineering storage.";
         }
        else if (primeInt == 6){
                 PlayerYouName.text = "YOU";
@@ -126,7 +126,7 @@ public void next(){
         }
 		else if (primeInt == 10){
                 PlayerYouName.text = "YOU";
-                PlayerYouSpeech.text = "…So, you’re guessing.";
+                PlayerYouSpeech.text = "...So, you’re guessing.";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
 				HorizonName.text = "";

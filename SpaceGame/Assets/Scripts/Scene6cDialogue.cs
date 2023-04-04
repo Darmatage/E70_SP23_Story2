@@ -165,7 +165,7 @@ public void next(){
         }
 		else if (primeInt == 15){
                 Char1name.text = "YOU";
-                Char1speech.text = "But… then the cryo bays would lose power.";
+                Char1speech.text = "But... then the cryo bays would lose power.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";

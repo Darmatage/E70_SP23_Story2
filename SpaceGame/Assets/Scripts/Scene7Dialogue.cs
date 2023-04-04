@@ -109,7 +109,7 @@ public void next(){
         }
        else if (primeInt ==3){
                 Char1name.text = "YOU";
-                Char1speech.text = "Things look worse and worse… And I haven’t recognized anyone we’ve found. What is going on?";
+                Char1speech.text = "Things look worse and worse... And I haven’t recognized anyone we’ve found. What is going on?";
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "";
