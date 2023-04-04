@@ -14,6 +14,7 @@ public class Scene1Dialogue : MonoBehaviour {
 		public Text Char3name;
 		public Text Char3speech;
         public GameObject DialogueDisplay;
+		public GameObject FunnyNameBack;
         public GameObject GeneratorArt;
 		public GameObject GenBodyArt_1;
 		public GameObject GenBodyArt_2;
@@ -37,6 +38,7 @@ public class Scene1Dialogue : MonoBehaviour {
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
+		FunnyNameBack.SetActive(false);
         GeneratorArt.SetActive(false);
 		GenBodyArt_1.SetActive(false);
 		GenBodyArt_2.SetActive(false);
@@ -198,7 +200,8 @@ public void next(){
                 Char3speech.text = "";
         }
 		else if (primeInt == 18){
-                Char1name.text = "";
+                FunnyNameBack.SetActive(true);
+				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -214,7 +217,8 @@ public void next(){
                 Char3speech.text = "Source of generator disruption: Unknown. Restore main power immediately.";
         }
 		else if (primeInt == 20){
-                Char1name.text = "YOU";
+                FunnyNameBack.SetActive(false);
+				Char1name.text = "YOU";
                 Char1speech.text = "Heuristic Opti... what? Oh, I get it. Your name is supposed to be Horizon, right?";
                 Char2name.text = "";
                 Char2speech.text = "";

@@ -70,7 +70,7 @@ public void next(){
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "H.O.R.I.Z.O.N.";
-                Char3speech.text = "The cargo bay appears undisturbed. Regardless, proceed with caution.";
+                Char3speech.text = "The Cargo Bay appears undisturbed. Regardless, proceed with caution.";
         }
        else if (primeInt ==3){
                 Char1name.text = "YOU";

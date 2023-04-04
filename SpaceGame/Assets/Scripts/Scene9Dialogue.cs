@@ -118,7 +118,7 @@ public class Scene9Dialogue : MonoBehaviour {
         }
 		else if (primeInt == 8){
             Char1name.text = "YOU";
-            Char1speech.text = "“Power cells detected. Press Start.”";
+            Char1speech.text = "'Power cells detected. Press Start.'";
 			Char2name.text = "";
 			Char2speech.text = "";
 			Char3name.text = "";

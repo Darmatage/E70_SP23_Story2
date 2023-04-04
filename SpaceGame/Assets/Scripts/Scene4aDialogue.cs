@@ -69,7 +69,7 @@ public void next(){
                 PlayerYouName.text = "";
                 PlayerYouSpeech.text = "";
                 NarratorName.text = "...";
-                NarratorSpeech.text = "The room is even darker than the those you just left, occupied by a dense maze of boxes and crates.";
+                NarratorSpeech.text = "The room is even darker than those you just left, occupied by a dense maze of boxes and crates.";
 				HorizonName.text = "";
                 HorizonSpeech.text = "";
         }
@@ -261,7 +261,7 @@ public void next(){
         }
 		else if (primeInt == 22){
                 PlayerYouName.text = "YOU";
-                PlayerYouSpeech.text = "“Just swapped the hydrator’s power cell, should be good for a while more. Take care of it yourself next time. Disconnection protocol is on p.480.”";
+                PlayerYouSpeech.text = "'Just swapped the hydrator’s power cell, should be good for a while more. Take care of it yourself next time. Disconnection protocol is on p.480.'";
                 NarratorName.text = "";
                 NarratorSpeech.text = "";
 				HorizonName.text = "";

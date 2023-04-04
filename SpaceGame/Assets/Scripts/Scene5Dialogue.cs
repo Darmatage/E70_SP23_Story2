@@ -150,7 +150,6 @@ public void next(){
 						NextScene4Button.SetActive(true);
 					}
 					else {
-						NextScene4Button.SetActive(true);
 						Choice1c.SetActive(true); //  CHOICE: CRYO
 					}
 				}

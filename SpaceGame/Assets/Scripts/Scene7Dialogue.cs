@@ -383,7 +383,7 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "...";
-                Char2speech.text = "And yet, it never comes. You nearly make it to the bend in the corridor before riskng a glance back over your shoulder.";
+                Char2speech.text = "And yet, it never comes. You nearly make it to the bend in the corridor before risking a glance back over your shoulder.";
 				Char3name.text = "";
                 Char3speech.text = "";
 				}
