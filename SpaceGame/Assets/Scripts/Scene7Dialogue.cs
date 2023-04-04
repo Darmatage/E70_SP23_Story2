@@ -137,7 +137,7 @@ public void next(){
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "H.O.R.I.Z.O.N.";
-                Char3speech.text = "Mass of BFH-9 is roughly equivalent to mass of Earth’s Sun. Therefore, BFH-9 contains roughly 1.514 x 10\u2077\u2077 bits of information.";
+                Char3speech.text = "Mass of BFH-9 is roughly equivalent to mass of Earth’s Sun. Therefore, BFH-9 contains roughly 1.514 x 10⁷⁷ bits of information.";
         }
        else if (primeInt ==7){
                 Char1name.text = "YOU";
@@ -161,7 +161,7 @@ public void next(){
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3name.text = "H.O.R.I.Z.O.N.";
-                Char3speech.text = "Comparing this to the 1.514 x 10\u2077\u2077 bits of information that BFH-9 has absorbed from the universe demonstrates the magnitude of information trapped within BFH-9.";
+                Char3speech.text = "Comparing this to the 1.514 x 10⁷⁷ bits of information that BFH-9 has absorbed from the universe demonstrates the magnitude of information trapped within BFH-9.";
         }
 		else if (primeInt ==10){
                 Char1name.text = "YOU";
